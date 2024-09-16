@@ -10,7 +10,7 @@
 
 ### Links úteis
 
-[![Figma](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=figma&message=Prot%C3%B3tipo)](#) [![Requisitos_do_Cliente](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=gitbook&message=Requisitos%20do%20Cliente)](#) [![Backlog - Produto](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=readthedocs&message=Backlog%20do%20Produto)](#) [![Burndown](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=simpleanalytics&message=Burndown)](#)
+[![Figma](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=figma&message=Prot%C3%B3tipo)](#) [![Requisitos_do_Cliente](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=gitbook&message=Requisitos%20do%20Cliente)](https://github.com/hallwaytechgrupo/ABP-2024-2/wiki/Requisitos-do-Cliente) [![Backlog - Produto](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=readthedocs&message=Backlog%20do%20Produto)](https://github.com/users/hallwaytechgrupo/projects/2/views/3)
 
 <!--
 | Título | Link |
@@ -31,21 +31,22 @@
 ### Sprints
 #### Sprint Atual: 1
 
-| Sprint | Backlog | Link |
-|---|---|---|
-| Sprint 1 | [![Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=Backlog%20Sprint%201&color=blue&logo=readthedocs&message=Acessar)](#)  | [![Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=gitlfs&message=Acessar)](#) |
-| Sprint 2 | [![Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=Backlog%20Sprint%202&color=red&logo=readthedocs&message=Indispon%C3%ADvel)](#) | [![Sprint 2](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=gitlfs&message=Acessar)](#) |
-| Sprint 3 | [![Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=Backlog%20Sprint%203&color=red&logo=readthedocs&message=Indispon%C3%ADvel)](#) | [![Sprint 3](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=gitlfs&message=Acessar)](#) |
+| Sprint | Backlog | Trello | Burndown | 
+|---|---|---|---|
+| Sprint 1 | [![Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=Backlog%20Sprint%201&color=blue&logo=readthedocs&message=Acessar)](#)  | [![Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=gitlfs&message=Acessar)](#) | Link aqui |
+| Sprint 2 | [![Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=Backlog%20Sprint%202&color=red&logo=readthedocs&message=Indispon%C3%ADvel)](#) | [![Sprint 2](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=gitlfs&message=Acessar)](#) | Link aqui |
+| Sprint 3 | [![Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=Backlog%20Sprint%203&color=red&logo=readthedocs&message=Indispon%C3%ADvel)](#) | [![Sprint 3](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=gitlfs&message=Acessar)](#) | Link aqui |
 
 ### Equipe
 | Função | Nome | GitHub |
 |---|---|---|
 | Product Owner | Marcos Vinicios S. A. Oliveira | [![MarcosViniciosSAOliveira](https://img.shields.io/static/v1?style=for-the-badge&label=marcknero&color=purple&logo=github&message=Product%20Owner)](https://github.com/marcknero) |
-| Scrum Master | Rodrigo Reinaldo de Faria | [![RodrigoReinaldoFaria](https://img.shields.io/static/v1?style=for-the-badge&label=RodrigoReinaldodeFaria&color=green&logo=github&message=Scrum%20Master)](https://github.com/RodrigoReinaldodeFaria) |
+| Dev Team | Vinicius Lemes dos Santos | [![viniilemes](https://img.shields.io/static/v1?style=for-the-badge&label=viniilemes&color=green&logo=github&message=Scrum%20Master)](https://github.com/viniilemes) |
 | Dev Team | Ariel Deyvison Fagundes da Silva | [![arielfagundes](https://img.shields.io/static/v1?style=for-the-badge&label=arielfagundes&color=blue&logo=github&message=Dev%20Team)](https://github.com/arielfagundes) |
 | Dev Team | Christopher Costa | [![ChrisKryon](https://img.shields.io/static/v1?style=for-the-badge&label=ChrisKryon&color=blue&logo=github&message=Dev%20Team)](https://github.com/ChrisKryon) |
 | Dev Team | Lucas Monteiro Correia | [![lucasmonteiro14](https://img.shields.io/static/v1?style=for-the-badge&label=lucasmonteiro14&color=blue&logo=github&message=Dev%20Team)](https://github.com/lucasmonteiro14) |
 | Dev Team | Mário César Vieira Alves | [![MarioCVAlves](https://img.shields.io/static/v1?style=for-the-badge&label=MarioCesarVieiraAlves&color=blue&logo=github&message=Dev%20Team)](https://github.com/MarioCesarVieiraAlves) |
+| Dev Team | Rodrigo Reinaldo de Faria | [![RodrigoReinaldoFaria](https://img.shields.io/static/v1?style=for-the-badge&label=RodrigoReinaldodeFaria&color=blue&logo=github&&message=Dev%20Team)](https://github.com/RodrigoReinaldodeFaria) |
 | Dev Team | Vinicius Lemes dos Santos | [![viniilemes](https://img.shields.io/static/v1?style=for-the-badge&label=viniilemes&color=blue&logo=github&message=Dev%20Team)](https://github.com/viniilemes) |
 | Dev Team | Yan Vitor Siqueira Bergantin | [![YanBergantin](https://img.shields.io/static/v1?style=for-the-badge&label=YanBergantin&color=blue&logo=github&message=Dev%20Team)](https://github.com/YanBergantin) |
 

@@ -144,13 +144,29 @@ ___________________________________________
 
 ### **Tarefas:**
 1. Pesquisa de Conteúdo:
-	1. O que é Scrum
-	2. Qual o uso do Scrum (pode ser usado em algo além do desenvolvimento de softwares?)
-	3. Quais as ferramentas e como utilizá-las
-	4. O que é Sprint
-	5. O que é Backlog do Projeto e Backlog da Sprint
-	6. Como pontuar as atividades?
-	7. User Stories (pesquisa bonus?)
+   - Página Inicial (Home)
+   - Módulo 1: Fundamentos do Scrum
+     - **O que é Scrum?** Definição, histórico e comparação com métodos tradicionais.
+     - **Princípios e Valores:** Explicação detalhada dos pilares e valores do Scrum.
+     - **Papéis do Scrum:** Product Owner, Scrum Master e Time de Desenvolvimento.
+     - **Artefatos do Scrum:** Product Backlog, Sprint Backlog e Incremento.
+   - Módulo 2: Eventos do Scrum e Fluxo de Trabalho
+     - Sprint Planning: Detalhes sobre o planejamento de cada Sprint.
+     - Daily Scrum: Propósito e formato da reunião diária.
+     - Sprint Review: Demonstração do trabalho concluído e coleta de feedback.
+     - Sprint Retrospective: Melhoria contínua do processo.
+     - **Fluxo de Trabalho do Scrum:**
+       - Visualização do ciclo de vida de uma Sprint, desde o planejamento até a revisão.
+   - Módulo 3: Ferramentas e Áreas de Aplicação
+     - **Boards visuais:** Kanban, Scrum Board.
+     - **Ferramentas de gestão de projetos:** Jira, Trello, Asana.
+     - **Ferramentas de colaboração:** Slack, Microsoft Teams.
+     - **Ferramentas de versionamento:** Git.
+     - **Áreas de Aplicação do Scrum:**
+     - **Desenvolvimento de software:** Criação de aplicativos, sistemas e plataformas.
+       - **Marketing e design:** Gestão de projetos criativos e campanhas.
+       - **Gestão de produtos:** Desenvolvimento e lançamento de novos produtos.
+       - **Outras áreas:** Recursos humanos, operações, etc.
 2. Criar estrutura do projeto no Figma de forma que cada tópico e subtópico tenha sua própria tela.
 3. Transcrever  cada tela do figma para HTML, CSS e JavaScript.
 

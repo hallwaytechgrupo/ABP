@@ -41,10 +41,10 @@
 | Função | Nome | GitHub |
 |---|---|---|
 | Product Owner | Marcos Vinicios S. A. Oliveira | [![MarcosViniciosSAOliveira](https://img.shields.io/static/v1?style=for-the-badge&label=marcknero&color=purple&logo=github&message=Product%20Owner)](https://github.com/marcknero) |
-| Dev Team | Vinicius Lemes dos Santos | [![viniilemes](https://img.shields.io/static/v1?style=for-the-badge&label=viniilemes&color=green&logo=github&message=Scrum%20Master)](https://github.com/viniilemes) |
+| Scrum Master | Lucas Monteiro Correia | [![lucasmonteiro14](https://img.shields.io/static/v1?style=for-the-badge&label=lucasmonteiro14&color=green&logo=github&message=Scrum%20Master)](https://github.com/lucasmonteiro14) |
 | Dev Team | Ariel Deyvison Fagundes da Silva | [![arielfagundes](https://img.shields.io/static/v1?style=for-the-badge&label=arielfagundes&color=blue&logo=github&message=Dev%20Team)](https://github.com/arielfagundes) |
 | Dev Team | Christopher Costa | [![ChrisKryon](https://img.shields.io/static/v1?style=for-the-badge&label=ChrisKryon&color=blue&logo=github&message=Dev%20Team)](https://github.com/ChrisKryon) |
-| Dev Team | Lucas Monteiro Correia | [![lucasmonteiro14](https://img.shields.io/static/v1?style=for-the-badge&label=lucasmonteiro14&color=blue&logo=github&message=Dev%20Team)](https://github.com/lucasmonteiro14) |
+| Dev Team | Vinicius Lemes dos Santos | [![lucasmonteiro14](https://img.shields.io/static/v1?style=for-the-badge&label=lucasmonteiro14&color=blue&logo=github&message=Dev%20Team)](https://github.com/) |
 | Dev Team | Mário César Vieira Alves | [![MarioCVAlves](https://img.shields.io/static/v1?style=for-the-badge&label=MarioCesarVieiraAlves&color=blue&logo=github&message=Dev%20Team)](https://github.com/MarioCesarVieiraAlves) |
 | Dev Team | Rodrigo Reinaldo de Faria | [![RodrigoReinaldoFaria](https://img.shields.io/static/v1?style=for-the-badge&label=RodrigoReinaldodeFaria&color=blue&logo=github&&message=Dev%20Team)](https://github.com/RodrigoReinaldodeFaria) |
 | Dev Team | Vinicius Lemes dos Santos | [![viniilemes](https://img.shields.io/static/v1?style=for-the-badge&label=viniilemes&color=blue&logo=github&message=Dev%20Team)](https://github.com/viniilemes) |

@@ -1,0 +1,31 @@
+# O que é Scrum? 
+O Scrum é um framework ágil utilizado para gerenciar e desenvolver produtos complexos, especialmente em ambientes de software. Criado na década de 1990 por Ken Schwaber e Jeff Sutherland , o Scrum surgiu como uma resposta às limitações dos métodos tradicionais de gerenciamento de projetos, como o modelo Waterfall. Enquanto os métodos tradicionais seguem um planejamento linear e sequencial, o Scrum adota uma abordagem iterativa e incremental, permitindo maior flexibilidade e adaptação às mudanças.
+Para garantir a eficácia e aplicabiliade da metodologia de gerenciamento o Scrum se baseia em determinados Princípios e Valores, bem como deifine alguns papeis a serem definidos para que o processo tenha o controle e o encaminhamento necessário para o desenvolvimento amigável. 
+
+# Princípios e Valores do Scrum
+Os princípios do Scrum são baseados em três pilares fundamentais:
+•	Transparência: Todas as partes interessadas devem ter visibilidade sobre o progresso do projeto. Isso é feito através de artefatos como o backlog do produto e gráficos de burndown.
+•	Inspeção: Revisões regulares permitem que a equipe identifique problemas rapidamente. As reuniões diárias (Daily Scrums) e as retrospectivas são exemplos de momentos em que uma equipe opera seu trabalho.
+•	Adaptação: A equipe deve ser capaz de ajustar seu trabalho com base no feedback recebido. Isso é facilitado pela flexibilidade do backlog do produto, que pode ser reordenado conforme necessário.
+Os valores do Scrum incluem:
+•	Compromisso: A equipe se compromete a atingir seus objetivos.
+•	Coragem: Os membros da equipe têm coragem de enfrentar desafios e problemas.
+•	Foco: O trabalho deve ser focado nas metas da Sprint.
+•	Abertura: A equipe deve ser aberta a novas ideias e feedback.
+•	Respeito: Todos os membros da equipe devem ser respeitados mutuamente.
+
+# Papéis do Scrum
+No Scrum, existem três papéis principais:
+•	Product Owner: Responsável por maximizar o valor do produto. Ele gerencia o backlog do produto, priorizando itens com base nas necessidades dos stakeholders. O Product Owner deve ter uma visão clara do que é mais valioso para os clientes.
+•	Scrum Master: Atua como facilitador para a equipe. Ele remove impedimentos que possam atrapalhar o progresso da equipe e garante que as práticas do Scrum sejam seguidas. O Scrum Master também ajuda a promover um ambiente colaborativo.
+•	Time de Desenvolvimento: Composto por profissionais multifuncionais que trabalham juntos para entregar incrementos do produto em cada Sprint. Este tempo é auto-organizado e responsável pela execução das tarefas.
+
+# Eventos do Scrum
+Durante o processo do Scrum existem eventos essenciais para o desenvolvimento:
+ - Sprint;
+ - Sprint planning;
+ - Daily Scrum;
+ - Sprint Review;
+ - Retrospectiva da Sprint.
+Como pode ser notado ao se falar dos eventos que compoem o processo de SCRUM, o que mais se fala é SPRINT, pois este é o coração de toda a metodologia do processo.
+Fazendo desta temática um assunto complexo o suficiente para todo um módulo, detalhando as formas de uso e seus significado no processo.

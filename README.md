@@ -1,14 +1,14 @@
 
 # Backlog
 
-| ID | Tipo | Descrição | Prioridade | Status | Pontuação | Responsável |
+| ID | Tipo | Descrição | Estimativa Total | Status | Responsável | Pontuação total |
 |--|--|--|--|--|--|--|
-| [01](#rf-01) | RF | As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que, ao ser clicado, remete o usuário à seção correspondente;|  | A fazer |  |  |
-| [02](#rf-02) | RF | O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail e senha;|  | A fazer |  |  |
-| [03](#rf-03) | RF | O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; |  | A fazer |  |  |
-| [04](#rf-04) | RF | O sistema deve manter um cadastro de questões, com alternativas verdadeira ou falsa, referentes aos tópicos apresentados nas páginas do portal; |  | A fazer |  |  |
-| [05](#rf-05) | RF | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devem contemplar o tema abordado no tópico;|  | A fazer |  |  |
-| [06](#rf-06) | RF | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões; |  | A fazer |  |  |
+| [01](#rf-01) | RF | As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que, ao ser clicado, remete o usuário à seção correspondente;|  | ✅ Concluído | Christopher C. | 2 |
+| [02](#rf-02) | RF | O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail e senha;|  | ✅ Concluído | Ariel D. | 3 |
+| [03](#rf-03) | RF | O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; |  | ✅ Concluído | Ariel D. | 3 |
+| [04](#rf-04) | RF | O sistema deve manter um cadastro de questões, com alternativas verdadeira ou falsa, referentes aos tópicos apresentados nas páginas do portal; |  | ✅ Concluído | Vinicius L. | 6 |
+| [05](#rf-05) | RF | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devem contemplar o tema abordado no tópico;|  | ✅ Concluído | Christopher C., Vinícius L. | 3 |
+| [06](#rf-06) | RF | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões; |  | ✅ Concluído | Ariel D., Lucas M., Marcos O., Mário C., Reinaldo, Yan V. | 38 |
 
 
 # Backlog - Projeto
@@ -25,7 +25,10 @@
 - Existência de menu fixo na página com links para as respectivas páginas sobre scrum.
 
 ### **Tarefas:**
-- Criar um design no Figma de um menu fixo.
+01. Criar um design no Figma de um menu fixo.
+	- **Estimativa:** 3
+	- **Pontuação:** 2
+	- **Responsável:** Christopher C
 
 ___________________________________________
 
@@ -44,11 +47,14 @@ ___________________________________________
 - Registro do usuário no sistema e o redirecionamento/atualização da página com o login.
 
 ### **Tarefas:**
-- Criar tela de registro de Usuário no Figma, utilizando o template base (com o menu fixo)
-	- A tela deve ter os campos de entrada de dados:
-		- Nome Completo.
-		- E-mail.
-		- Senha.
+01. Criar tela de registro de Usuário no Figma, utilizando o template base (com o menu fixo)
+    - **Estimativa:** 4
+    - **Pontuação:** 3
+    - **Responsável:** Ariel D
+    - **Descrição:** A tela deve ter os campos de entrada de dados:
+    	- Nome Completo.
+    	- E-mail.
+    	- Senha.
 ___________________________________________
 
 <a name="rf-03"></a>
@@ -64,10 +70,13 @@ ___________________________________________
 - Validação dos campos de e-mail e senha.
 
 ### **Tarefas:**
-- Criar tela de login de Usuário no Figma, utilizando o template base (com o menu fixo)
-	- A tela deve ter os campos de entrada de dados:
-		- E-mail.
-		- Senha.
+01. Criar tela de login de Usuário no Figma, utilizando o template base (com o menu fixo)
+    - **Estimativa:** 4
+    - **Pontuação:** 3
+    - **Responsável:** Ariel D
+    - **Descrição:** A tela deve ter os campos de entrada de dados:
+      - E-mail.
+      - Senha.
 
 ___________________________________________
 
@@ -99,7 +108,10 @@ ___________________________________________
 - Mecanismo para apresentar questões aleatoriamente aos usuários, categorizado por tópico.
 
 ### **Tarefas:**
-- Tela base (esqueleto) no Figma para o Quizz.
+01. Tela base (esqueleto) no Figma para o Quizz.
+    - **Estimativa:** 5
+    - **Pontuação:** 3
+    - **Responsável:** Vinícius L.
 
 ___________________________________________
 
@@ -123,29 +135,32 @@ ___________________________________________
 
 ### **Tarefas:**
 1. Pesquisa de Conteúdo:
- - Página Inicial (Home)
- - Módulo 1: Fundamentos do Scrum
- - **O que é Scrum?** Definição, histórico e comparação com métodos tradicionais.
- - **Princípios e Valores:** Explicação detalhada dos pilares e valores do Scrum.
- - **Papéis do Scrum:** Product Owner, Scrum Master e Time de Desenvolvimento.
- - **Artefatos do Scrum:** Product Backlog, Sprint Backlog e Incremento.
- - Módulo 2: Eventos do Scrum e Fluxo de Trabalho
- - Sprint Planning: Detalhes sobre o planejamento de cada Sprint.
- - Daily Scrum: Propósito e formato da reunião diária.
- - Sprint Review: Demonstração do trabalho concluído e coleta de feedback.
- - Sprint Retrospective: Melhoria contínua do processo.
- - **Fluxo de Trabalho do Scrum:**
- - Visualização do ciclo de vida de uma Sprint, desde o planejamento até a revisão.
- - Módulo 3: Ferramentas e Áreas de Aplicação
- - **Boards visuais:** Kanban, Scrum Board.
- - **Ferramentas de gestão de projetos:** Jira, Trello, Asana.
- - **Ferramentas de colaboração:** Slack, Microsoft Teams.
- - **Ferramentas de versionamento:** Git.
- - **Áreas de Aplicação do Scrum:**
- - **Desenvolvimento de software:** Criação de aplicativos, sistemas e plataformas.
- - **Marketing e design:** Gestão de projetos criativos e campanhas.
- - **Gestão de produtos:** Desenvolvimento e lançamento de novos produtos.
- - **Outras áreas:** Recursos humanos, operações, etc.
+	1.1 Página Inicial (Home)
+	1.2 Módulo 1: Fundamentos do Scrum
+   - **O que é Scrum?** Definição, histórico e comparação com métodos tradicionais.
+   - **Princípios e Valores:** Explicação detalhada dos pilares e valores do Scrum.
+   - **Papéis do Scrum:** Product Owner, Scrum Master e Time de Desenvolvimento.
+   - **Artefatos do Scrum:** Product Backlog, Sprint Backlog e Incremento.
+   
+	1.3 Módulo 2: Eventos do Scrum e Fluxo de Trabalho
+     - Sprint Planning: Detalhes sobre o planejamento de cada Sprint.
+     - Daily Scrum: Propósito e formato da reunião diária.
+     - Sprint Review: Demonstração do trabalho concluído e coleta de feedback.
+     - Sprint Retrospective: Melhoria contínua do processo.
+     - **Fluxo de Trabalho do Scrum:**
+     - Visualização do ciclo de vida de uma Sprint, desde o planejamento até a revisão.
+     
+	1.4 Módulo 3: Ferramentas e Áreas de Aplicação
+    - **Boards visuais:** Kanban, Scrum Board.
+    - **Ferramentas de gestão de projetos:** Jira, Trello, Asana.
+    - **Ferramentas de colaboração:** Slack, Microsoft Teams.
+    - **Ferramentas de versionamento:** Git.
+    - **Áreas de Aplicação do Scrum:**
+    - **Desenvolvimento de software:** Criação de aplicativos, sistemas e plataformas.
+    - **Marketing e design:** Gestão de projetos criativos e campanhas.
+    - **Gestão de produtos:** Desenvolvimento e lançamento de novos produtos.
+    - **Outras áreas:** Recursos humanos, operações, etc.
+
 2. Criar estrutura do projeto no Figma de forma que cada tópico e subtópico tenha sua própria tela.
 
 ___________________________________________

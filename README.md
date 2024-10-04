@@ -19,7 +19,13 @@
 ![Burndown da Sprint 1](/imgs/burndown.png)
 > Gerado pelo burndownfortrello.com
 
+## Imagens:
+
+![Home](https://i.imgur.com/xoXRGoo.png)
+
 </center>
+
+
 
 
 # Backlog - Sprint 1

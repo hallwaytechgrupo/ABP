@@ -1,5 +1,7 @@
 
-# Backlog Sprint 1
+# Sprint 1
+
+## Entregas
 
 | ID | Tipo | Descrição | Prioridade | Status | Responsável | Pontuação total |
 |--|--|--|--|--|--|--|
@@ -8,11 +10,20 @@
 | [03](#rf-03) | RF | O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; | Baixa | ✅ Concluído | Ariel D. | 3 |
 | [04](#rf-04) | RF | O sistema deve manter um cadastro de questões, com alternativas verdadeira ou falsa, referentes aos tópicos apresentados nas páginas do portal; | Média | ✅ Concluído | Vinicius L. | 6 |
 | [05](#rf-05) | RF | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devem contemplar o tema abordado no tópico;| Média | ✅ Concluído | Christopher C., Vinícius L. | 3 |
-| [06](#rf-06) | RF | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões; | Alta | ✅ Concluído | Ariel D., Lucas M., Marcos O., Mário C., Reinaldo, Yan V. | 51 |
+| [06](#rf-06) | RF | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões; | Alta | ✅ Concluído | Ariel D., Christopher C., Lucas M., Marcos O., Mário C., Rodrigo, Yan V. | 51 |
+
+## Burndown:
+
+<center>
+
+![Burndown da Sprint 1](/imgs/burndown.png)
+> Gerado pelo burndownfortrello.com
+
+</center>
 
 
-# Backlog - Projeto
-
+# Backlog - Sprint 1
+## Requisito, Histórias de Usuário, DoD e Tarefas 
 <a name="rf-01"></a>
 
 ## 01 - Requisito Funcional

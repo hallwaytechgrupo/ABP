@@ -7,12 +7,14 @@
 
 ### Links úteis
 
-[![Figma](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=figma&message=Prot%C3%B3tipo)](https://www.figma.com/proto/JbO5zLjqOLSZqpVH2QZfXN/ABP-2024-2?node-id=0-1&t=4hfZRAhckQHi34pd-1) [![Requisitos_do_Cliente](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=gitbook&message=Requisitos%20do%20Cliente)](https://github.com/hallwaytechgrupo/ABP-2024-2/wiki/Requisitos-do-Cliente)
+#### Protótipo: 
+[![Figma](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=figma&message=Prot%C3%B3tipo)](https://www.figma.com/proto/JbO5zLjqOLSZqpVH2QZfXN/ABP-2024-2?node-id=0-1&t=4hfZRAhckQHi34pd-1)
 
+#### Sprint 1:
 [![Backlog - Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=readthedocs&message=Backlog%20Sprint%201)](https://github.com/hallwaytechgrupo/ABP-2024-2/tree/backlog-sprint-1) [![Retro - Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=readthedocs&message=Retrospectiva%20Sprint%201)](https://github.com/hallwaytechgrupo/ABP-2024-2/blob/backlog-sprint-1/retrospectiva-sprint-1.md)
 
-[![Backlog - Produto](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=readthedocs&message=Backlog%20do%20Produto)](https://github.com/hallwaytechgrupo/ABP-2024-2/tree/backlog) 
-
+#### Outros:
+[![Backlog - Produto](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=readthedocs&message=Backlog%20do%20Produto)](https://github.com/hallwaytechgrupo/ABP-2024-2/tree/backlog) [![Requisitos_do_Cliente](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=gitbook&message=Requisitos%20do%20Cliente)](https://github.com/hallwaytechgrupo/ABP-2024-2/wiki/Requisitos-do-Cliente)
 
 <hr />
 

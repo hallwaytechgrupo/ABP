@@ -31,11 +31,11 @@
 ### Sprints
 #### Sprint Atual: 1
 
-| Sprint | Backlog | Burndown | 
-|---|---|---|
-| Sprint 1 | [![Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=Backlog%20Sprint%201&color=blue&logo=readthedocs&message=Acessar)](https://github.com/hallwaytechgrupo/ABP-2024-2/tree/backlog-sprint-1)  | Link aqui |
-| Sprint 2 | [![Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=Backlog%20Sprint%202&color=red&logo=readthedocs&message=Indispon%C3%ADvel)](#) | Link aqui |
-| Sprint 3 | [![Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=Backlog%20Sprint%203&color=red&logo=readthedocs&message=Indispon%C3%ADvel)](#) | Link aqui |
+| Sprint | O que foi Entregue? | Backlog | Burndown | 
+|---|---|---|---|
+| Sprint 1 | Protótipo do Figma | [![Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=Backlog%20Sprint%201&color=blue&logo=readthedocs&message=Acessar)](https://github.com/hallwaytechgrupo/ABP-2024-2/tree/backlog-sprint-1)  | Link aqui |
+| Sprint 2 | A definir | [![Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=Backlog%20Sprint%202&color=red&logo=readthedocs&message=Indispon%C3%ADvel)](#) | Link aqui |
+| Sprint 3 | A definir | [![Sprint 1](https://img.shields.io/static/v1?style=for-the-badge&label=Backlog%20Sprint%203&color=red&logo=readthedocs&message=Indispon%C3%ADvel)](#) | Link aqui |
 
 ### Equipe
 | Função | Nome | GitHub |

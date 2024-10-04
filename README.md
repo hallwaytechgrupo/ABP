@@ -1,14 +1,14 @@
 
-# Backlog
+# Backlog Sprint 1
 
-| ID | Tipo | Descrição | Estimativa Total | Status | Responsável | Pontuação total |
+| ID | Tipo | Descrição | Prioridade | Status | Responsável | Pontuação total |
 |--|--|--|--|--|--|--|
-| [01](#rf-01) | RF | As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que, ao ser clicado, remete o usuário à seção correspondente;|  | ✅ Concluído | Christopher C. | 2 |
-| [02](#rf-02) | RF | O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail e senha;|  | ✅ Concluído | Ariel D. | 3 |
-| [03](#rf-03) | RF | O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; |  | ✅ Concluído | Ariel D. | 3 |
-| [04](#rf-04) | RF | O sistema deve manter um cadastro de questões, com alternativas verdadeira ou falsa, referentes aos tópicos apresentados nas páginas do portal; |  | ✅ Concluído | Vinicius L. | 6 |
-| [05](#rf-05) | RF | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devem contemplar o tema abordado no tópico;|  | ✅ Concluído | Christopher C., Vinícius L. | 3 |
-| [06](#rf-06) | RF | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões; |  | ✅ Concluído | Ariel D., Lucas M., Marcos O., Mário C., Reinaldo, Yan V. | 38 |
+| [01](#rf-01) | RF | As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que, ao ser clicado, remete o usuário à seção correspondente; | Baixa | ✅ Concluído | Christopher C. | 2 |
+| [02](#rf-02) | RF | O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail e senha;| Baixa | ✅ Concluído | Ariel D. | 3 |
+| [03](#rf-03) | RF | O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; | Baixa | ✅ Concluído | Ariel D. | 3 |
+| [04](#rf-04) | RF | O sistema deve manter um cadastro de questões, com alternativas verdadeira ou falsa, referentes aos tópicos apresentados nas páginas do portal; | Média | ✅ Concluído | Vinicius L. | 6 |
+| [05](#rf-05) | RF | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devem contemplar o tema abordado no tópico;| Média | ✅ Concluído | Christopher C., Vinícius L. | 3 |
+| [06](#rf-06) | RF | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões; | Alta | ✅ Concluído | Ariel D., Lucas M., Marcos O., Mário C., Reinaldo, Yan V. | 51 |
 
 
 # Backlog - Projeto
@@ -48,7 +48,7 @@ ___________________________________________
 
 ### **Tarefas:**
 01. Criar tela de registro de Usuário no Figma, utilizando o template base (com o menu fixo)
-    - **Estimativa:** 4
+    - **Estimativa:** 3
     - **Pontuação:** 3
     - **Responsável:** Ariel D
     - **Descrição:** A tela deve ter os campos de entrada de dados:
@@ -71,7 +71,7 @@ ___________________________________________
 
 ### **Tarefas:**
 01. Criar tela de login de Usuário no Figma, utilizando o template base (com o menu fixo)
-    - **Estimativa:** 4
+    - **Estimativa:** 3
     - **Pontuação:** 3
     - **Responsável:** Ariel D
     - **Descrição:** A tela deve ter os campos de entrada de dados:
@@ -86,13 +86,21 @@ ___________________________________________
 - O sistema deve manter um cadastro de questões, com alternativas verdadeira ou falsa, referentes aos tópicos apresentados nas páginas do portal;
 
 ### **Histórias de Usuário**
-- 
+- **Como** um visitante do site, **eu quero** a possibilidade de fazer um quiz no , **para que** eu possa testar meus conhecimentos e ter a possibilidade de ser aprovado para gerar um certificado.
 
 ### **DoD - Definition of Done**
-- 
+- 3 questões para cada módulo criada.
 
 ### **Tarefas:**
-- 
+01. Criar três perguntas verdadeiro ou falso, para o módulo 1.
+    - **Estimativa:** 2
+    - **Pontuação:** 2
+02. Criar três perguntas verdadeiro ou falso, para o módulo 2.
+    - **Estimativa:** 2
+    - **Pontuação:** 2
+03. Criar três perguntas verdadeiro ou falso, para o módulo 3.
+    - **Estimativa:** 2
+    - **Pontuação:** 2
 ___________________________________________
 
 <a name="rf-05"></a>
@@ -109,7 +117,7 @@ ___________________________________________
 
 ### **Tarefas:**
 01. Tela base (esqueleto) no Figma para o Quizz.
-    - **Estimativa:** 5
+    - **Estimativa:** 3
     - **Pontuação:** 3
     - **Responsável:** Vinícius L.
 
@@ -135,32 +143,95 @@ ___________________________________________
 
 ### **Tarefas:**
 1. Pesquisa de Conteúdo:
+
 	1.1 Página Inicial (Home)
+    - **Estimativa:** 5
+    - **Pontuação:** 5
+    - **Responsável:** Ariel D., Christopher C.
+    - **Descrição**: Criar página home, com um resumo sobre o que é Scrum para convencer o usuário a aprender, e no final da página ter uma chamada para começar o curso.
+
 	1.2 Módulo 1: Fundamentos do Scrum
-   - **O que é Scrum?** Definição, histórico e comparação com métodos tradicionais.
-   - **Princípios e Valores:** Explicação detalhada dos pilares e valores do Scrum.
-   - **Papéis do Scrum:** Product Owner, Scrum Master e Time de Desenvolvimento.
-   - **Artefatos do Scrum:** Product Backlog, Sprint Backlog e Incremento.
+    - **Estimativa:** 5
+    - **Pontuação:** 5
+    - **Responsável:** Lucas.
+    - **Descrição**: Criar Conteúdo para o Módulo 1 e abranger os seguintes tópicos:
+        - **O que é Scrum?** Definição, histórico e comparação com métodos tradicionais.
+        - **Princípios e Valores:** Explicação detalhada dos pilares e valores do Scrum.
+        - **Papéis do Scrum:** Product Owner, Scrum Master e Time de Desenvolvimento.
+        - **Artefatos do Scrum:** Product Backlog, Sprint Backlog e Incremento.
    
 	1.3 Módulo 2: Eventos do Scrum e Fluxo de Trabalho
-     - Sprint Planning: Detalhes sobre o planejamento de cada Sprint.
-     - Daily Scrum: Propósito e formato da reunião diária.
-     - Sprint Review: Demonstração do trabalho concluído e coleta de feedback.
-     - Sprint Retrospective: Melhoria contínua do processo.
-     - **Fluxo de Trabalho do Scrum:**
-     - Visualização do ciclo de vida de uma Sprint, desde o planejamento até a revisão.
+    - **Estimativa:** 5
+    - **Pontuação:** 5
+    - **Responsável:** Ariel D.
+    - **Descrição**: Criar Conteúdo para o Módulo 2 e abranger os seguintes tópicos:
+        - Sprint Planning: Detalhes sobre o planejamento de cada Sprint.
+        - Daily Scrum: Propósito e formato da reunião diária.
+        - Sprint Review: Demonstração do trabalho concluído e coleta de feedback.
+        - Sprint Retrospective: Melhoria contínua do processo.
+        - **Fluxo de Trabalho do Scrum:**
+            - Visualização do ciclo de vida de uma Sprint, desde o planejamento até a revisão.'
      
 	1.4 Módulo 3: Ferramentas e Áreas de Aplicação
-    - **Boards visuais:** Kanban, Scrum Board.
-    - **Ferramentas de gestão de projetos:** Jira, Trello, Asana.
-    - **Ferramentas de colaboração:** Slack, Microsoft Teams.
-    - **Ferramentas de versionamento:** Git.
-    - **Áreas de Aplicação do Scrum:**
-    - **Desenvolvimento de software:** Criação de aplicativos, sistemas e plataformas.
-    - **Marketing e design:** Gestão de projetos criativos e campanhas.
-    - **Gestão de produtos:** Desenvolvimento e lançamento de novos produtos.
-    - **Outras áreas:** Recursos humanos, operações, etc.
+    - **Estimativa:** 5
+    - **Pontuação:** 5
+    - **Responsável:** Rodrigo.
+    - **Descrição**: Criar Conteúdo para o Módulo 1 e abranger os seguintes tópicos:
+        - **Boards visuais:** Kanban, Scrum Board.
+        - **Ferramentas de gestão de projetos:** Jira, Trello, Asana.
+        - **Ferramentas de colaboração:** Slack, Microsoft Teams.
+        - **Ferramentas de versionamento:** Git.
+        - **Áreas de Aplicação do Scrum:**
+        - **Desenvolvimento de software:** Criação de aplicativos, sistemas e plataformas.
+        - **Marketing e design:** Gestão de projetos criativos e campanhas.
+        - **Gestão de produtos:** Desenvolvimento e lançamento de novos produtos.
+        - **Outras áreas:** Recursos humanos, operações, etc.
 
-2. Criar estrutura do projeto no Figma de forma que cada tópico e subtópico tenha sua própria tela.
+    1.5 Imagens para a Home, Módulo 1, 2 e 3.
+    - **Estimativa:** 2
+    - **Pontuação:** 2
+    - **Responsável:** Ariel D.
+    - **Descrição**: Criar imagens para as páginas mencionadas.
+
+2. Refinar o conteúdo das tarefas acima e revisar, de modo que o usuário possa aprender o básico e que os módulos estejam conectados (um complementar ao outro).
+
+	2.1 Módulo 1: Fundamentos do Scrum
+    - **Estimativa:** 2
+    - **Pontuação:** 2
+    - **Responsável:** Marcos V.
+    - **Descrição**: Revisar Conteúdo do Módulo 1, refinar de modo que o usuário possa aprender o básico e que os módulos estejam conectados (um complementar ao outro).
+
+    2.2 Módulo 1: Fundamentos do Scrum
+    - **Estimativa:** 2
+    - **Pontuação:** 2
+    - **Responsável:** Ariel D.
+    - **Descrição**: Revisar Conteúdo do Módulo 2, refinar de modo que o usuário possa aprender o básico e que os módulos estejam conectados (um complementar ao outro).
+
+    2.3 Módulo 1: Fundamentos do Scrum
+    - **Estimativa:** 2
+    - **Pontuação:** 2
+    - **Responsável:** Rodrigo.
+    - **Descrição**: Revisar Conteúdo do Módulo 3, refinar de modo que o usuário possa aprender o básico e que os módulos estejam conectados (um complementar ao outro).
+
+3. Criar estrutura do projeto no Figma de forma que cada tópico e subtópico tenha sua própria tela.
+
+	3.1 Módulo 1: Fundamentos do Scrum
+    - **Estimativa:** 5
+    - **Pontuação:** 5
+    - **Responsável:** Lucas.
+    - **Descrição**: Criar página no Figma para o Módulo 1 utilizando as tarefas do refinamento de conteúdo como base.
+   
+	3.2 Módulo 2: Eventos do Scrum e Fluxo de Trabalho
+    - **Estimativa:** 5
+    - **Pontuação:** 5
+    - **Responsável:** Ariel D.
+    - **Descrição**: Criar página no Figma para o Módulo 2 utilizando as tarefas do refinamento de conteúdo como base.
+     
+	3.3 Módulo 3: Ferramentas e Áreas de Aplicação
+    - **Estimativa:** 5
+    - **Pontuação:** 5
+    - **Responsável:** Rodrigo.
+    - **Descrição**: Criar página no Figma para o Módulo 1 utilizando as tarefas do refinamento de conteúdo como base.
+
 
 ___________________________________________

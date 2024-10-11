@@ -1,0 +1,82 @@
+#header {
+	display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 90px;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	background-color: #1e1e1e;
+	color: white;
+	height: auto;
+	z-index: 1000;
+}
+
+#header #logo {
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+	color: #1a66ba;
+	font-size: 32px;
+  font-weight: bold;
+}
+
+#header #links {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	gap: 30px;
+}
+
+#header #botoes {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: auto;
+	gap: 10px;
+}
+
+#header #botoes button {
+	background: #1a66ba;
+	width: 200px;
+	height: 48px;
+	border-radius: 8px;
+	color: white;
+	font-weight: bold;
+	border: none;
+}
+
+#footer {
+	display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;
+	bottom: 0;
+	width: 100%;
+	background-color: #1e1e1e;
+	color: white;
+	height: 160px;
+  gap: 30px;
+	padding: 30px 90px;
+
+}
+
+#footer #footerLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+#footer #footerLinks .sobre {
+  display: flex;
+  flex-direction: row;
+  gap: 100px
+}

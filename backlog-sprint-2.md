@@ -1,5 +1,9 @@
 
-# Sprint 1
+# Sprint 2
+
+## Links úteis
+[![Trello](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=trello&message=Trello)](https://trello.com/b/pvZsrUjm/sprint-02) 
+[![Website](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=htmx&message=Visitar%20Website)](https://hallwaytechgrupo.github.io/ABP-2024-2/) 
 
 ## Entregas
 
@@ -11,11 +15,6 @@
 | [05](#rf-05) | RF | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devem contemplar o tema abordado no tópico;| Média | 🔨 Em trabalho | Nome | 15 |
 | [06](#rf-06) | RF | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões; | Alta | 🔨 Em trabalho | Nome | 30 |
 | [09](#rf-09) | RF   | O sistema deve ser capaz de emitir o certificado de conclusão para os usuários que foram aprovados em todos os tópicos; | Baixa | ⏸️ Pendente | 5
-
-## Links úteis
-[![Trello](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=trello&message=Trello)](https://trello.com/b/pvZsrUjm/sprint-02) 
-[![Website](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=htmx&message=Visitar%20Website)](https://hallwaytechgrupo.github.io/ABP-2024-2/) 
-
 
 <center>
 

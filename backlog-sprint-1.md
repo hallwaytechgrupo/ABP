@@ -1,6 +1,10 @@
 
 # Sprint 1
 
+## Links úteis
+[![Trello](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=trello&message=Trello)](https://trello.com/b/DNJojiWv/sprint-01) 
+[![Website](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=htmx&message=Visitar%20Website)](https://hallwaytechgrupo.github.io/ABP-2024-2/) 
+
 ## Entregas
 
 | ID | Tipo | Descrição | Prioridade | Status | Responsável | Pontuação total |

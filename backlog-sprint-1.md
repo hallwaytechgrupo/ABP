@@ -16,32 +16,17 @@
 
 <center>
 
-![Burndown da Sprint 1](/imgs/burndown.png)
+![Burndown da Sprint 1](./content/sprint-01/imgs/burndown-sprint-1.png)
 > Gerado pelo burndownfortrello.com
 
 ## Imagens:
 
-### Home
-![Home](https://i.imgur.com/xoXRGoo.png)
-
-
-### Módulo 1
-![Imagem](https://i.imgur.com/xmAjo2f.png)
-
-### Módulo 2
-![Imagem](https://i.imgur.com/yqH9HPk.png)
-
-### Módulo 3
-![Imagem](https://i.imgur.com/iZdDKYg.png)
-
-### Certificado
-![Imagem](https://i.imgur.com/7V3GwiX.png)
-
+|  |  |  |
+|--|--|--|
+| ![Imagem](https://i.imgur.com/xmAjo2f.png) | ![Home](https://i.imgur.com/xoXRGoo.png) | ![Login](https://github.com/hallwaytechgrupo/ABP-2024-2/blob/main/content/sprint-02/figma/cadastro.png?raw=true) |
+| ![Imagem](https://i.imgur.com/yqH9HPk.png) | ![Imagem](https://i.imgur.com/iZdDKYg.png) | ![Imagem](https://i.imgur.com/7V3GwiX.png) |
 
 </center>
-
-
-
 
 # Backlog - Sprint 1
 ## Requisito, Histórias de Usuário, DoD e Tarefas 

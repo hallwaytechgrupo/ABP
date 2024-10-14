@@ -1,20 +1,92 @@
-#scrumPrincipal{
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-}
+/* GERAL */
 
-#imgScrumPrincipal{
-    width: 347px;
-    height: 450px;
-    border-radius: 5px;
+#geral{
+    padding: 10px 30px 10px 30px;
+    text-align: justify;
 }
-
-.text{
-    flex: 1;
+h3 {
+    padding: 15px 0 10px 0px;
+}
+p{
     text-align: justify;
 }
 
+/* PRIMEIRA PARTE DO SCRUM - SCRUM PRINCIPAL */
+
+#principal{
+    display: flex;
+    flex-direction: row;
+    gap: 30px; /* espaço entre img e texto */
+    padding: 10px 0 50px 0;
+}
+.textPrincipal{
+    text-indent: 56.7px;
+    line-height: 1.6; /* espaço entre as linhas */
+}
+.imgPrincipal{
+    width: 35%;
+    height: 380px;
+    border-radius: 10px;
+}
 
 
+/* SEGUNDA PARTE DO SCRUM - SCRUM VALUE */
 
+#imgWithTitleValue{
+    background-image: url('../img/modulo-01/DevTeamPrinc.jpg');
+    width: 100%;
+    height: 534px;
+    border-radius: 10px;
+}
+#titleValue{
+    width: 430px;
+    margin-left: 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding-top: 40px;
+}
+#textValue{
+    line-height: 1.6;
+    padding: 20px 0 50px 20px;
+}
+
+
+/* TERCEIRA PARTE DO SCRUM - SCRUM ROLES */
+
+#roles{
+    padding-bottom: 50px;
+}
+#titleRoles{
+    margin-bottom: 20px;
+}
+#textWithImgRoles{
+    display: flex;
+    gap: 30px;
+    line-height: 1.4;
+}
+#textWithImgRoles span{
+    display: block;
+    margin-top: 10px;
+}
+#imgRoles{
+    width: 30%;
+    height: 350px;
+    border-radius: 10px;
+}
+
+/* QUARTA PARTE DO SCRUM - SCRUM EVENTS */
+#textWithImgEvents{
+    display: flex;
+    gap: 30px;
+    line-height: 1.6;
+}
+#titleEvents{
+    margin-bottom: 30px;
+}
+#imgEvents{
+    width: 30%;
+    height: 340px;
+}
+#textEvents{
+    display: flex;
+    flex-direction: column;
+}

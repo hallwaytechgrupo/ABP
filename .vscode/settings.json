@@ -13,4 +13,5 @@
     },
     "workbench.colorTheme": "Halcyon",
     "workbench.iconTheme": "catppuccin-latte",
+    "liveServer.settings.port": 5501,
 }

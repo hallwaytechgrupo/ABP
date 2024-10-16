@@ -39,8 +39,9 @@
 	align-items: center;
 	width: auto;
 	gap: 10px;
+	
 }
-
+/* ID #botões não existe */
 #header #botoes button {
 	background: #1a66ba;
 	width: 200px;
@@ -49,6 +50,10 @@
 	color: white;
 	font-weight: bold;
 	border: none;
+	
+}
+#header button{
+	cursor: pointer;
 }
 
 #footer {

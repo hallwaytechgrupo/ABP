@@ -3,22 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/modulo1.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/components.css">
     <title>O que é Scrum?</title>
+
 </head>
 <body>
-    <h1>O que é Scrum?</h1>
-<div id="principal">
-        <div id="scrumTextWithImage">
-            <p class="firstParagraph"> O Scrum é um framework ágil utilizado para gerenciar e desenvolver produtos complexos, especialmente em ambientes de software. Criado na década de 1990 por Ken Schwaber e Jeff Sutherland, o Scrum surgiu como uma resposta às limitações dos métodos tradicionais de gerenciamento de projetos, como o modelo Waterfall. Enquanto os métodos tradicionais seguem um planejamento linear e sequencial, o Scrum adota uma abordagem iterativa e incremental, permitindo maior flexibilidade e adaptação às mudanças.</p>
-            <p class="secondParagraph">Para garantir a eficácia e aplicabiliade da metodologia de gerenciamento o Scrum se baseia em determinados Princípios e Valores, bem como deifine alguns papeis a serem definidos para que o processo tenha o controle e o encaminhamento necessário para o desenvolvimento amigável.</p>
-            <img src="imagensScrum2/ScrumHistory.jpg" alt="The History Of Scrum">
+<div id="componente-header"></div>
+<div class="container">
+    <div class="content">
+        <h1>O que é Scrum?</h1>
+    <div id="geral">
+        <div id="principal">
+            <div >
+                <p class="textPrincipal">O Scrum é um framework ágil utilizado para gerenciar e desenvolver produtos complexos, especialmente em ambientes de software. Criado na década de 1990 por Ken Schwaber e Jeff Sutherland, o Scrum surgiu como uma resposta às limitações dos métodos tradicionais de gerenciamento de projetos, como o modelo Waterfall. Enquanto os métodos tradicionais seguem um planejamento linear e sequencial, o Scrum adota uma abordagem iterativa e incremental, permitindo maior flexibilidade e adaptação às mudanças.</p>
+                <p class="textPrincipal">Para garantir a eficácia e aplicabiliade da metodologia de gerenciamento, o Scrum se baseia em determinados <a href="#textValue">Princípios e Valores</a>, bem como, define alguns <a href="#textWithImgRoles">Papeis</a> e <a href="#textWithImgEvents">Eventos</a> a serem definidos. Veremos mais nos tópicos abaixo.
+                </p>
+            </div>
+            <img class="imgPrincipal" src="img/modulo-01/ScrumHistory.jpg" alt="The History Of Scrum">
         </div>
     
-        <div id="scrumValue">
-            <div id="secondImageWithTitle">
-                <h2>Princípios e Valores do Scrum</h2>
-                <img src="imagensScrum2/DevTeamPrinc.jpg" alt="Dev Team">
+        <div id="value">
+            <div id="imgWithTitleValue">
+                <h2 id="titleValue">Princípios e Valores do Scrum</h2>
             </div>
+            <div id="textValue">
             <ul>
                 <h3>Os princípios dos Scrum são baseados em três pilares fundamentais:</h3>
                 <li><b>Transparência:</b> Todas as partes interessadas devem ter visibilidade sobre o progresso do projeto. Isso é feito através de artefatos como o backlog do produto e gráficos de burndown.</li>
@@ -31,41 +42,64 @@
                 <li><b>Abertura:</b> A equipe deve ser aberta a novas ideias e feedback.</li>
                 <li><b>Respeito:</b> Todos os membros da equipe devem ser respeitados mutuamente.</li>
             </ul>
+            </div>
         </div>
     
-        <div id="rolesScrum">
-            <h2>Papéis do Scrum</h2>
-            <h3>No Scrum, existem três papéis principais:</h3>
-            <p><b>- Product Owner:</b> Responsável por maximizar o valor do produto. Ele gerencia o backlog do produto, priorizando itens com base nas necessidades dos stakeholders. O Product Owner deve ter uma visão clara do que é mais valioso para os clientes.</p>
-            <p><b>- Scrum Master:</b> Atua como facilitador para a equipe. Ele remove impedimentos que possam atrapalhar o progresso da equipe e garante que as práticas do Scrum sejam seguidas. O Scrum Master também ajuda a promover um ambiente colaborativo.
+        <div id="roles">
+            <h2 id="titleRoles">Papéis do Scrum</h2>
+            <b>No Scrum, existem três papéis principais:</b>
+            
+            <div id="textWithImgRoles">
+            <p>
+            
+            <span><b>- Product Owner:</b> Responsável por maximizar o valor do produto. Ele gerencia o backlog do produto, priorizando itens com base nas necessidades dos stakeholders. O Product Owner deve ter uma visão clara do que é mais valioso para os clientes.</span>
+            <span><b>- Scrum Master:</b> Atua como facilitador para a equipe. Ele remove impedimentos que possam atrapalhar o progresso da equipe e garante que as práticas do Scrum sejam seguidas. O Scrum Master promove também um ambiente colaborativo.</span>
+            <span><b>- Dev Team:</b> Composto por profissionais multifuncionais que trabalham juntos para entregar incrementos do produto em cada Sprint. Este tempo é auto-organizado e responsável pela execução das tarefas.</span>
             </p>
-            <p><b>- Time de Desenvolvimento:</b> Composto por profissionais multifuncionais que trabalham juntos para entregar incrementos do produto em cada Sprint. Este tempo é auto-organizado e responsável pela execução das tarefas.
-            </p>
-            <img src="imagensScrum2/ProductOwner.jpg" alt="Product Owner">
+            <img id="imgRoles" src="img/modulo-01/ProductOwner.jpg" alt="Product Owner">
+            </div>
         </div>
     
-        <div id="scrumEvents">
-            <h2>Eventos do Scrum</h2>
+        <div id="events">
+            <h2 id="titleEvents">Eventos do Scrum</h2>
 
-            <img src="imagensScrum2/Sprint life.jpg" alt="Sprint Planning">
-            <p>Durante o processo do Scrum existem eventos essenciais para o desenvolvimento:</p>
-            <p><b>- Sprint;</b></p>
-            <p><b>- Sprint Planning;</b></p>
-            <p><b>- Daily Scrum;</b></p>
-            <p><b>- Sprint Review;</b></p>
-            <p><b>- Sprint Retrospective.</b></p>
-            <p>Como pode ser notado ao se falar dos eventos que compoem o processo de SCRUM, o que mais se fala é SPRINT, pois este é o coração de toda a metodologia do processo.</p>
-            <p>Fazendo desta temática um assunto complexo o suficiente para todo um módulo, detalhando as formas de uso e seus significado no processo.</p>
-
+            <div id="textWithImgEvents">
+                <img id="imgEvents" src="img/modulo-01/Sprint life.jpg" alt="Sprint Planning">
+                <p id="textEvents">Durante o processo do Scrum existem eventos essenciais para o desenvolvimento:
+                <b>- Sprint;</b>
+                <b>- Sprint Planning;</b>
+                <b>- Daily Scrum;</b>
+                <b>- Sprint Review;</b>
+                <b>- Sprint Retrospective.</b>
+                Como pode ser notado ao se falar dos eventos que compõem o processo de SCRUM, o que mais se fala é SPRINT, pois este é o coração de toda a metodologia do processo.
+                Fazendo desta temática um assunto complexo o suficiente para todo um módulo, detalhando as formas de uso e seus significado no processo.</p>
+            </div>
         </div>
+    </div>
+    </div>
+</div>  
+<div class="content-footer">
+    <a href="#" class="button">Home</a>
+    <p>Módulo 1</p>
+    <a href="#" class="button">Próximo Módulo</a>
+  </div>
+<div id="componente-footer"></div>
+<script>
+    feather.replace();
+  </script>
 
-        <div id="principalHeader">
-            <button id="home">Home</button>
+  <script>
+    fetch("./components/header.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("componente-header").innerHTML = data;
+      });
 
-            <span id="textModuloUm">Módulo 1</span>
-
-            <button id="proximoModulo">Próximo Módulo</button>
-        </div>
-</div>
+    fetch("./components/footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("componente-footer").innerHTML = data;
+      });
+  </script>
 </body>
 </html>

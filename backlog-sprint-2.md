@@ -9,12 +9,12 @@
 
 | ID | Tipo | Descrição | Prioridade | Status | Responsável | Pontuação total |
 |--|--|--|--|--|--|--|
-| [01](#rf-01) | RF | As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que, ao ser clicado, remete o usuário à seção correspondente; | Baixa | 🔨 Em trabalho | Nome | 6 |
-| [02](#rf-02) | RF | O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail e senha;| Baixa | 🔨 Em trabalho | Nome | 6 |
-| [03](#rf-03) | RF | O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; | Baixa | 🔨 Em trabalho | Nome | 6 |
-| [05](#rf-05) | RF | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devem contemplar o tema abordado no tópico;| Média | 🔨 Em trabalho | Nome | 15 |
-| [06](#rf-06) | RF | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões; | Alta | 🔨 Em trabalho | Nome | 30 |
-| [09](#rf-09) | RF   | O sistema deve ser capaz de emitir o certificado de conclusão para os usuários que foram aprovados em todos os tópicos; | Baixa | ⏸️ Pendente | 5
+| [01](#rf-01) | RF | As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que, ao ser clicado, remete o usuário à seção correspondente; | Baixa | 🔨 Em trabalho | Marcos | 6 |
+| [02](#rf-02) | RF | O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail e senha;| Baixa | 🔨 Em trabalho | Lucas | 6 |
+| [03](#rf-03) | RF | O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; | Lucas | 🔨 Em trabalho | Nome | 6 |
+| [05](#rf-05) | RF | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devem contemplar o tema abordado no tópico;| Média | 🔨 Em trabalho | Vinícius | 15 |
+| [06](#rf-06) | RF | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões; | Alta | 🔨 Em trabalho | Ariel, Christopher, Mário e Yan | 30 |
+| [09](#rf-09) | RF   | O sistema deve ser capaz de emitir o certificado de conclusão para os usuários que foram aprovados em todos os tópicos; | Baixa | ⏸️ Pendente | A definir | 5 |
 
 <center>
 
@@ -31,6 +31,14 @@
 
 ## 01 - Requisito Funcional
 - As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que, ao ser clicado, remete o usuário à seção correspondente.
+
+### **Diagramas de Caso de Uso:**
+
+![alt text](/content/sprint-02/uml/dcu-1-visitante.png)
+> Diagrama de Caso de Uso - Visitante
+
+![alt text](/content/sprint-02/uml/dcu-1-logado.png)
+> Diagrama de Caso de Uso - Usuário Logado
 
 ### **Histórias de Usuário:**
 - **Como** um visitante do site, **eu quero** um menu de fácil de navegação, entendimento, acessibilidade, **para que** eu possa acessar os conteúdos de forma rápida.
@@ -136,12 +144,13 @@ ___________________________________________
 ![image](./content/sprint-02/figma/questionario.png)
 
 ### **Tarefas:**
-**1, 2 e 3**. Criar o HTML do Questionário do Módulo 1, 2 e 3, com base no Figma.
+**1, 2 e 3**. Criar o HTML do Questionário do [Módulo 1 ✅](https://trello.com/c/rFTWGUAO), [Módulo 2 ✅](https://trello.com/c/tVUt2PJT) e [Módulo 3 ✅](https://trello.com/c/Y2dQZ5lq), com base no Figma.
     - **Estimativa:** 6 (2 cada)
     - **Pontuação:** 6 (2 cada)
     - **Responsável:** Vinícius
     - **Descrição:** Criar o respectivo HTML e subir no GitHub.
-**4, 5 e 6**. Criar o CSS do Questionário do Módulo 1, 2 e 3, com base no Figma.
+
+**4, 5 e 6**. Criar o CSS do Questionário do [Módulo 1 🔨](https://trello.com/c/GpEA7caF), [Módulo 2 🔨](https://trello.com/c/pnUGfaRD) e [Módulo 3 🔨](https://trello.com/c/d4IB6lRn), com base no Figma.
     - **Estimativa:** 9 (3 cada)
     - **Pontuação:** 9 (3 cada)
     - **Responsável:** A definir
@@ -178,16 +187,19 @@ ___________________________________________
     - **Pontuação:** 8 (2 cada)
     - **Responsável:** Módulo 1 - Ariel, Módulo 2 - Yan, Módulo 3 - Mário
     - **Descrição:** Criar HTML de cada página acima e subir no GitHub.
+
 3. Criar o CSS da Home, Módulo 1, 2 e 3, com base no Figma.
     - **Estimativa:** 12 (3 cada)
     - **Pontuação:** 12 (3 cada)
     - **Responsável:** Módulo 1 - A definir, Módulo 2 - A definir, Módulo 3 - A definir
     - **Descrição:** Criar o CSS e JS (se houver), das respectivas páginas e subir no GitHub.
+
 4. Criar imagens por IA ou pesquisar magens para colocar no Módulo 3.
     - **Estimativa:** 2
     - **Pontuação:** 2
     - **Responsável:** Ariel.
     - **Descrição:** As imagens devem ser colocadas no módulo 3, seguindo pedido do cliente.
+
 5. Utilizar as imagens da tarefa 3 e colocá-las no Módulo 3.
     - **Estimativa:** 2
     - **Pontuação:** 2

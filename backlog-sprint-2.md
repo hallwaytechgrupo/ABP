@@ -19,14 +19,14 @@
 <center>
 
 ## Burndown:
-![image](./content/sprint-02/burndown-11-10-2024.png)
-> Atualizado em 11/10/2024
+![image](./content/sprint-02/burndown-17-10-2024.png)
+> Atualizado em 17/10/2024
 
 </center>
 
 # Backlog - Sprint 2
 ## Requisito, Histórias de Usuário, DoD e Tarefas 
-- A sprint tem uma pontuação total de X pontos.
+- A sprint tem uma pontuação total de 70 pontos.
 <a name="rf-01"></a>
 
 ## 01 - Requisito Funcional
@@ -83,12 +83,12 @@ ___________________________________________
     - **Estimativa:** 2
     - **Pontuação:** 2
     - **Responsável:** Lucas.
-    - **Descrição:** -
+    - **Descrição:** Criar o respectivo HTML e subir no GitHub.
 2. Criar o CSS do Cadastro/Registro, com base no Figma.
     - **Estimativa:** 3
     - **Pontuação:** 3
-    - **Responsável:** A definir
-    - **Descrição:** -
+    - **Responsável:** Lucas
+    - **Descrição:** Criar o respectivo CSS, e JS (se houver) e subir no GitHub.
 ___________________________________________
 
 <a name="rf-03"></a>
@@ -111,12 +111,12 @@ ___________________________________________
     - **Estimativa:** 2
     - **Pontuação:** 2
     - **Responsável:** Lucas.
-    - **Descrição:** -
+    - **Descrição:** Criar o respectivo HTML e subir no GitHub.
 2. Criar o CSS do Login, com base no Figma.
     - **Estimativa:** 3
     - **Pontuação:** 3
-    - **Responsável:** A definir
-    - **Descrição:** -
+    - **Responsável:** Lucas.
+    - **Descrição:** Criar o respectivo CSS, JS (se houver), e subir no GitHub.
 
 ___________________________________________
 
@@ -140,12 +140,12 @@ ___________________________________________
     - **Estimativa:** 6 (2 cada)
     - **Pontuação:** 6 (2 cada)
     - **Responsável:** Vinícius
-    - **Descrição:** -
+    - **Descrição:** Criar o respectivo HTML e subir no GitHub.
 **4, 5 e 6**. Criar o CSS do Questionário do Módulo 1, 2 e 3, com base no Figma.
     - **Estimativa:** 9 (3 cada)
     - **Pontuação:** 9 (3 cada)
     - **Responsável:** A definir
-    - **Descrição:** -
+    - **Descrição:** Criar o respectivo CSS, js (se houver), e subir no GitHub.
 ___________________________________________
 
 <a name="rf-06"></a>
@@ -166,34 +166,33 @@ ___________________________________________
 - **RNF 04** - O curso deve seguir uma sequência lógica necessária para o aprendizado do Scrum.
 - O quizz não aparece para usuários não logados.
 
-
 ### **Tarefas:**
 1. Criar CSS Global para ser utilizado nas páginas.
     - **Estimativa:** 3
     - **Pontuação:** 3
-    - **Responsável:** A Definir.
+    - **Responsável:** Christopher C.
     - **Descrição:** A ideia do CSS Global é facilitar o desenvolvimento das páginas, nele deve estar especificado a fonte utilizada, cores, definição dos estilos de botões, etc.
 
 2. Criar o HTML da Home, Módulo 1, 2 e 3, com base no Figma.
     - **Estimativa:** 8 (2 cada)
     - **Pontuação:** 8 (2 cada)
     - **Responsável:** Módulo 1 - Ariel, Módulo 2 - Yan, Módulo 3 - Mário
-    - **Descrição:** -
+    - **Descrição:** Criar HTML de cada página acima e subir no GitHub.
 3. Criar o CSS da Home, Módulo 1, 2 e 3, com base no Figma.
     - **Estimativa:** 12 (3 cada)
     - **Pontuação:** 12 (3 cada)
     - **Responsável:** Módulo 1 - A definir, Módulo 2 - A definir, Módulo 3 - A definir
-    - **Descrição:** -
-4. Criar imagens por IA ou gerar imagens para colocar no Módulo 3.
+    - **Descrição:** Criar o CSS e JS (se houver), das respectivas páginas e subir no GitHub.
+4. Criar imagens por IA ou pesquisar magens para colocar no Módulo 3.
     - **Estimativa:** 2
     - **Pontuação:** 2
     - **Responsável:** Ariel.
-    - **Descrição:** -
+    - **Descrição:** As imagens devem ser colocadas no módulo 3, seguindo pedido do cliente.
 5. Utilizar as imagens da tarefa 3 e colocá-las no Módulo 3.
     - **Estimativa:** 2
     - **Pontuação:** 2
     - **Responsável:** A Definir.
-    - **Descrição:** -
+    - **Descrição:** Colocar as imagens no módulo 3 no Figma e no HTML.
 
 ___________________________________________
 
@@ -215,10 +214,10 @@ ___________________________________________
 1. Criar o HTML do Certificado, com base no Figma.
     - **Estimativa:** 2
     - **Pontuação:** 2
-    - **Responsável:** Lucas.
-    - **Descrição:** -
+    - **Responsável:** A Definir.
+    - **Descrição:** Criar HTML da página de certificado e subir no Git.
 2. Criar o CSS do Certificado, com base no Figma.
     - **Estimativa:** 3
     - **Pontuação:** 3
     - **Responsável:** A definir
-    - **Descrição:** -
+    - **Descrição:** Criar o CSS da página de certificado, se necessário, também o JS, e subir no GitHub.

@@ -202,6 +202,11 @@
 	gap: 10px;
 }
 
+.card-hover:hover, .cartao-beneficios:hover {
+	border: 1px solid #154D8F !important;
+	background-color: #377bc8 !important;
+}
+
 .scrum-beneficios .cartoes .cartao-beneficios .bold {
 	font-weight: bold;
 }

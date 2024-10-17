@@ -4,11 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HEADER</title>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/components.css" />
-    <link rel="stylesheet" href="./css/login.css" />
-
+    <script src="./scripts/auto-import-css.js"></script>
   </head>
   <body>
     <div id="componente-header"></div>    
@@ -30,38 +26,6 @@
       feather.replace();
     </script>
 
-    <script>
-      fetch("./components/header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("componente-header").innerHTML = data;
-        });
-
-      fetch("./components/footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("componente-footer").innerHTML = data;
-        });
-
-        fetch('login-modal.html')
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("componente-login").innerHTML = data;
-
-          const btnAbrirModal = document.getElementById('loginRegistrar');
-        const modal = document.getElementsByClassName('modal');
-        let status = 'closed';
-        btnAbrirModal.addEventListener('click', () => {
-          console.log("clicado")
-          console.log(modal)
-          console.log(modal.style)
-          modal[0].style.display = 'block';
-          status = 'open';
-        });
-
-      });
-
-        
-    </script>
+    <script src="./scripts/auto-import-components.js"></script>
   </body>
 </html>

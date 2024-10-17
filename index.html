@@ -4,10 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HallwayEducation - Introdução ao Scrum</title>
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/global.css" />
-    <link rel="stylesheet" href="./css/components.css" />
-    <link rel="stylesheet" href="./css/index.css" />
+    <script src="./scripts/auto-import-css.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
   </head>
   <body>
     <div id="componente-header"></div>
@@ -76,7 +74,7 @@
       <div class="imagem">
         <img class="img" src="./img/index/vantagens.jpg" alt="Scrum" />
       </div>
-      <div class="cartao">
+      <div class="cartao card-hover">
         <h2>Vantagem do Scrum</h2>
         <p>
           A principal vantagem do Scrum é a sua capacidade de responder a
@@ -152,18 +150,7 @@
       feather.replace();
     </script>
 
-    <script>
-      fetch("./components/header.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("componente-header").innerHTML = data;
-        });
+<script src="./scripts/auto-import-components.js"></script>
 
-      fetch("./components/footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("componente-footer").innerHTML = data;
-        });
-    </script>
   </body>
 </html>

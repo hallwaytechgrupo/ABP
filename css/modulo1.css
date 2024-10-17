@@ -11,25 +11,30 @@ p{
     text-align: justify;
 }
 
-/* PRIMEIRA PARTE DO SCRUM - SCRUM PRINCIPAL */
+/* PRIMEIRA PARTE DO SITE SCRUM */
 
 #principal{
     display: flex;
     flex-direction: row;
-    gap: 30px; /* espaço entre img e texto */
+    gap: 20px; /* espaço entre img e texto */
     padding: 10px 0 50px 0;
+}
+#principal > div {
+    flex: 1; /* Permite que o texto ocupe o espaço necessário */
 }
 .textPrincipal{
     text-indent: 56.7px;
     line-height: 1.6; /* espaço entre as linhas */
 }
-.imgPrincipal{
-    width: 35%;
-    height: auto;
+
+#imgPrincipal{
+    width: 100%;
+    height: 340px;
     border-radius: 10px;
     transition: transform 0.3s ease;
+    max-width: 300px; /* Limite opcional para evitar que a imagem cresça demais */
 }
-.imgPrincipal:hover{
+#imgPrincipal:hover{
     transform: scale(1.2); /* Ampliação de 20% */
 }
 
@@ -114,37 +119,49 @@ p{
         flex-direction: column; /* Muda para coluna em telas menores */
         align-items: center;
     }
-
-    .imgPrincipal, 
+    #imgPrincipal, 
     #imgRoles, 
     #imgEvents {
-        width: 80%; /* Aumenta a largura em relação ao container */
+        width: 100%; /* Aumenta a largura em relação ao container */
     }
-
+    .text{
+        font-size: 16px;
+    }
     #titleValue {
         width: 100%; /* Adapta a largura do título */
         margin-left: 0; /* Remove margem lateral */
         padding: 20px;
+    }
+    #titleValue, #titleRoles, #titleEvents {
+        font-size: 24px;
+    }
+    h1{
+        font-size: 28px;
     }
 }
 
 @media (max-width: 480px) {
     .textPrincipal {
         text-indent: 30px; /* Reduz indentação para telas bem pequenas */
-        font-size: 14px; /* Ajusta o tamanho da fonte */
     }
-
+    .text{
+        font-size: 14px;
+    }
     #imgWithTitleValue {
         height: 300px; /* Reduz a altura para telas pequenas */
     }
-
-    .imgPrincipal, 
+    #imgPrincipal, 
     #imgRoles, 
     #imgEvents {
-        width: 100%; /* Ocupa toda a largura disponível */
+        width: 80%; /* Ocupa toda a largura disponível */
     }
-
     #textValue {
         padding: 10px; /* Reduz espaço interno */
+    }
+    #titleValue, #titleRoles, #titleEvents {
+        font-size: 20px;
+    }
+    h1{
+        font-size: 24px;
     }
 }

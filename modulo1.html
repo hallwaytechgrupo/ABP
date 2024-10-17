@@ -3,12 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/modulo1.css">
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/components.css">
     <title>O que é Scrum?</title>
-
 </head>
 <body>
 <div id="componente-header"></div>
@@ -25,9 +20,10 @@
                 <img id="imgPrincipal" src="img/modulo-01/ScrumHistory.jpg" alt="The History Of Scrum">
         </div>
     
-        <div id="value">
-            <div id="imgWithTitleValue">
-                <h2 id="titleValue">Princípios e Valores do Scrum</h2>
+        <div id="scrumValue">
+            <div id="secondImageWithTitle">
+                <h2>Princípios e Valores do Scrum</h2>
+                <img src="imagensScrum2/DevTeamPrinc.jpg" alt="Dev Team">
             </div>
             <div id="textValue">
             <ul class="text">
@@ -42,7 +38,6 @@
                 <li><b>Abertura:</b> A equipe deve ser aberta a novas ideias e feedback.</li>
                 <li><b>Respeito:</b> Todos os membros da equipe devem ser respeitados mutuamente.</li>
             </ul>
-            </div>
         </div>
     
         <div id="roles">
@@ -56,12 +51,23 @@
             <span><b>- Scrum Master:</b> Atua como facilitador para a equipe. Ele remove impedimentos que possam atrapalhar o progresso da equipe e garante que as práticas do Scrum sejam seguidas. O Scrum Master promove também um ambiente colaborativo.</span>
             <span><b>- Dev Team:</b> Composto por profissionais multifuncionais que trabalham juntos para entregar incrementos do produto em cada Sprint. Este tempo é auto-organizado e responsável pela execução das tarefas.</span>
             </p>
-            <img id="imgRoles" src="img/modulo-01/ProductOwner.jpg" alt="Product Owner">
-            </div>
+            <p><b>- Time de Desenvolvimento:</b> Composto por profissionais multifuncionais que trabalham juntos para entregar incrementos do produto em cada Sprint. Este tempo é auto-organizado e responsável pela execução das tarefas.
+            </p>
+            <img src="imagensScrum2/ProductOwner.jpg" alt="Product Owner">
         </div>
     
-        <div id="events">
-            <h2 id="titleEvents">Eventos do Scrum</h2>
+        <div id="scrumEvents">
+            <h2>Eventos do Scrum</h2>
+
+            <img src="imagensScrum2/Sprint life.jpg" alt="Sprint Planning">
+            <p>Durante o processo do Scrum existem eventos essenciais para o desenvolvimento:</p>
+            <p><b>- Sprint;</b></p>
+            <p><b>- Sprint Planning;</b></p>
+            <p><b>- Daily Scrum;</b></p>
+            <p><b>- Sprint Review;</b></p>
+            <p><b>- Sprint Retrospective.</b></p>
+            <p>Como pode ser notado ao se falar dos eventos que compoem o processo de SCRUM, o que mais se fala é SPRINT, pois este é o coração de toda a metodologia do processo.</p>
+            <p>Fazendo desta temática um assunto complexo o suficiente para todo um módulo, detalhando as formas de uso e seus significado no processo.</p>
 
             <div id="textWithImgEvents">
                 <img id="imgEvents" src="img/modulo-01/Sprint life.jpg" alt="Sprint Planning">
@@ -75,31 +81,14 @@
                 Fazendo desta temática um assunto complexo o suficiente para todo um módulo, detalhando as formas de uso e seus significado no processo.</p>
             </div>
         </div>
-    </div>
-    </div>
-</div>  
-<div class="content-footer">
-    <a href="#" class="button">Home</a>
-    <p>Módulo 1</p>
-    <a href="#" class="button">Próximo Módulo</a>
-  </div>
-<div id="componente-footer"></div>
-<script>
-    feather.replace();
-  </script>
 
-  <script>
-    fetch("./components/header.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("componente-header").innerHTML = data;
-      });
+        <div id="principalHeader">
+            <button id="home">Home</button>
 
-    fetch("./components/footer.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("componente-footer").innerHTML = data;
-      });
-  </script>
+            <span id="textModuloUm">Módulo 1</span>
+
+            <button id="proximoModulo">Próximo Módulo</button>
+        </div>
+</div>
 </body>
 </html>

@@ -57,7 +57,7 @@ border: 1px solid var(--btn-hover );
 }
 
 button:hover, .button:hover {
-  background: var(--btn-hover);
+  background: var(--btn-hover) !important;
   color: var(--font-color) !important;
 	font-weight: 500;
   border: 1px solid var(--primary-color);
@@ -85,10 +85,41 @@ button:hover, .button:hover {
 
 .content-footer {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
 
 .content-footer a {
   margin: 20px;
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    margin: 30px 20px 30px 20px;
+  }
+
+  .content-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    margin: 30px 50px 30px 50px;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  right: 10%;
+  /* transform: translate(-50%, -50%); */
+  /* padding: 20px; */
+  z-index: 999;
 }

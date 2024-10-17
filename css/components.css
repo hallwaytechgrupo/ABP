@@ -1,7 +1,11 @@
+#logout {
+	display: none;
+}
+
 #header {
 	display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 	align-items: center;
 	justify-content: space-between;
 	padding: 10px 90px;
@@ -12,6 +16,7 @@
 	color: white;
 	height: auto;
 	z-index: 1000;
+	gap: 30px;
 }
 
 #header #logo {
@@ -19,7 +24,7 @@
 	align-items: center;
 	padding-left: 20px;
 	color: #1a66ba;
-	font-size: 32px;
+	font-size: 21px;
   font-weight: bold;
 }
 
@@ -35,22 +40,22 @@
 
 #header #botoes {
 	display: flex;
+	flex-wrap: wrap;
 	flex-direction: row;
 	align-items: center;
+	justify-content: center;
 	width: auto;
 	gap: 10px;
-	
 }
 /* ID #botões não existe */
 #header #botoes button {
 	background: #1a66ba;
-	width: 200px;
-	height: 48px;
+	width: auto !important;
 	border-radius: 8px;
 	color: white;
 	font-weight: bold;
 	border: none;
-	
+	cursor: pointer;
 }
 #header button{
 	cursor: pointer;
@@ -85,3 +90,50 @@
   flex-direction: row;
   gap: 100px
 }
+
+@media (max-width: 768px) {
+	#header {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		justify-content: center;
+	}
+
+	#header > #logo > div {
+		display: none !important;
+	}
+}
+
+
+@media (max-width: 640px) {
+	#header {
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+    justify-content: center;
+	}
+
+	#header > #logo > div {
+		display: none !important;
+	}
+}
+
+
+@media (max-width: 480px) {
+	#header, #footer {
+		padding: 10px 20px;
+	}
+	#header > #logo > div {
+		display: none !important;
+	}
+
+	#footer #footerLinks {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
+}
+

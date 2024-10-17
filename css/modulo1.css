@@ -1,7 +1,7 @@
 /* GERAL */
 
 #geral{
-    padding: 10px 30px 10px 30px;
+    padding: 10px 15px;
     text-align: justify;
 }
 h3 {
@@ -40,7 +40,10 @@ p{
     width: 100%;
     height: 534px;
     border-radius: 10px;
+    background-size: cover; /* ajusta a imagem para cobrir o container */
+    background-position: center; /* centraliza a imagem */
 }
+
 #titleValue{
     width: 430px;
     margin-left: 20px;
@@ -100,4 +103,48 @@ p{
 #textEvents{
     display: flex;
     flex-direction: column;
+}
+
+/* Ajuste para responsividade */
+
+@media (max-width: 768px) {
+    #principal,
+    #textWithImgRoles,
+    #textWithImgEvents {
+        flex-direction: column; /* Muda para coluna em telas menores */
+        align-items: center;
+    }
+
+    .imgPrincipal, 
+    #imgRoles, 
+    #imgEvents {
+        width: 80%; /* Aumenta a largura em relação ao container */
+    }
+
+    #titleValue {
+        width: 100%; /* Adapta a largura do título */
+        margin-left: 0; /* Remove margem lateral */
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .textPrincipal {
+        text-indent: 30px; /* Reduz indentação para telas bem pequenas */
+        font-size: 14px; /* Ajusta o tamanho da fonte */
+    }
+
+    #imgWithTitleValue {
+        height: 300px; /* Reduz a altura para telas pequenas */
+    }
+
+    .imgPrincipal, 
+    #imgRoles, 
+    #imgEvents {
+        width: 100%; /* Ocupa toda a largura disponível */
+    }
+
+    #textValue {
+        padding: 10px; /* Reduz espaço interno */
+    }
 }

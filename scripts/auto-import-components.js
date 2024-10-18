@@ -41,4 +41,25 @@ fetch('./components/login.html')
         fecharModal();
       }
     });
+
+    const cadastro = document.getElementById('cadastro-tab');
+    const login = document.getElementById('login-tab');
+
+    console.log('cadastro', cadastro);
+
+    cadastro.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.getElementById('cadastro-tab-content').style.display = 'block';
+      document.getElementById('login-tab-content').style.display = 'none';
+      login.classList.remove('active');
+      cadastro.classList.add('active');
+    });
+
+    login.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.getElementById('cadastro-tab-content').style.display = 'none';
+      document.getElementById('login-tab-content').style.display = 'block';
+      cadastro.classList.remove('active');
+      login.classList.add('active');
+    });
   });

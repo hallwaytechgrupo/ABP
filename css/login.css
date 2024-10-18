@@ -51,6 +51,16 @@
 
 }
 
+.cadastro-container {
+	display: none;
+	padding: 20px;
+	border-radius: 0px 0px 12px 12px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 300px;
+	text-align: center;
+	background-color: white;
+}
+
 .h1-login {
 	font-size: 24px;
 	margin-bottom: 10px;

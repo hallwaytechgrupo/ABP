@@ -4,11 +4,10 @@
 
 #header {
 	display: flex;
-  flex-direction: row;
-  /* flex-wrap: wrap; */
+    flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	padding: 10px 90px;
+	padding: 1% 1%;
 	position: sticky;
 	top: 0;
 	width: 100%;
@@ -17,6 +16,7 @@
 	height: auto;
 	z-index: 1000;
 	gap: 30px;
+	max-height: 70px;
 }
 
 #header #logo {
@@ -25,13 +25,12 @@
 	padding-left: 20px;
 	color: #1a66ba;
 	font-size: 21px;
-  font-weight: bold;
+    font-weight: bold;
 }
 
 #header #links {
 	display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
 	width: auto;
@@ -63,18 +62,20 @@
 
 #footer {
 	display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
 	justify-content: center;
 	align-items: flex-end;
 	bottom: 0;
 	width: 100%;
 	background-color: #1e1e1e;
 	color: white;
-	height: 160px;
-  gap: 30px;
-	padding: 30px 90px;
-
+    gap: 20%;
+	padding: 1%;
+	max-height: 80px;
+}
+#footerMeta {
+    padding-top: 1%;
 }
 
 #footer #footerLinks {
@@ -88,13 +89,10 @@
 #footer #footerLinks .sobre {
   display: flex;
   flex-direction: row;
-  gap: 100px
 }
 
 @media (max-width: 768px) {
 	#header {
-		display: flex;
-		flex-wrap: wrap;
 		align-content: center;
 		justify-content: center;
 	}
@@ -107,21 +105,15 @@
 
 @media (max-width: 640px) {
 	#header {
-		display: flex;
-		flex-wrap: wrap;
 		align-content: center;
-    justify-content: center;
-	}
-
-	#header > #logo > div {
-		display: none !important;
+    	justify-content: center;
 	}
 }
 
 
 @media (max-width: 480px) {
 	#header, #footer {
-		padding: 10px 20px;
+		padding: 1% 1%;
 	}
 	#header > #logo > div {
 		display: none !important;

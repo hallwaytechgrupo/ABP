@@ -1,0 +1,100 @@
+
+      body {
+        background-color: #6a0dad;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+      }
+      .quiz-container {
+        background-color: white;
+        border-radius: 15px;
+        padding: 50px;
+        max-width: 400px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      .custom-line {
+    border: none;
+    border-top: 2px solid #000080; /* Cor azul marinho */
+    margin-top: 10px; /* Espaçamento acima */
+    width: 100%; /* Ajustar conforme necessário */
+      }
+
+      .quiz-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+        width: 10%; /* Ajustar conforme necessário */
+      }
+      .question h4 {
+        text-align: left;
+        border: none;
+        border-bottom: 5px solid #000080; /* Cor azul marinho */
+        margin-top: 10px; /* Espaçamento acima */
+        width: 100%; /* Ajustar conforme necessário */
+       }
+      .question h2 {
+        font-size: 2.0em;
+      }
+      .hr {
+        border: none;
+        border-top: 2px solid #ccc;
+        margin-top: 10px;
+      }
+      .quiz-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .true-button,
+      .false-button {
+        width: 100%;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 8px;
+        background-color: white;
+        cursor: pointer;
+      }
+
+      .true-button {
+        border: 2px solid red;
+        color: red;
+      }
+
+      .false-button {
+        border: 2px solid green;
+        color: green;
+      }
+      .true-button:hover,
+      .false-button:hover {
+        background-color: #f0f0f0;
+      }
+      .options button {
+        background-color: #008cba;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        width: 100%;
+        margin-top: 30px;
+        cursor: pointer;
+      }
+      .options {
+        display: flex;
+        gap: 80px;
+      }
+      .questao {
+    white-space: nowrap;
+}
+      .question button {
+        display: flex;
+      }
+      .options button:hover {
+        background-color: #005f73;
+      }
+    

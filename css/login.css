@@ -87,6 +87,11 @@ input {
 	border-radius: 5px;
 }
 
+input:focus {
+	outline: none;
+	border: 2px solid #007bff;
+}
+
 /* button {
 	width: 100%;
 	padding: 10px;

@@ -117,7 +117,7 @@ button:hover, .button:hover {
 
 .modal {
   display: none;
-  position: fixed;
+  position: absolute;
   right: 10%;
   /* transform: translate(-50%, -50%); */
   /* padding: 20px; */

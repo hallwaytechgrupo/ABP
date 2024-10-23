@@ -1,0 +1,39 @@
+Revisão para prova 2 - Engenharia de Software
+
+Doc. capitulo 12 - ciclo de vida de sistemas tradicional:
+Análise de sistema > Projeto de sistema > Programação > Teste > Conversão > Produção e manutenção
+
+Doc. 60 a 63 Exemplos de requisitos;
+
+Doc. UML - linguagem de modelagem unificada:
+diagramas com bonecos (programa Astah)
+(Ator / Caso de uso / Comunicação - (user story)
+Diagrama de caso de uso (com vários atores e requisitos);
+
+Doc. A Engenharia de requisitos é definida como: 
+Gerenciamento dos Requisitos:
+Elicitação dos Reqisitos > Análise e Negociação dos Requisitos > Documentação dos Requisitos > Veriicação dos Requisitos > Validação dos Requisitos;
+
+Doc. PMI (no Scrum esse gerenciamento fica por conta do Scrum Master)
+Gerenciamento de integração:
+Equipe de desenvolvimento; proprietários; gestor de projetos; Se a equipe está treinada, se tem recursos, se os proprietários estão de acordo com o projeto, se o cliente está de acordo que alguém da equipe vá falar com ele; 
+Gerenciamento de Escopo; 
+Gerenciamento de Custos; 
+Gerenciamento de Qualidade;
+Gerenciamento de Aquisições; 
+Gerenciamento de Recursos; 
+Gerenciamento de Comunicações; 
+Gerenciamento de Risco; 
+Gerenciamento de Cronograma; 
+Gerenciamento das Partes Interessadas.
+
+Doc. CMMI - CMMI (Capability Maturity Model Integration) é um modelo de melhoria de processos que ajuda empresas a avaliar e aperfeiçoar a qualidade e eficiência de seus processos.
+Qual é a ideia do CMMI? Níveis de maturidade.
+- Nível 1 - Inicial; 
+- Nivel 2 - Gerenciado;
+- Nível 3 - Definido;
+- Nível 4 - Gerenciado Quantitativamente;
+- Nível 5 - Otimização.
+
+
+

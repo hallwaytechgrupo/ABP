@@ -9,6 +9,33 @@ function importarComponente(componentPath, elementId, callback) {
 }
 
 importarComponente('components/header.html', 'componente-header');
+
+if (document.getElementById('componente-cta-quiz')) {
+  importarComponente('components/cta.html', 'componente-cta-quiz');
+}
+
+importarComponente('components/quiz.html', 'componente-quiz', () => {
+  console.log("injetei!")
+  const btnAbrirModal = document.getElementById('start-quiz');
+  console.log(btnAbrirModal, "botao")
+  const modal = document.querySelector('.modal-quiz');
+  console.log("achou/:",)
+  let status = 'closed';
+
+  btnAbrirModal.addEventListener('click', () => {
+    console.log('clicado');
+    modal.style.display = 'block';
+    status = 'open';
+    document.querySelector('.container').style.filter = 'blur(10px)';
+  });
+
+  function fecharModal() {
+    modal.style.display = 'none';
+  }
+
+});
+
+
 importarComponente('components/footer.html', 'componente-footer');
 importarComponente('components/login.html', 'componente-login', () => {
   const btnAbrirModal = document.getElementById('loginRegistrar');

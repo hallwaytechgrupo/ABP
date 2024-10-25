@@ -14,6 +14,7 @@ const linksCss = [
   './css/global.css',
   './css/components.css',
   './css/login.css',
+  'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined',
 ];
 
 incluirLinksCss(linksCss);

@@ -109,19 +109,17 @@
     gap: 3px;
 }
 
-#footerDisplayNone{
-	display: flex;
-	flex-direction: column;
-	line-height: 1.5;
-}
-
 #sobreP{
 	padding: 2% 5% 2% 5%;
 	text-indent: 50px;
+	line-height: 1.5;
+	display: none;
 }
 
 #suporteP{
 	padding: 2% 5% 2% 17.2%;
+	line-height: 1.5;
+	display: none;
 }
 
 .footerLogos{
@@ -132,6 +130,7 @@
 #localizacaoP{
 	line-height: 3;
 	text-align: center;
+	display: none;
 }
 
 #localizacaoP p{
@@ -148,26 +147,6 @@
     padding-top: 5%;
 	
 }
-
-/* OCULTANDO ITENS */
-
-.containerSobre{
-	display: none;
-}
-
-#suporteP{
-	display: none;
-}
-
-#localizacaoP{
-	display: none;
-}
-
-
-
-
-
-
 
 
 

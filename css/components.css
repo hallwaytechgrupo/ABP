@@ -46,7 +46,7 @@
 	width: auto;
 	gap: 10px;
 }
-/* ID #botões não existe */
+
 #header #botoes button {
 	background: #1a66ba;
 	width: auto !important;
@@ -60,6 +60,8 @@
 	cursor: pointer;
 }
 
+/* INICIO DO FOOTER */
+
 #footer {
 	display: flex;
     flex-direction: row;
@@ -68,28 +70,108 @@
 	align-items: flex-end;
 	bottom: 0;
 	width: 100%;
+	height: 100%;
 	background-color: #1e1e1e;
 	color: white;
     gap: 20%;
 	padding: 1%;
-	max-height: 80px;
+	max-height: 1000px;
 }
-#footerMeta {
-    padding-top: 1%;
-}
+
+
 
 #footer #footerLinks {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
+  	display: flex;
+  	flex-direction: row;
+	align-items: center;
+  	justify-content: space-between;
+  	width: 100%;
 }
 
-#footer #footerLinks .sobre {
-  display: flex;
-  flex-direction: row;
+#primaryFooterLinks{
+  	display: flex;
+    flex-direction: row;
+	padding-left: 5%;
+    gap: 100px;
+	
 }
+
+#primaryFooterLinks button{
+	background-color: #1e1e1e;
+    border: none;
+	cursor: pointer;
+}
+
+#gitProjeto {
+    display: flex;
+    align-items: center;
+	padding-right: 5%; 
+    gap: 3px;
+}
+
+#footerDisplayNone{
+	display: flex;
+	flex-direction: column;
+	line-height: 1.5;
+}
+
+#sobreP{
+	padding: 2% 5% 2% 5%;
+	text-indent: 50px;
+}
+
+#suporteP{
+	padding: 2% 5% 2% 17.2%;
+}
+
+.footerLogos{
+	width: 25px;
+	height: 25px;
+}
+
+#localizacaoP{
+	line-height: 3;
+	text-align: center;
+}
+
+#localizacaoP p{
+	text-align: center;
+}
+
+#localizacaoP a{
+	color: rgb(71, 71, 221);
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#footerMeta {
+    padding-top: 5%;
+	
+}
+
+/* OCULTANDO ITENS */
+
+.containerSobre{
+	display: none;
+}
+
+#suporteP{
+	display: none;
+}
+
+#localizacaoP{
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 768px) {
 	#header {

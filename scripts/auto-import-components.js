@@ -100,7 +100,7 @@ function sobreFunction() {
       footerMeta.style.paddingTop = '2%'
   } else {
       sobreP.style.display = 'none';
-      footerMeta.style.paddingTop = '10%'
+      footerMeta.style.paddingTop = '5%'
   }
 }
 
@@ -118,7 +118,7 @@ function suporteFunction() {
 
   } else {
       suporteP.style.display = 'none';
-      footerMeta.style.paddingTop = '10%'
+      footerMeta.style.paddingTop = '5%'
   }
 }
 
@@ -135,6 +135,6 @@ function localizacaoFunction() {
       footerMeta.style.paddingTop = '2%'
   } else {
       localizacaoP.style.display = 'none';
-      footerMeta.style.paddingTop = '10%'
+      footerMeta.style.paddingTop = '5%'
   }
 }

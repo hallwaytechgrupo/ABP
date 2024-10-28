@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
 #logout {
 	display: none;
 }
@@ -64,26 +66,19 @@
 
 #footer {
 	display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-	justify-content: center;
-	align-items: flex-end;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
+    flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
 	background-color: #1e1e1e;
 	color: white;
-    gap: 20%;
-	padding: 1%;
-	max-height: 1000px;
+	width: 100%;
+	padding: 2%;
+	gap: 20%;
 }
 
-
-
-#footer #footerLinks {
+#footerLinks {
   	display: flex;
   	flex-direction: row;
-	align-items: center;
   	justify-content: space-between;
   	width: 100%;
 }
@@ -92,13 +87,10 @@
   	display: flex;
     flex-direction: row;
 	padding-left: 5%;
-    gap: 100px;
-	
+    gap: 75px;
 }
 
-#primaryFooterLinks button{
-	background-color: #1e1e1e;
-    border: none;
+#primaryFooterLinks .SSL{
 	cursor: pointer;
 }
 
@@ -110,16 +102,23 @@
 }
 
 #sobreP{
-	padding: 2% 5% 2% 5%;
+	padding: 2% 5%;
 	text-indent: 50px;
 	line-height: 1.5;
 	display: none;
+
+	animation: fadeIn;
+	animation-duration: 3s;
 }
 
 #suporteP{
-	padding: 2% 5% 2% 17.2%;
+	padding: 2% 5%;
 	line-height: 1.5;
 	display: none;
+	text-align: center;
+
+	animation: fadeIn;
+	animation-duration: 3s;
 }
 
 .footerLogos{
@@ -128,29 +127,27 @@
 }
 
 #localizacaoP{
-	line-height: 3;
-	text-align: center;
+	padding: 2% 5%;
+	line-height: 2;
 	display: none;
-}
-
-#localizacaoP p{
 	text-align: center;
+
+	animation: fadeIn;
+	animation-duration: 3s;
 }
 
 #localizacaoP a{
-	color: rgb(71, 71, 221);
+	color: #4747dd; 
 	font-weight: bold;
 	text-decoration: none;
 }
 
-#footerMeta {
-    padding-top: 5%;
-	
+#footerMeta{
+	padding-top: 10%;
 }
 
 
-
-
+/* RESPONSIVIDADE */
 
 @media (max-width: 768px) {
 	#header {

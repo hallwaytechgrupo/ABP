@@ -85,31 +85,56 @@ importarComponente('components/login.html', 'componente-login', () => {
 });
 
 
-
+// INÍCIO DO SCRIPT USADO NO FOOTER 
 
 function sobreFunction() {
-  const sobreP = document.getElementById('sobreP');
-  if (sobreP.style.display === 'none') {
-      sobreP.style.display = 'block';
+  const sobreP = document.getElementById('sobreP');                  
+  const suporteP = document.getElementById('suporteP');
+  const localizacaoP = document.getElementById('localizacaoP');
+  const footerMeta = document.getElementById('footerMeta');             
+
+  if (sobreP.style.display === 'none' || !sobreP.style.display) {
+      sobreP.style.display = 'block';      
+      suporteP.style.display = 'none';
+      localizacaoP.style.display = 'none';
+      footerMeta.style.paddingTop = '2%'
   } else {
       sobreP.style.display = 'none';
+      footerMeta.style.paddingTop = '10%'
   }
 }
 
 function suporteFunction() {
-  const suporteP = document.getElementById('suporteP');
-  if (suporteP.style.display === 'none') {
+  const suporteP = document.getElementById('suporteP');      
+  const sobreP = document.getElementById('sobreP');                              
+  const localizacaoP = document.getElementById('localizacaoP');
+  const footerMeta = document.getElementById('footerMeta');  
+
+  if (suporteP.style.display === 'none' || !suporteP.style.display) {
       suporteP.style.display = 'block';
+      sobreP.style.display = 'none';
+      localizacaoP.style.display = 'none'
+      footerMeta.style.paddingTop = '2%'
+
   } else {
       suporteP.style.display = 'none';
+      footerMeta.style.paddingTop = '10%'
   }
 }
 
 function localizacaoFunction() {
   const localizacaoP = document.getElementById('localizacaoP');
-  if (localizacaoP.style.display === 'none') {
+  const sobreP = document.getElementById('sobreP');
+  const suporteP = document.getElementById('suporteP');
+  const footerMeta = document.getElementById('footerMeta'); 
+  
+  if (localizacaoP.style.display === 'none' || !localizacaoP.style.display) {
       localizacaoP.style.display = 'block';
+      sobreP.style.display = 'none';      
+      suporteP.style.display = 'none';
+      footerMeta.style.paddingTop = '2%'
   } else {
       localizacaoP.style.display = 'none';
+      footerMeta.style.paddingTop = '10%'
   }
 }

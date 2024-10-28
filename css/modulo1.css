@@ -16,7 +16,7 @@ p{
 #principal{
     display: flex;
     flex-direction: row;
-    gap: 20px; /* espaço entre img e texto */
+    gap: 20px;
     padding: 10px 0 50px 0;
 }
 #principal > div {
@@ -25,7 +25,7 @@ p{
 .textPrincipal{
     text-indent: 56.7px;
     margin-top: 2px;
-    line-height: 1.6; /* espaço entre as linhas */
+    line-height: 1.6; 
 }
 #imgPrincipal{
     width:100%;
@@ -37,6 +37,19 @@ p{
 #imgPrincipal:hover{
     transform: scale(1.2); /* Ampliação de 20% */
 }
+
+.linksInText{
+    color: #4747dd;
+    font-weight: bolder;
+}
+
+.linksInText:hover{
+    color: #fa7d2f;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+
 
 /* SEGUNDA PARTE - SCRUM VALUE */
 

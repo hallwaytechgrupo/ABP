@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+  "biomejs.biome",
+  "esbenp.prettier-vscode",
+  "pranaygp.vscode-css-peek",
+  "ecmel.vscode-html-css",
+  "formulahendry.auto-rename-tag",
+],
+}

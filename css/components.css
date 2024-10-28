@@ -1,0 +1,189 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css');
+
+#logout {
+	display: none;
+}
+
+#header {
+	display: flex;
+    flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding: 1% 1%;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	background-color: #1e1e1e;
+	color: white;
+	height: auto;
+	z-index: 1000;
+	gap: 30px;
+	max-height: 70px;
+}
+
+#header #logo {
+	display: flex;
+	align-items: center;
+	padding-left: 20px;
+	color: #1a66ba;
+	font-size: 21px;
+    font-weight: bold;
+}
+
+#header #links {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: auto;
+	gap: 30px;
+}
+
+#header #botoes {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	width: auto;
+	gap: 10px;
+}
+
+#header #botoes button {
+	background: #1a66ba;
+	width: auto !important;
+	border-radius: 8px;
+	color: white;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+}
+#header button{
+	cursor: pointer;
+}
+
+/* INICIO DO FOOTER */
+
+#footer {
+	display: flex;
+    flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	background-color: #1e1e1e;
+	color: white;
+	width: 100%;
+	padding: 2%;
+	gap: 20%;
+}
+
+#footerLinks {
+  	display: flex;
+  	flex-direction: row;
+  	justify-content: space-between;
+  	width: 100%;
+}
+
+#primaryFooterLinks{
+  	display: flex;
+    flex-direction: row;
+	padding-left: 5%;
+    gap: 75px;
+}
+
+#primaryFooterLinks .SSL{
+	cursor: pointer;
+}
+
+#gitProjeto {
+    display: flex;
+    align-items: center;
+	padding-right: 5%; 
+    gap: 3px;
+}
+
+#sobreP{
+	padding: 2% 5%;
+	text-indent: 50px;
+	line-height: 1.5;
+	display: none;
+
+	animation: fadeIn;
+	animation-duration: 3s;
+}
+
+#suporteP{
+	padding: 2% 5%;
+	line-height: 1.5;
+	display: none;
+	text-align: center;
+
+	animation: fadeIn;
+	animation-duration: 3s;
+}
+
+.footerLogos{
+	width: 25px;
+	height: 25px;
+}
+
+#localizacaoP{
+	padding: 2% 5%;
+	line-height: 2;
+	display: none;
+	text-align: center;
+
+	animation: fadeIn;
+	animation-duration: 3s;
+}
+
+#localizacaoP a{
+	color: #4747dd; 
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#footerMeta{
+	padding-top: 5%;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+	#header {
+		align-content: center;
+		justify-content: center;
+	}
+
+	#header > #logo > div {
+		display: none !important;
+	}
+}
+
+
+@media (max-width: 640px) {
+	#header {
+		align-content: center;
+    	justify-content: center;
+	}
+}
+
+
+@media (max-width: 480px) {
+	#header, #footer {
+		padding: 1% 1%;
+	}
+	#header > #logo > div {
+		display: none !important;
+	}
+
+	#footer #footerLinks {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+	}
+
+}
+

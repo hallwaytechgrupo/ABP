@@ -1,0 +1,187 @@
+/* GERAL */
+
+#geral{
+    padding: 10px 15px;
+    text-align: justify;
+}
+h3 {
+    padding: 15px 0 10px 0px;
+}
+p{
+    text-align: justify;
+}
+
+/* PRIMEIRA PARTE DO SITE SCRUM */
+
+#principal{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 10px 0 50px 0;
+}
+#principal > div {
+    flex: 1; /* Permite que o texto ocupe o espaço necessário */
+}
+.textPrincipal{
+    text-indent: 56.7px;
+    margin-top: 2px;
+    line-height: 1.6; 
+}
+#imgPrincipal{
+    width:100%;
+    height: 340px;
+    border-radius: 10px;
+    max-width: 300px; 
+    transition: transform 0.3s ease;
+}
+#imgPrincipal:hover{
+    transform: scale(1.2); /* Ampliação de 20% */
+}
+
+.linksInText{
+    color: #4747dd;
+    font-weight: bolder;
+}
+
+.linksInText:hover{
+    color: #fa7d2f;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+
+
+/* SEGUNDA PARTE - SCRUM VALUE */
+
+#imgWithTitleValue{
+    background-image: url('../img/modulo-01/DevTeamPrinc.jpg');
+    background-size: cover; /* ajusta a imagem para cobrir o container */
+    background-position: center;
+    width: 100%;
+    height: 534px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+#titleValue{
+    width: 430px;
+    margin-left: 20px;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding-top: 40px;
+}
+#textValue{
+    line-height: 1.6;
+    padding: 20px 0 50px 20px;
+}
+
+/* TERCEIRA PARTE - SCRUM ROLES */
+
+#roles{
+    padding-bottom: 50px;
+}
+#titleRoles{
+    margin-bottom: 20px;
+}
+#textWithImgRoles{
+    display: flex;
+    gap: 30px;
+    line-height: 1.4;
+}
+#textWithImgRoles span{
+    display: block;
+    margin-top: 10px;
+}
+#imgRoles{
+    width: 40%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+#imgRoles:hover{
+    transform: scale(1.2);
+}
+
+/* QUARTA PARTE DO SCRUM - SCRUM EVENTS */
+#textWithImgEvents{
+    display: flex;
+    gap: 30px;
+    line-height: 1.6;
+}
+#titleEvents{
+    margin-bottom: 30px;
+}
+#imgEvents{
+    width: 30%;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+#imgEvents:hover{
+    transform: scale(1.2);
+
+}
+#textEvents{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajuste para responsividade */
+
+@media (max-width: 1020px) {
+    #principal,
+    #textWithImgRoles,
+    #textWithImgEvents {
+        flex-direction: column; /* Muda para coluna em telas menores */
+        align-items: center;
+    }
+    #imgPrincipal,
+    #imgRoles, 
+    #imgEvents{
+        width: 70%;
+        max-width: 100%;
+        height: auto;
+    }
+    .text{
+        font-size: 16px;
+    }
+    #titleValue {
+        width: 100%; /* Adapta a largura do título */
+        margin-left: 0; /* Remove margem lateral */
+        padding: 20px;
+    }
+    #titleValue, #titleRoles, #titleEvents {
+        font-size: 24px;
+    }
+    h1{
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .textPrincipal {
+        text-indent: 30px; 
+    }
+    .text{
+        font-size: 14px;
+    }
+    #imgWithTitleValue {
+        height: 300px; /* Reduz a altura para telas pequenas */
+    }
+    #imgPrincipal, 
+    #imgRoles, 
+    #imgEvents {
+        width: 80%; 
+    }
+    #textValue {
+        padding: 10px; /* Reduz espaço interno */
+    }
+    #titleValue, #titleRoles, #titleEvents {
+        font-size: 20px;
+    }
+    #titleValue{
+        padding: 5px 0 0 10px;
+    }
+    h1{
+        font-size: 24px;
+    }
+}

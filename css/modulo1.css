@@ -131,7 +131,7 @@ p{
     #principal,
     #textWithImgRoles,
     #textWithImgEvents {
-        flex-direction: column; /* Muda para coluna em telas menores */
+        flex-direction: column; 
         align-items: center;
     }
     #imgPrincipal,
@@ -149,7 +149,8 @@ p{
         margin-left: 0; /* Remove margem lateral */
         padding: 20px;
     }
-    #titleValue, #titleRoles, #titleEvents {
+    .title {
+        text-align: center;
         font-size: 24px;
     }
     h1{
@@ -157,12 +158,22 @@ p{
     }
 }
 
+/* RESPONSIVIDADE PARA TELAS MENORES */
+
 @media (max-width: 480px) {
+    #geral{
+        padding: 10px 0px;
+    }
+
+    h1{
+        text-align: center;
+    }
+
     .textPrincipal {
         text-indent: 30px; 
     }
     .text{
-        font-size: 14px;
+        font-size: 16px;
     }
     #imgWithTitleValue {
         height: 300px; /* Reduz a altura para telas pequenas */
@@ -170,14 +181,23 @@ p{
     #imgPrincipal, 
     #imgRoles, 
     #imgEvents {
+        margin-top: -20px;
+        margin-bottom: -30px;
         width: 80%; 
     }
     #textValue {
         padding: 10px; /* Reduz espaço interno */
     }
-    #titleValue, #titleRoles, #titleEvents {
+    .title {
+        text-align: center;
         font-size: 20px;
     }
+
+    .isolateTitles{
+        padding-top: 40px;
+        
+    }
+
     #titleValue{
         padding: 5px 0 0 10px;
     }

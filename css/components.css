@@ -91,7 +91,7 @@
 #primaryFooterLinks{
 	display: flex;
 	flex-direction: row;
-padding-left: 5%;
+	padding-left: 5%;
 	gap: 75px;
 }
 
@@ -102,59 +102,59 @@ cursor: pointer;
 #gitProjeto {
 	display: flex;
 	align-items: center;
-padding-right: 5%; 
+	padding-right: 5%; 
 	gap: 3px;
 }
 
 #sobreP{
-padding: 2% 5%;
-text-indent: 50px;
-line-height: 1.5;
-display: none;
+	padding: 2% 5%;
+	text-indent: 50px;
+	line-height: 1.5;
+	display: none;
 
-animation: fadeIn;
-animation-duration: 3s;
+	animation: fadeIn;
+	animation-duration: 3s;
 }
 
 #suporteP{
-padding: 2% 5%;
-line-height: 1.5;
-display: none;
-text-align: center;
+	padding: 2% 5%;
+	line-height: 1.5;
+	display: none;
+	text-align: center;
 
-animation: fadeIn;
-animation-duration: 3s;
+	animation: fadeIn;
+	animation-duration: 3s;
 }
 
 .footerLogos{
-width: 25px;
-height: 25px;
+	width: 25px;
+	height: 25px;
 }
 
 #localizacaoP{
-padding: 2% 5%;
-line-height: 2;
-display: none;
-text-align: center;
+	padding: 2% 5%;
+	line-height: 2;
+	display: none;
+	text-align: center;
 
-animation: fadeIn;
-animation-duration: 3s;
+	animation: fadeIn;
+	animation-duration: 3s;
 }
 
 #localizacaoP a{
-color: #4747dd; 
-font-weight: bold;
-text-decoration: none;
+	color: #4747dd; 
+	font-weight: bold;
+	text-decoration: none;
 }
 
 #footerMeta{
-padding-top: 5%;
+	padding-top: 5%;
 }
 
 
 /* RESPONSIVIDADE */
 
-@media (max-width: 1200px) {
+@media (max-width: 710px) {
 	#logo > div {
 		display: none;
 	}
@@ -178,6 +178,28 @@ padding-top: 5%;
 	#header #menu-mobile {
 		display: block;
 	}
+
+	#footer{
+		align-items: center;
+	}
+
+	#footer #footerLinks {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 5%;
+		width: 100%;
+	}
+
+	#gitProjeto{
+		padding-right: 0%;
+	}
+
+	#primaryFooterLinks{
+		margin-bottom: 10%;
+		text-align: center;
+	}
 }
 
 
@@ -193,13 +215,27 @@ padding-top: 5%;
 		display: none !important;
 	}
 
+	#footer{
+		align-items: center;
+		width: 100%;
+	}
+
 	#footer #footerLinks {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
 		align-items: center;
+		margin-bottom: 5%;
 		width: 100%;
 	}
 
+	#gitProjeto{
+		padding-right: 0%;
+	}
+
+	#primaryFooterLinks{
+		margin-bottom: 10%;
+		text-align: center;
+	}
 }
 

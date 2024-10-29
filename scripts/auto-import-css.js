@@ -15,6 +15,7 @@ const linksCss = [
   './css/components.css',
   './css/login.css',
   'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined',
+  'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css'
 ];
 
 const scriptElement = document.currentScript;

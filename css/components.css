@@ -1,4 +1,4 @@
-#logout {
+#logout, #menu-mobile {
 	display: none;
 }
 
@@ -91,27 +91,38 @@
   flex-direction: row;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+	#logo > div {
+		display: none;
+	}
+}
+
+@media (max-width: 800px) {
 	#header {
-		align-content: center;
-		justify-content: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+			align-content: center;
 	}
 
 	#header > #logo > div {
 		display: none !important;
 	}
-}
 
+	#header #links {
+		display: none;
+	}
 
-@media (max-width: 640px) {
-	#header {
-		align-content: center;
-    	justify-content: center;
+	#header #menu-mobile {
+		display: block;
 	}
 }
 
 
 @media (max-width: 480px) {
+	#header {
+		max-height: 100%;
+	}
+
 	#header, #footer {
 		padding: 1% 1%;
 	}

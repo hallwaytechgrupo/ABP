@@ -1,50 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-
-* {
-    margin: 10; /* Remover espaçamento global */
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    
-}
-
-body {
-    min-height: 100vh; /* Altura da tela inteira */
-    display: flex;
+.box {
+    /* height: 95vh; */
+    /* width: 85vw; */
+    /* background-color: white; */
+    /* border-radius: 10px; */
+    /* display: flex; */
+    padding: 30px 10px 10px 10px;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #4E54CA;
-    background-image: linear-gradient(0deg, #4E54CA 0%, #6A82FB 100%);
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    
-    
-}
-
-#container {
-    display: flex;
-    flex-direction: column;
-    width: 85%;
-    align-items: center; /* Centraliza horizontalmente */
-    justify-content: center; /* Centraliza verticalmente */
-    gap: 0; /* Sem espaçamento entre os elementos */
-}
-
-.box {
-    height: 95vh; /* Altura da tela, mas menor para evitar overflow */
-    width: 85vw; /* Largura total da janela */
-    background-color: white;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza o conteúdo horizontalmente */
-    justify-content: flex-start; /* Começar a disposição no topo */
     text-align: center;
-    padding: 20px; /* Para garantir um espaçamento interno */
-    overflow-y: auto; /* Habilitar rolagem vertical, se necessário */
-    scrollbar-width: none /*esconder a scrollbar*/
+    /* padding: 20px; */
+    overflow-y: auto;
+    scrollbar-width: none
+}
+
+.container {
+    background-color: white !important;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -58,7 +29,6 @@ body {
     padding: 12px;
     cursor: pointer;
     margin-bottom: 25px; /* Espaçamento entre os accordions */
-    background-color: white; /* Colocar cor de fundo visível */
 }
 
 ul li {

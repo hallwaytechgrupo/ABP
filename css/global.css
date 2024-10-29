@@ -123,3 +123,17 @@ button:hover, .button:hover {
   /* padding: 20px; */
   z-index: 999;
 }
+
+.modal-quiz {
+  display: none;
+  /* position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 20px; */
+  z-index: 999;
+}
+
+
+#componente-cta-quiz {
+  display: flex;
+  justify-content: center;
+}

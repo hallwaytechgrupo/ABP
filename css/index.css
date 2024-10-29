@@ -103,6 +103,9 @@
 
 .linha {
   display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  align-items: center;
   gap: 50px;
 }
 
@@ -165,7 +168,7 @@
 .scrum-vantagem .cartao,
 .scrum-vantagem .imagem {
 	width: 550px;
-	height: 350px;
+		height: auto;
 	background-color: #377bc8;
 }
 
@@ -250,3 +253,37 @@
 	z-index: 2;
 }
 
+@media (max-width: 1200px) {
+	.cartao .empresas .linha img {
+			width: 84px;
+			height: 84px;
+	}
+}
+
+@media (max-width: 900px) {
+	.cartao .empresas .linha img {
+			width: 72px;
+			height: 72px;
+	}
+}
+
+@media (max-width: 600px) {
+	.entrada > .cartao {
+		margin: 30px;
+	}
+
+	.cartao .empresas .linha img {
+			width: 64px;
+			height: 64px;
+	}
+
+	.scrum-definicao {
+		padding: 12px 0;
+		font-size: 14px;
+	}
+
+	.scrum-definicao p {
+		padding: 10px;
+		width: 100%;
+	}
+}

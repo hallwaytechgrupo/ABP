@@ -17,4 +17,11 @@ const linksCss = [
   'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined',
 ];
 
+const scriptElement = document.currentScript;
+const isQuiz = scriptElement.getAttribute('data-quiz') === 'true';
+
+if (isQuiz) {
+  linksCss.push('./css/cta-quiz.css', './css/quizz.css');
+}
+
 incluirLinksCss(linksCss);

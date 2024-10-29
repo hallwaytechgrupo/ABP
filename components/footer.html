@@ -1,24 +1,58 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+    
 </head>
 <body>
     <div id="footer">
         <div id="footerLinks">
-            <div id="sobre"><a href="#.sobre.html"><span class="material-symbols-outlined">
-                apartment
-                </span>Sobre</a></div>
-            <div id="suporte"><a href="#.suporte.html"><span class="material-symbols-outlined">
-                flag
-                </span>Suporte</a></div>
-            <div id="nossaLocalizacao"><a href="#link_pagina_localização"><span class="material-symbols-outlined">
-                location_on
-                </span>Nossa Localização</a></div>
-            <div id="gitProjeto"><a href="#link_para_modulo2"><span class="material-symbols-outlined">
-                public
-                </span>Github do projeto</a></div>
+            <div id="primaryFooterLinks">
+                <a class="SSL" id="sobre" onclick="sobreFunction()">Sobre</a>
+                <a class="SSL" id="suporte" onclick="suporteFunction()">Suporte</a>
+                <a class="SSL" id="nossaLocalizacao" onclick="localizacaoFunction()">Nossa Localização</a>
+            </div>
+
+            <div id="gitProjeto"> 
+                <img class="footerLogos" src="./img/footerLogos/logoGithub.png" alt="logoGitHub">
+                
+                <a href="https://github.com/hallwaytechgrupo/ABP-2024-2" target="_blank"> 
+                Github - Projeto</a>
+            </div>
         </div>
-        <div id="footerMeta">HallwayTech &copy; ABP - 2024-2 </div>
+        
+        
+            <div id="sobreP">
+                <p>Nosso grupo de desenvolvimento surgiu no ano de 2024. Uma equipe apaixonada e dedicada a explorar as possibilidades do Scrum. Unindo talentos diversos, buscamos não apenas adquirir conhecimento técnico, mas também construir um ambiente colaborativo que estimule a criatividade e a resolução de problemas.</p>
+                <p>Acreditamos que a chave para o sucesso está na comunicação aberta e no trabalho em equipe. Cada membro com habilidades únicas e juntos estamos comprometidos em aprimorar nossas competências e entregar soluções de software que façam a diferença. Estamos animados para enfrentar os desafios deste semestre e ansiosos para ver onde essa jornada nos levará!</p>
+            </div>
+            <div id="suporteP">
+                <dl>
+                    <p>Entre em contato com nosso time para suporte sempre que precisar. Ficaremos felizes em te ajudar!</p>
+                    <br>
+
+                    <dd><img class="footerLogos" src="./img/footerLogos/logoWhatsapp.png" alt="logoWhatsapp"><a href="https://web.whatsapp.com/" target="_blank">(12)99321-5093</a></dd>
+
+                    <dd><img class="footerLogos" src="./img/footerLogos/logoGmail.png" alt="logoGmail"><a href="https://mail.google.com/" target="_blank">hallwaytechgrupo@gmail.com</a></dd>
+
+                    <dd><img class="footerLogos" src="./img/footerLogos/logoGitHubContato.png" alt="logoGitHub"><a href="https://github.com/hallwaytechgrupo" target="_blank">github.com/hallwaytechgrupo</a></dd>
+                </dl>
+            </div>
+            <div id="localizacaoP">
+                <p>Venha nos visitar, será um prazer recebê-lo!</p>
+                <a href="https://encurtador.com.br/LdAC2" target="_blank">Nosso endereço</a>
+            </div>
+        
+        <div id="footerMeta">
+            <p>HallwayTech &copy; ABP - 2024-2</p> 
+        </div>
     </div>
+
 </body>
 </html>
+
+
+
+

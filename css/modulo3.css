@@ -206,7 +206,7 @@ ul li {
 /* Responsividade */
 @media screen and (max-width: 768px) {
     .row {
-        flex-direction: column;
+        flex-direction: row;
     }
     .image {
         max-width: 100%;

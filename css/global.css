@@ -119,9 +119,10 @@ button:hover, .button:hover {
   display: none;
   position: absolute;
   right: 10%;
+  top: 8%;
   /* transform: translate(-50%, -50%); */
   /* padding: 20px; */
-  z-index: 999;
+  z-index: 9999;
 }
 
 .modal-quiz {
@@ -130,6 +131,10 @@ button:hover, .button:hover {
   transform: translate(-50%, -50%);
   padding: 20px; */
   z-index: 999;
+}
+
+.componente-quiz {
+  z-index: 9999;
 }
 
 

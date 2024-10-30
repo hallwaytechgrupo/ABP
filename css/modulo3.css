@@ -111,7 +111,7 @@ button.active {
     transform: rotate(180deg);
 }
 
-.img {
+img {
     border-radius: 10%;
     height:300px;
     width: 40%;

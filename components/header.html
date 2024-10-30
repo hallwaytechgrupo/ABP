@@ -4,9 +4,9 @@
 <head>
 </head>
 <body>
-    <div id="header">
+    <nav id="header">
         <div id="logo">
-          <img src="./img/logo.png" alt="Logo do projeto" />
+          <a href="./index.html"><img src="./img/logo.png" alt="Logo do projeto" /></a>
           <div>HallwayEducation</div>
         </div>
         <div id="menu-mobile">
@@ -14,15 +14,23 @@
             menu
             </span>
         </div>
+        <div id="menu-mobile-sidebar" class="hidden">
+          <div id="menu-content">
+            <ul>
+              <li id="linkHome"><a href="./index.html">Home</a></li>
+              <li id="linkM1"><a href="./modulo1.html">O que é SCRUM?</a></li>
+              <li id="linkM2"><a href="./modulo2.html">Tudo sobre Sprint</a></li>
+              <li id="linkM3"><a href="./modulo3.html">Ferramentas Scrum</a></li>
+            </ul>
+          </div>
+        </div>
         <div id="links">
-          <div id="linkHome"><a href="./index.html">Home</a></div>
-          <div id="linkM1"><a href="./modulo1.html">O que é SCRUM?</a></div>
-          <div id="linkM2">
-            <a href="./modulo2.html">Tudo sobre Sprint</a>
-          </div>
-          <div id="linkM3">
-            <a href="./modulo3.html">Ferramentas Scrum</a>
-          </div>
+          <ul>
+            <li id="linkHome"><a href="./index.html">Home</a></li>
+            <li id="linkM1"><a href="./modulo1.html">O que é SCRUM?</a></li>
+            <li id="linkM2"><a href="./modulo2.html">Tudo sobre Sprint</a></li>
+            <li id="linkM3"><a href="./modulo3.html">Ferramentas Scrum</a></li>
+          </ul>
         </div>
         <div id="botoes">
           <div id="loginRegistrar">
@@ -32,7 +40,7 @@
           </div>
           <div id="logout"><button>Logout</button></div>
         </div>
-      </div>
+      </nav>
       <div id="componente-login"></div>
 </body>
 </html>

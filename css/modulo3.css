@@ -111,9 +111,9 @@ button.active {
     transform: rotate(180deg);
 }
 
-.conteiner > img {
+.img-rounded {
     border-radius: 10%;
-    height:300px;
+    /* height:300px; */
     width: 40%;
 }
 
@@ -206,7 +206,7 @@ ul li {
 /* Responsividade */
 @media screen and (max-width: 768px) {
     .row {
-        flex-direction: column;
+        flex-direction: row;
     }
     .image {
         max-width: 100%;

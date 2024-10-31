@@ -1,36 +1,28 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
+    <link rel="stylesheet" href="./css/model2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./scripts/auto-import-css.js" data-quiz="true"></script>
     <title>Módulo 2</title>
   </head>
-  <style>
-    body{
-        display:flex;
-        flex-direction: column;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    }
-    ul {
-        list-style-type:decimal;
-    }
-    ol {
-        list-style-type: disc;
-    }
-    #card1{
-        justify-content: space-around;
-        image-rendering: auto; 
-    }
+  <style> 
     
   </style>
 
   <body>
+   
     <!-- Conteudo referente ao card 1, botões seram montados junto ao arquivo css para melhor dimensionamento e posicionamento-->
+    <div id="componente-header"></div>
+    <div class="container2">
     <div class="card" id="card1">
-
-      <h1>Tudo Sobre Sprint</h1>
-
-      <h2>Planejamento e execução</h2>
+        <div class="text-part">
+          <div class="format1">
+            <div class="conteudo">
+            <h1>Tudo Sobre Sprint</h1>
+            <h2>Planejamento e execução</h2>
 
       <p>
         No Scrum, uma Sprint é um período fixo de tempo, geralmente de 1 a 4
@@ -57,6 +49,11 @@
         Sprint que serve como um guia para o qual o time deve alcançar. Ele
         descreve o "por quê" da Sprint e mantém a equipe direcionada.</li>
       </p>
+      </ul>
+    </div>
+      <img class="card-img" src="./img/modulo-02/scrumMeeting.jpg" alt="Meeting">
+      </div>
+      <ul>
       <p>
         <li><b> Execução do trabalho</b> Durante a Sprint, o time trabalha nas
         tarefas do Sprint Backlog, adaptando-se conforme necessário, mas sem
@@ -88,17 +85,28 @@
       </p>
     </ul>
     </div>
+    </div>
+  
     <!--Conteudo card 2-->
-    <div class="card" id="card2">
+    <div class="card card-dois" id="card2">
+      <div class="card-content">
+        <div class="invert">
+        <div class="format2">
       <h3>
         Sprint Backlog: è e oque você precisa saber sobre o plano de ação de
         cara Sprint
       </h3>
+      
 
       <p>O Sprint Backlog é um conjunto de itens do Product Backlog selecionados
       para serem trabalhados durante uma Sprint, juntamente com o plano de ação
       do time para entregar esses itens. Ele representa o trabalho que o Scrum
       Team se compromete a completar dentro do ciclo da Sprint.</p>
+    </div>
+    <img class="card-img" src="./img/modulo-02/sprintBacklog.jpg" alt="Backlog">
+  </div>
+    <div class="conteudo2">
+      <div class="tabel1">
 
       <h3>Componentes do Sprint Backlog:</h3>
         <ul>
@@ -111,6 +119,11 @@
       concluir o trabalho, geralmente dividindo os itens em tarefas menores que
       podem ser facilmente gerenciadas e acompanhadas.</p></li>
       </ul>
+    </div>
+    <div class="line">
+      
+    </div>
+    <div class="tabel2">
 
       <h3>Caracteristicas Principais</h3>
 
@@ -121,14 +134,24 @@
       <p><b>2. Dinâmico:</b> Embora os itens selecionados não devam mudar durante a
       Sprint, o plano pode ser ajustado conforme necessário para que o time
       alcance o objetivo da Sprint.</p>
+    </div>
+  </div>
 
       <p>O Sprint Backlog é fundamental para orientar o trabalho da equipe e
       garantir que todos estejam alinhados em relação ao que precisa ser
       entregue no final da Sprint.</p>
-    </div>
+    
+    
+  </div>
+   
+</div>
+    
     <!--Conteudo card 3-->
-
-        <h1>Propósito e Formato da Daily Scrum</h1>
+    <div class="card card-tres" id="card3">
+        <div class="card-content">
+          <div class="invert">
+            <div class="format2">
+            <h1>Propósito e Formato da Daily Scrum</h1>
 
         <p>O Daily Scrum é uma reunião curta, geralmente de 15 minutos, onde os
         membros da equipe discutem o progresso na direção à meta do Sprint. Cada
@@ -143,7 +166,9 @@
         rapidamente problemas que podem afetar o progresso. Cada membro da
         equipe pode apontar seus impedimentos ao Scrum Master durante o
         processo.</p>
-
+        </div>
+        <img class="card-img" src="./img/modulo-02/dailyScrum.jpg" alt="Daily">
+        </div>
         <h2>
           Sprint Review: Demonstração do Trabalho Concluído e Coleta de Feedback
         </h2>
@@ -175,18 +200,21 @@
         expectativas do mercado e dos stakeholders. Ela ajuda a manter o
         desenvolvimento ágil e adaptável a mudanças.</p>
     </div>
+</div>
 
     <!--Conteudo card 4-->
 
     <div class="card" id="card4">
-      <h1>Sprint Retrospective: Melhoria Contínua do Processo</h1>
+        <div class="text-part">         
+          <div class="card-content">
+            <h1>Sprint Retrospective</h1>
 
       <p>A Sprint Retrospective é a última cerimônia de uma Sprint, focada em
       avaliar o desempenho do time e identificar formas de melhorar o processo
       para as próximas iterações. Ela ocorre após a Sprint Review e antes do
       planejamento da próxima Sprint.</p>
- 
- 
+        <div class="conteudo2">
+        <div class="tabel1">
       <h3>Objetivos principais da Sprint Retrospective:</h3>
 
         <ul>
@@ -201,20 +229,30 @@
       reflexão, mas de ação. A equipe define medidas concretas para implementar
       na próxima Sprint, com o objetivo de melhorar continuamente.</p></li>
         </ul>
+      </div>
+      <div class="line">
 
+      </div>
+      <div class="tabel2">
       <h3>Perguntas comuns na Retrospectiva:</h3>
     <ol>
-    <li><p> O que funcionou bem nesta Sprint? </p></li>
-    <li><p> O que não funcionou como esperado?</p></li>
-    <li><p> O que podemos fazer diferente na próxima Sprint?</p></li>
+      <li><p> O que não funcionou como esperado?</p></li>
+      <li><p> O que podemos fazer diferente na próxima Sprint?</p></li>
+      <li><p> O que funcionou bem nesta Sprint? </p></li>
     </ol>
-
+  </div>
+</div>
     <p>A Retrospective promove uma cultura de melhoria contínua e cria um
       ambiente seguro para que os membros da equipe compartilhem abertamente
       suas preocupações e sugestões, fortalecendo o time e aumentando a
       eficiência ao longo do tempo.</p>
+
+      
       
       <h1>Visualização do Ciclo de Vida de uma Sprint</h1>
+      <div class="format4">
+      <img class="card-img" src="./img/modulo-02/estagiosSprint.jpg" alt="ciclo de vida">
+      <div class="conteudo">
 
     <p> <b>O ciclo de vida de um Sprint inclui as seguintes etapas:</b></p>
     <ul>
@@ -228,7 +266,62 @@
       incremental, inspecionar seu progresso regularmente e adaptar-se
       rapidamente a mudanças, mantendo sempre o foco no objetivo definido.</p>
     </div>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>
 
     <!-- Anexar e formatar imagens junto a criação do css para facilitar organização e formatação dos cards -->
-  </body>
+    <div class="navigation">
+      <i class="fas fa-chevron-left" onclick="showPreviousCard()"></i>
+      <i class="fas fa-chevron-right" onclick="showNextCard()"></i>
+  </div>
+    </div>  
+    <script>
+let currentCardIndex = 0;
+const cards = document.querySelectorAll('.card');
+
+function showCard(index) {
+    // Oculta todos os cards
+    cards.forEach(card => {
+        card.style.display = 'none';
+    });
+
+    // Mostra o card selecionado
+    if (cards[index]) {
+        cards[index].style.display = 'block';
+        currentCardIndex = index; // Atualiza o índice atual
+    }
+}
+
+function showPreviousCard() {
+    if (currentCardIndex > 0) {
+        const newIndex = currentCardIndex - 1;
+        cards[newIndex].style.transform = 'translateX(-100%)'; // Move para a esquerda
+        showCard(newIndex);
+        cards[newIndex].style.transform = 'translateX(0)'; // Volta à posição original
+    }
+}
+
+function showNextCard() {
+    if (currentCardIndex < cards.length - 1) {
+        const newIndex = currentCardIndex + 1;
+        cards[newIndex].style.transform = 'translateX(100%)'; // Move para a direita
+        showCard(newIndex);
+        cards[newIndex].style.transform = 'translateX(0)'; // Volta à posição original
+    }
+}
+
+// Inicializa o primeiro card como visível
+document.addEventListener('DOMContentLoaded', () => {
+    showCard(0); // Mostra o primeiro card
+});
+    </script>
+    <div id="componente-cta-quiz"></div>
+
+    <div id="componente-footer"></div>
+    
+    <script src="./scripts/auto-import-components.js" data-module="quiz2.html"></script>
+</body>
 </html>

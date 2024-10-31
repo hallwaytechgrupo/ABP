@@ -68,7 +68,7 @@ button:hover, .button:hover {
   flex-direction: column;
   justify-content: space-around;
   flex: 1 1 auto;
-  margin: 30px 100px 30px 100px;
+  margin: 100px 100px 30px 100px;
 	color: black;
   border: 1px solid var(--btn-hover);
   border-radius: 12px;

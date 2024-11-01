@@ -9,17 +9,17 @@
 
 | ID | Tipo | Descrição | Prioridade | Status | Responsável | Pontuação total |
 |--|--|--|--|--|--|--|
-| [01](#rf-01) | RF | As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que, ao ser clicado, remete o usuário à seção correspondente; | Baixa | 🔨 Em trabalho | Marcos | 6 |
-| [02](#rf-02) | RF | O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail e senha;| Baixa | 🔨 Em trabalho | Lucas | 6 |
-| [03](#rf-03) | RF | O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; | Lucas | 🔨 Em trabalho | Nome | 6 |
-| [05](#rf-05) | RF | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devem contemplar o tema abordado no tópico;| Média | 🔨 Em trabalho | Vinícius | 15 |
-| [06](#rf-06) | RF | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões; | Alta | 🔨 Em trabalho | Ariel, Christopher, Mário e Yan | 30 |
-| [09](#rf-09) | RF   | O sistema deve ser capaz de emitir o certificado de conclusão para os usuários que foram aprovados em todos os tópicos; | Baixa | ⏸️ Pendente | A definir | 5 |
+| [01](#rf-01) | RF | As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que, ao ser clicado, remete o usuário à seção correspondente; | Baixa | ✅ Concluído | Marcos | 6 |
+| [02](#rf-02) | RF | O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail e senha;| Baixa | ✅ Concluído | Lucas | 6 |
+| [03](#rf-03) | RF | O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; | Lucas | ✅ Concluído | Nome | 6 |
+| [05](#rf-05) | RF | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devem contemplar o tema abordado no tópico;| Média | ✅ Concluído | Vinícius | 15 |
+| [06](#rf-06) | RF | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões; | Alta | ✅ Concluído | Ariel, Christopher, Mário e Yan | 30 |
+| [09](#rf-09) | RF   | O sistema deve ser capaz de emitir o certificado de conclusão para os usuários que foram aprovados em todos os tópicos; | Baixa | ✅ Concluído | Christopher | 5 |
 
 <center>
 
 ## Burndown:
-![image](./content/sprint-02/burndown-17-10-2024.png)
+![image](./content/sprint-02/burndown-01-10-2024.png)
 > Atualizado em 17/10/2024
 
 </center>

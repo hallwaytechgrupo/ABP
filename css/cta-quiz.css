@@ -8,7 +8,7 @@
   border: 5px solid #1A66BA;
   border-radius: 12px;
   padding: 40px;
-  background-image: url('/img/index/curso.jpg');
+  background-image: url('./../img/index/curso.jpg');
   background-size: cover;
   background-position: center;
   position: relative;

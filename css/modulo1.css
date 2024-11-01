@@ -68,6 +68,7 @@ p{
     margin-left: 20px;
     background-color: rgba(0, 0, 0, 0.05);
     padding-top: 40px;
+    scroll-margin-top: 70px;
 }
 #textValue{
     line-height: 1.6;
@@ -81,6 +82,7 @@ p{
 }
 #titleRoles{
     margin-bottom: 20px;
+    scroll-margin-top: 70px;
 }
 #textWithImgRoles{
     display: flex;
@@ -109,6 +111,7 @@ p{
 }
 #titleEvents{
     margin-bottom: 30px;
+    scroll-margin-top: 70px;
 }
 #imgEvents{
     width: 30%;

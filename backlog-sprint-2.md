@@ -221,13 +221,13 @@ ___________________________________________
 3. Criar o CSS da Home, Módulo 1, 2 e 3, com base no Figma.
     - **Estimativa:** 12 (3 cada)
     - **Pontuação:** 12 (3 cada)
-    - **Responsável:** Módulo 1 - A definir, Módulo 2 - A definir, Módulo 3 - A definir
+    - **Responsável:** Módulo 1 - Ariel, Módulo 2 - Yan, Módulo 3 - Mário, Home e Certificado - Christopher
     - **Descrição:** Criar o CSS e JS (se houver), das respectivas páginas e subir no GitHub.
 
 4. Criar imagens por IA ou pesquisar magens para colocar no Módulo 3.
     - **Estimativa:** 2
     - **Pontuação:** 2
-    - **Responsável:** Ariel.
+    - **Responsável:** Ariel e Mário.
     - **Descrição:** As imagens devem ser colocadas no módulo 3, seguindo pedido do cliente.
 
 5. Utilizar as imagens da tarefa 3 e colocá-las no Módulo 3.

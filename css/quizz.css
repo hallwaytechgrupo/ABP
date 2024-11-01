@@ -38,7 +38,8 @@ input[type="radio"]:checked+label.false-button {
   background-color: white;
   border-radius: 15px;
   padding: 50px;
-  max-width: 600px;
+  max-width: 80vw;
+  margin: 0 auto;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   color: black !important;
@@ -85,7 +86,7 @@ input[type="radio"]:checked+label.false-button {
 
 .quiz-buttons {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 3px;
   margin-bottom: 20px;
 }
@@ -154,6 +155,6 @@ input[type="radio"]:checked+label.false-button {
 }
 
 .question > h3 {
-  font-size: 16px !important;
+  font-size: 14px !important;
   text-align: start;
 }

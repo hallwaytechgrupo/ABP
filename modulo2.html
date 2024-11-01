@@ -16,7 +16,7 @@
   <div id="componente-header"></div>
     <div class="container2">
 
-      <div class="card" id="card1">
+      <div class="card animate__animated" id="card1">
           <div class="text-part">
             <div class="format1">
               <div class="conteudo">
@@ -84,7 +84,7 @@
       </div>
       </div>
       <!--Conteudo card 2-->
-      <div class="card card-dois" id="card2">
+      <div class="card card-dois animate__animated" id="card2">
         <div class="card-content">
           <div class="invert">
           <div class="format2">
@@ -137,7 +137,7 @@
       </div>
       
       <!--Conteudo card 3-->
-      <div class="card card-tres" id="card3">
+      <div class="card card-tres animate__animated" id="card3">
           <div class="card-content">
             <div class="invert">
               <div class="format2">
@@ -185,7 +185,7 @@
       </div>
       </div>
       <!--Conteudo card 4-->
-      <div class="card" id="card4">
+      <div class="card animate__animated" id="card4">
           <div class="text-part">
             <div class="card-content">
               <h1>Sprint Retrospective</h1>
@@ -276,8 +276,10 @@
       if (currentCardIndex > 0) {
           const newIndex = currentCardIndex - 1;
           cards[newIndex].style.transform = 'translateX(-100%)'; // Move para a esquerda
+          cards[newIndex].classList.add('animate__fadeInLeft');
           showCard(newIndex);
           cards[newIndex].style.transform = 'translateX(0)'; // Volta à posição original
+
       }
       }
       
@@ -285,6 +287,7 @@
       if (currentCardIndex < cards.length - 1) {
           const newIndex = currentCardIndex + 1;
           cards[newIndex].style.transform = 'translateX(100%)'; // Move para a direita
+          cards[newIndex].classList.add('animate__fadeInRight');
           showCard(newIndex);
           cards[newIndex].style.transform = 'translateX(0)'; // Volta à posição original
       }

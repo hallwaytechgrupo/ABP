@@ -3,10 +3,8 @@
     flex-direction: column;
     align-items: center; /* Centraliza horizontalmente */
     text-align: justify;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: black;
     padding-top: 80px;
-
 }
 
 .card {
@@ -18,7 +16,7 @@
     border-radius: 10px;
     padding: 40px;
     margin: 20px 0; /* Espaçamento entre os cards */
-    width: 1160px; /* Largura do card */
+    width: 80vw;
     height: auto; /* Altura automática para se ajustar ao conteúdo */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 1s ease; /* Adiciona transição suave */
@@ -33,8 +31,10 @@
 }
 
 .card-img {
-    width: 500px; /* Largura da imagem (ajuste conforme necessário) */
+    display: flex;
+    width: 50%; /* Largura da imagem (ajuste conforme necessário) */
     height: auto; /* Mantém a proporção da imagem */
+    object-fit: cover;
     border-radius: 5px; /* Bordas arredondadas para imagens */
     margin-left: 20px; /* Espaço entre a imagem e o texto */
     align-self: flex-start; /* Alinha a imagem ao topo */
@@ -50,16 +50,17 @@
     display: flex;
     justify-content: space-between;
     width: 100%; /* Garante que ocupe toda a largura do card */
-    position: absolute; /* Posiciona as setas em relação ao card */
-    top: 100%; /* Centraliza verticalmente */
+    position: fixed; /* Posiciona as setas fixamente na tela */
+    top: 50%; /* Centraliza verticalmente */
     transform: translateY(-50%); /* Centraliza corretamente */
-    
+    box-sizing: border-box;
 }
 
 .navigation i {
     font-size: 60px; /* Aumenta o tamanho das setas para 60px */
     cursor: pointer;
     color: #333; /* Altere para a cor que preferir */
+    margin: 30px;
 }
 
 .navigation i:hover {
@@ -154,3 +155,55 @@
     text-align: justify;
     padding: 50px;
 }
+
+/* Responsividade */ 
+  @media only screen and (min-width: 300px) and (max-width: 767px) {
+    * {
+        text-align: justify !important;
+    }
+
+    .navigation i {
+        font-size: 30px;
+        margin: 10px;
+    }
+
+    .container2 {
+        padding-top: 40px;
+    }
+
+    .card {
+        font-size: 16px !important;
+    }
+
+    .format1, .format4 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .invert, .conteudo2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tabel1, .tabel2 {
+        width: 100%;
+    }
+
+    #card4 .tabel2 {
+        display: flex;
+        padding: 10px;
+    }
+
+    .format4 > img {
+        align-self: center
+    }
+  }
+  
+  
+  @media only screen and (min-width: 767px) {
+    /* Estilos para desktops e laptops */
+  }

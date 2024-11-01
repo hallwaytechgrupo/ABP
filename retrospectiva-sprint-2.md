@@ -3,7 +3,7 @@
   <br />
 </p>
 
-# Retrospectiva Sprint 01 - 04/10/2024
+# Retrospectiva Sprint 02 - 01/11/2024
 
 ## Pontos Positivos
 - Agilidade na entrega das atividades.

@@ -19,7 +19,7 @@
 <center>
 
 ## Burndown:
-![image](./content/sprint-02/burndown-01-10-2024.png)
+![image](./content/sprint-02/burndown-01-11-2024.png)
 > Atualizado em 17/10/2024
 
 </center>
@@ -233,7 +233,7 @@ ___________________________________________
 5. Utilizar as imagens da tarefa 3 e colocá-las no Módulo 3.
     - **Estimativa:** 2
     - **Pontuação:** 2
-    - **Responsável:** A Definir.
+    - **Responsável:** Ariel e Mário.
     - **Descrição:** Colocar as imagens no módulo 3 no Figma e no HTML.
 
 ___________________________________________

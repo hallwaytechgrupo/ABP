@@ -13,7 +13,7 @@
 | [02](#rf-02) | RF | O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail e senha;| Baixa | ✅ Concluído | Lucas | 6 |
 | [03](#rf-03) | RF | O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; | Lucas | ✅ Concluído | Nome | 6 |
 | [05](#rf-05) | RF | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devem contemplar o tema abordado no tópico;| Média | ✅ Concluído | Vinícius | 15 |
-| [06](#rf-06) | RF | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões; | Alta | ✅ Concluído | Ariel, Christopher, Mário e Yan | 30 |
+| [06](#rf-06) | RF | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões; | Alta | ✅ Concluído | Ariel, Christopher, Mário e Yan | 32 |
 | [09](#rf-09) | RF   | O sistema deve ser capaz de emitir o certificado de conclusão para os usuários que foram aprovados em todos os tópicos; | Baixa | ✅ Concluído | Christopher | 5 |
 
 <center>
@@ -29,10 +29,18 @@
 - A sprint tem uma pontuação total de 70 pontos.
 <a name="rf-01"></a>
 
+
+## Diagrama de Caso de Uso do Sistema
+![alt text](./content/sprint-02/casosDeUso/userCaseSistema.jpeg)
+> Diagrama de Caso de Uso - Sistema
+
 ## 01 - Requisito Funcional
 - As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que, ao ser clicado, remete o usuário à seção correspondente.
 
 ### **Diagramas de Caso de Uso:**
+
+![alt text](./content/sprint-02/casosDeUso/userCaseRF01.png)
+> Diagrama de Caso de Uso - Requisito Funcional 01
 
 ![alt text](/content/sprint-02/uml/dcu-1-visitante.png)
 > Diagrama de Caso de Uso - Visitante
@@ -74,6 +82,11 @@ ___________________________________________
 ## 02 - Requisito Funcional
 - O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail e senha.
 
+### **Diagramas de Caso de Uso:**
+
+![alt text](./content/sprint-02/casosDeUso/userCaseRF02.png)
+> Diagrama de Caso de Uso - Requisito Funcional 02
+
 ### **Histórias de Usuário**
 - **Como** um visitante do site, **eu quero** me cadastrar com meu nome completo, e-mail e senha, **para que** eu possa ter acesso a certas funcionalidades.
 
@@ -104,6 +117,12 @@ ___________________________________________
 ## 03 - Requisito Funcional
 - O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha;
 
+### **Diagramas de Caso de Uso:**
+
+![alt text](./content/sprint-02/casosDeUso/userCaseRF03.png)
+> Diagrama de Caso de Uso - Requisito Funcional 03
+
+
 ### **Histórias de Usuário:**
 **Como um** visitante do site/usuário não logado, **eu quero** fazer o login com meu e-mail e senha, **para que** eu possa ter acesso a certas funcionalidades.
 
@@ -133,6 +152,11 @@ ___________________________________________
 ## 05 - Requisito Funcional
 - Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devem contemplar o tema abordado no tópico.
 
+### **Diagramas de Caso de Uso:**
+
+![alt text](./content/sprint-02/casosDeUso/userCaseRF05.png)
+> Diagrama de Caso de Uso - Requisito Funcional 05
+
 ### **Histórias de Usuário**
 - **Como um** usuário logado, **eu quero** que o sistema me apresente três questões por tópico, **para que** eu possa ter uma avaliação justa do meu conhecimento.
 ### **DoD - Definition of Done**
@@ -161,6 +185,12 @@ ___________________________________________
 
 ## 06 - Requisito Funcional
 - O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões;
+
+### **Diagramas de Caso de Uso:**
+
+![alt text](./content/sprint-02/casosDeUso/userCaseRF06.png)
+> Diagrama de Caso de Uso - Requisito Funcional 06
+
 
 ### **Histórias de Usuário:**
 
@@ -210,6 +240,12 @@ ___________________________________________
 
 <a name="rf-09"></a>
 
+### **Diagramas de Caso de Uso:**
+
+![alt text](./content/sprint-02/casosDeUso/userCaseRF09.png)
+> Diagrama de Caso de Uso - Requisito Funcional 09
+
+
 ## 09 - Requisito Funcional
 - O sistema deve ser capaz de emitir o certificado de conclusão para os usuários que foram aprovados em todos os tópicos;
 
@@ -226,10 +262,10 @@ ___________________________________________
 1. Criar o HTML do Certificado, com base no Figma.
     - **Estimativa:** 2
     - **Pontuação:** 2
-    - **Responsável:** A Definir.
+    - **Responsável:** Christopher.
     - **Descrição:** Criar HTML da página de certificado e subir no Git.
 2. Criar o CSS do Certificado, com base no Figma.
     - **Estimativa:** 3
     - **Pontuação:** 3
-    - **Responsável:** A definir
+    - **Responsável:** Christopher.
     - **Descrição:** Criar o CSS da página de certificado, se necessário, também o JS, e subir no GitHub.

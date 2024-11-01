@@ -32,7 +32,7 @@
 	flex-wrap: wrap;
 	align-content: center;
 	justify-content: space-evenly;
-	background-image: url("/img/index/card-1.jpg");
+	background-image: url("./../img/index/card-1.jpg");
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -221,7 +221,7 @@
 }
 
 .curso-content {
-	background-image: url("/img/index/curso.jpg");
+	background-image: url("./../img/index/curso.jpg");
 	background-size: cover;
 	background-position: center;
 	border: 1px solid blue;

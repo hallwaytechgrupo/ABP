@@ -20,7 +20,7 @@
 
 <center>
 
-![Burndown da Sprint 1](./content/sprint-01/imgs/burndown-sprint-1.png)
+![Burndown da Sprint 1](./content/sprint-01/imgs/burndown-sprint-1-fix.png.png)
 > Gerado pelo burndownfortrello.com
 
 ## Imagens:

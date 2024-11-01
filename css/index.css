@@ -115,7 +115,8 @@
 	justify-content: center;
 	height: auto;
 	padding: 30px;
-	/* background-color: #4e99e2; */
+	background-color: #377bc8;	
+	
 }
 
 .sobre-conteudo {
@@ -142,7 +143,7 @@
 	background: #000000b3;
 	padding: 30px;
 	text-align: center;
-	background-image: url("./../imgs/bg_2.png");
+	background-image: url("./../img/index/bg_2.png");
 	background-attachment: fixed;
 }
 
@@ -162,13 +163,13 @@
 	padding: 30px;
 	text-align: center;
 	gap: 30px;
-	margin: 30px;
+	background-color: #CACACA;
 }
 
 .scrum-vantagem .cartao,
 .scrum-vantagem .imagem {
-	width: 550px;
-		height: auto;
+	width: 400px;
+	height: auto;
 	background-color: #377bc8;
 }
 
@@ -218,6 +219,7 @@
   color: white;
 	padding: 30px;
 	height: 500px;
+	background-color: #CACACA;
 }
 
 .curso-content {
@@ -246,6 +248,7 @@
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.8);
 	z-index: 1;
+	border-radius: 12px;
 }
 
 .curso-content > * {

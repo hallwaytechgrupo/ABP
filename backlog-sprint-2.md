@@ -70,7 +70,7 @@
 2. Criar o CSS do menu fixo, com base no Figma.
     - **Estimativa:** 3
     - **Pontuação:** 3
-    - **Responsável:** A definir
+    - **Responsável:** Ariel e Marcos
     - **Descrição:** Criar CSS do menu e rodapé, com base no Figma.
     - [Link da Tarefa - Menu](https://trello.com/c/2Z08aGrf)
     - [Link da Tarefa - Rodapé](https://trello.com/c/UeDXojue)
@@ -177,7 +177,7 @@ ___________________________________________
 **4, 5 e 6**. Criar o CSS do Questionário do [Módulo 1 🔨](https://trello.com/c/GpEA7caF), [Módulo 2 🔨](https://trello.com/c/pnUGfaRD) e [Módulo 3 🔨](https://trello.com/c/d4IB6lRn), com base no Figma.
     - **Estimativa:** 9 (3 cada)
     - **Pontuação:** 9 (3 cada)
-    - **Responsável:** A definir
+    - **Responsável:** Vinícius
     - **Descrição:** Criar o respectivo CSS, js (se houver), e subir no GitHub.
 ___________________________________________
 

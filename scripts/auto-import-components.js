@@ -114,7 +114,14 @@ if (document.getElementById('componente-cta-quiz')) {
 
       console.log('Respostas:', answers);
 
-      // Aqui você pode adicionar a lógica para processar as respostas
+      const infoDiv = document.querySelector('.info');
+      infoDiv.style.display = 'block';
+      infoDiv.innerHTML = `
+        <p>Respostas:</p>
+        <p>Questão 1: ${answers.question1}</p>
+        <p>Questão 2: ${answers.question2}</p>
+        <p>Questão 3: ${answers.question3}</p>
+      `;
     });
   });
 }

@@ -40,6 +40,8 @@
 	gap: 30px;
 }
 
+
+
 #header #botoes {
 	display: flex;
 	flex-wrap: wrap;
@@ -137,7 +139,6 @@ cursor: pointer;
 	line-height: 2;
 	display: none;
 	text-align: center;
-
 	animation: fadeIn;
 	animation-duration: 3s;
 }
@@ -145,7 +146,6 @@ cursor: pointer;
 #localizacaoP a{
 	color: #4747dd; 
 	font-weight: bold;
-	text-decoration: none;
 }
 
 #footerMeta{
@@ -278,6 +278,9 @@ cursor: pointer;
 		text-align: center;
 	}
 }
+
+
+
 
 
 

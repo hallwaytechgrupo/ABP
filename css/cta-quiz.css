@@ -1,44 +1,44 @@
 #cta-quiz {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  width: 80%;
-  border: 5px solid #1A66BA;
-  border-radius: 12px;
-  padding: 40px;
-  background-image: url('./../img/index/curso.jpg');
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  margin-bottom: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	width: 80%;
+	border: 5px solid #1a66ba;
+	border-radius: 12px;
+	padding: 40px;
+	background-image: url("./../img/index/curso.jpg");
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	margin-bottom: 30px;
 }
 
 #cta-quiz::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  z-index: 1;
-  border-radius: 12px;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 1;
+	border-radius: 12px;
 }
 
 #cta-quiz > * {
-  position: relative;
-  z-index: 2;
+	position: relative;
+	z-index: 2;
 }
 
 #quiz-description {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  gap: 15px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 15px;
 }
 
-a{
-  cursor: pointer;
+a {
+	cursor: pointer;
 }

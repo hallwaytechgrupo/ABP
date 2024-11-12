@@ -19,3 +19,7 @@ export function getCadastroData() {
     confirmarSenha: confirmPassword,
   };
 }
+
+export const cadastro = (nome, email, password) => {
+  // Faça a tarefa aqui
+};

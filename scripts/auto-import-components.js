@@ -1,8 +1,8 @@
 import modalHeaderControl from './components/header-user-form.js';
 import setupMobileMenu from './components/header-mobile-menu.js';
-import { getCadastroData } from './utils/puxar_dados.js';
 import modalQuizControl from './components/quiz-modal-control.js';
 import getQuizRespostas from './components/quiz-respostas.js';
+import { getCadastroData } from './utils/user.cadastro.js';
 
 function importarComponente(componentPath, elementId, callback) {
   fetch(componentPath)

@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --primary-color: #1A66BA;
-  --font-color: #FFFFFF;
-  --font-color-dark: #000000;
-  --bg-header-footer: #1E1E1E;
-  --btn-hover: #154D8F;
-  --btn-disabled: #4E99E2;
+	--primary-color: #1a66ba;
+	--font-color: #ffffff;
+	--font-color-dark: #000000;
+	--bg-header-footer: #1e1e1e;
+	--btn-hover: #154d8f;
+	--btn-disabled: #4e99e2;
 }
 
 .claro {
-  color: var(--font-color);
+	color: var(--font-color);
 }
 
 .escuro {
-  color: var(--font-color-dark);
+	color: var(--font-color-dark);
 }
 
 body {
@@ -23,10 +23,10 @@ body {
 	width: 100%;
 	max-width: 100%;
 	font-family: "Montserrat", sans-serif;
-  background: linear-gradient(0deg, #4E54CA 0%, #6A82FB 100%);
-  background-attachment: fixed;
-  color: var(--font-color);
-  font-size: 18px;
+	background: linear-gradient(0deg, #4e54ca 0%, #6a82fb 100%);
+	background-attachment: fixed;
+	color: var(--font-color);
+	font-size: 18px;
 }
 
 a {
@@ -37,109 +37,114 @@ a {
 a:hover {
 	color: var(--primary-color);
 	font-weight: 500;
-	color: rgb(102, 2, 169);
-  font-weight: bold;
+	color: #1a66ba;
+	font-weight: bold;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: 700;
 }
 
-button, .button {
-background: var(--primary-color);
-color: var(--font-color);
-border-radius: 8px;
-padding: 10px 30px;
-border: none;
-flex: none;
-order: 0;
-flex-grow: 0;
-border: 1px solid var(--btn-hover );
+button,
+.button {
+	background: var(--primary-color);
+	color: var(--font-color);
+	border-radius: 8px;
+	padding: 10px 30px;
+	border: none;
+	flex: none;
+	order: 0;
+	flex-grow: 0;
+	border: 1px solid var(--btn-hover);
 }
 
-button:hover, .button:hover {
-  background: var(--btn-hover) !important;
-  color: var(--font-color) !important;
+button:hover,
+.button:hover {
+	background: var(--btn-hover) !important;
+	color: var(--font-color) !important;
 	font-weight: 500;
-  border: 1px solid var(--primary-color);
+	border: 1px solid var(--primary-color);
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  flex: 1 1 auto;
-  margin: 100px 100px 30px 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex: 1 1 auto;
+	margin: 100px 100px 30px 100px;
 	color: black;
-  border: 1px solid var(--btn-hover);
-  border-radius: 12px;
-  background-color: rgb(255, 255, 255);
+	border: 1px solid var(--btn-hover);
+	border-radius: 12px;
+	background-color: rgb(255, 255, 255);
 }
 
 .content {
-  display: flex;
+	display: flex;
 	flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 30px;
+	align-items: center;
+	gap: 10px;
+	padding: 30px;
 }
 
 .content-footer {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
 }
 
 .content-footer a {
-  margin: 20px;
+	margin: 20px;
 }
 
-
 @media (max-width: 480px) {
-  .container {
-    margin: 30px 20px 30px 20px;
-  }
+	.container {
+		margin: 30px 20px 30px 20px;
+	}
 
-  .content-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+	.content-footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 }
 
 @media (max-width: 640px) {
-  .container {
-    margin: 30px 50px 30px 50px;
-  }
+	.container {
+		margin: 30px 50px 30px 50px;
+	}
 }
 
 .modal {
-  display: none;
-  position: absolute;
-  right: 10%;
-  top: 8%;
-  /* transform: translate(-50%, -50%); */
-  /* padding: 20px; */
-  z-index: 9999;
+	display: none;
+	position: absolute;
+	right: 10%;
+	top: 8%;
+	/* transform: translate(-50%, -50%); */
+	/* padding: 20px; */
+	z-index: 9999;
 }
 
 .modal-quiz {
-  display: none;
-  /* position: absolute;
+	display: none;
+	/* position: absolute;
   transform: translate(-50%, -50%);
   padding: 20px; */
-  z-index: 999;
+	z-index: 999;
 }
 
 .componente-quiz {
-  z-index: 9999;
+	z-index: 9999;
 }
 
-
 #componente-cta-quiz {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }

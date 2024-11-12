@@ -8,20 +8,21 @@
 	object-fit: cover;
 }
 
-.imagem, .img {
+.imagem,
+.img {
 	border-radius: 12px;
 }
 
 .container {
-  margin: 0 0;
-  border-radius: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  flex: 1 1 auto;
+	margin: 0 0;
+	border-radius: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	flex: 1 1 auto;
 	color: black;
-  border: 1px solid var(--btn-hover);
-  background-color: rgba(255, 255, 255, 0.71);
+	border: 1px solid var(--btn-hover);
+	background-color: rgba(255, 255, 255, 0.71);
 }
 
 .entrada {
@@ -95,18 +96,17 @@
 	align-items: center;
 }
 
-
 .cartao .empresas .linha img {
 	width: 96px;
 	height: 96px;
 }
 
 .linha {
-  display: flex;
+	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-  align-items: center;
-  gap: 50px;
+	align-items: center;
+	gap: 50px;
 }
 
 .sobre {
@@ -115,8 +115,7 @@
 	justify-content: center;
 	height: auto;
 	padding: 30px;
-	background-color: #377bc8;	
-	
+	background-color: #377bc8;
 }
 
 .sobre-conteudo {
@@ -163,7 +162,7 @@
 	padding: 30px;
 	text-align: center;
 	gap: 30px;
-	background-color: #CACACA;
+	background-color: #cacaca;
 }
 
 .scrum-vantagem .cartao,
@@ -206,8 +205,9 @@
 	gap: 10px;
 }
 
-.card-hover:hover, .cartao-beneficios:hover {
-	border: 1px solid #154D8F !important;
+.card-hover:hover,
+.cartao-beneficios:hover {
+	border: 1px solid #154d8f !important;
 	background-color: #377bc8 !important;
 }
 
@@ -216,10 +216,10 @@
 }
 
 .curso {
-  color: white;
+	color: white;
 	padding: 30px;
 	height: 500px;
-	background-color: #CACACA;
+	background-color: #cacaca;
 }
 
 .curso-content {
@@ -236,7 +236,6 @@
 	gap: 10px;
 	position: relative;
 	padding: 30px;
-
 }
 
 .curso-content::before {
@@ -258,15 +257,15 @@
 
 @media (max-width: 1200px) {
 	.cartao .empresas .linha img {
-			width: 84px;
-			height: 84px;
+		width: 84px;
+		height: 84px;
 	}
 }
 
 @media (max-width: 900px) {
 	.cartao .empresas .linha img {
-			width: 72px;
-			height: 72px;
+		width: 72px;
+		height: 72px;
 	}
 }
 
@@ -276,8 +275,8 @@
 	}
 
 	.cartao .empresas .linha img {
-			width: 64px;
-			height: 64px;
+		width: 64px;
+		height: 64px;
 	}
 
 	.scrum-definicao {

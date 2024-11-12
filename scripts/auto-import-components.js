@@ -1,3 +1,9 @@
+import modalHeaderControl from './components/header-user-form.js';
+import setupMobileMenu from './components/header-mobile-menu.js';
+import { getCadastroData } from './utils/puxar_dados.js';
+import modalQuizControl from './components/quiz-modal-control.js';
+import getQuizRespostas from './components/quiz-respostas.js';
+
 function importarComponente(componentPath, elementId, callback) {
   fetch(componentPath)
     .then((response) => response.text())
@@ -8,172 +14,45 @@ function importarComponente(componentPath, elementId, callback) {
     .catch((error) => console.error('Erro ao carregar o componente:', error));
 }
 
-importarComponente('components/header.html', 'componente-header', () => {
-  document.getElementById('menu-mobile').addEventListener('click', () => {
-    console.log('cliquei!');
-    const sidebar = document.getElementById('menu-mobile-sidebar');
-    if (sidebar.classList.contains('hidden')) {
-      sidebar.classList.remove('hidden');
-      sidebar.classList.add('show');
-      sidebar.style.animation = 'slideIn 0.3s forwards';
-    } else {
-      sidebar.style.animation = 'slideOut 0.3s forwards';
-      setTimeout(() => {
-        sidebar.classList.remove('show');
-        sidebar.classList.add('hidden');
-      }, 300);
-    }
+document.addEventListener('DOMContentLoaded', () => {
+  importarComponente('components/header.html', 'componente-header', () => {
+    setupMobileMenu();
   });
 
-  document.addEventListener('click', (event) => {
-    const sidebar = document.getElementById('menu-mobile-sidebar');
-    const menuButton = document.getElementById('menu-mobile');
-    if (!sidebar.contains(event.target) && !menuButton.contains(event.target)) {
-      sidebar.style.animation = 'slideOut 0.3s forwards';
-      setTimeout(() => {
-        sidebar.classList.remove('show');
-        sidebar.classList.add('hidden');
-      }, 300);
-    }
-  });
+  if (document.getElementById('componente-cta-quiz')) {
+    importarComponente('components/cta.html', 'componente-cta-quiz');
 
-  const style = document.createElement('style');
-  style.innerHTML = `
-    @keyframes slideIn {
-      from {
-        transform: translateX(-100%);
-      }
-      to {
-        transform: translateX(0);
-      }
-    }
+    const scriptElement = document.querySelector(
+      'script[type="module"][src="./scripts/auto-import-components.js"]',
+    );
+    const moduleNumber = scriptElement.getAttribute('data-module');
 
-    @keyframes slideOut {
-      from {
-        transform: translateX(0);
-      }
-      to {
-        transform: translateX(-100%);
-      }
-    }
+    console.log('Módulo:', moduleNumber);
 
-    #menu-mobile-sidebar.show {
-      display: block;
-    }
-
-    #menu-mobile-sidebar.hidden {
-      display: none;
-    }
-  `;
-  document.head.appendChild(style);
-});
-
-if (document.getElementById('componente-cta-quiz')) {
-  importarComponente('components/cta.html', 'componente-cta-quiz');
-
-  console.log('oi');
-  const scriptElement = document.currentScript;
-  const moduleNumber = scriptElement.getAttribute('data-module');
-
-  importarComponente(`components/${moduleNumber}`, 'componente-quiz', () => {
-    const btnAbrirModal = document.getElementById('start-quiz');
-    const modal = document.querySelector('.modal-quiz');
-    let status = 'closed';
-
-    btnAbrirModal.addEventListener('click', () => {
-      modal.style.display = 'block';
-      status = 'open';
-      document.querySelector('.container').style.filter = 'blur(10px)';
+    importarComponente(`components/${moduleNumber}`, 'componente-quiz', () => {
+      modalQuizControl(moduleNumber);
+      const respostas = getQuizRespostas();
+      console.log('Respostas:', respostas);
     });
-
-    function fecharModal() {
-      modal.style.display = 'none';
-    }
-
-    document.addEventListener('click', (event) => {
-      if (
-        status === 'open' &&
-        !event.target.closest('.modal-quiz') &&
-        !event.target.closest('#start-quiz')
-      ) {
-        status = 'closed';
-        document.querySelector('.container').style.filter = 'none';
-        fecharModal();
-      }
-    });
-
-    document.getElementById('quiz-form').addEventListener('submit', (event) => {
-      event.preventDefault();
-
-      const formData = new FormData(event.target);
-      const answers = {
-        question1: formData.get('question1'),
-        question2: formData.get('question2'),
-        question3: formData.get('question3'),
-      };
-
-      console.log('Respostas:', answers);
-
-      const infoDiv = document.querySelector('.info');
-      infoDiv.style.display = 'block';
-      infoDiv.innerHTML = `
-        <p>Respostas:</p>
-        <p>Questão 1: ${answers.question1}</p>
-        <p>Questão 2: ${answers.question2}</p>
-        <p>Questão 3: ${answers.question3}</p>
-      `;
-    });
-  });
-}
-
-importarComponente('components/footer.html', 'componente-footer');
-importarComponente('components/login.html', 'componente-login', () => {
-  const btnAbrirModal = document.getElementById('loginRegistrar');
-  const modal = document.querySelector('.modal');
-  let status = 'closed';
-
-  btnAbrirModal.addEventListener('click', () => {
-    modal.style.display = 'block';
-    status = 'open';
-  });
-
-  function fecharModal() {
-    modal.style.display = 'none';
   }
 
-  document.addEventListener('click', (event) => {
-    if (
-      status === 'open' &&
-      !event.target.closest('.modal') &&
-      !event.target.closest('#loginRegistrar')
-    ) {
-      status = 'closed';
-      fecharModal();
-    }
+  importarComponente('components/footer.html', 'componente-footer', () => {
+    console.log('callback');
   });
 
-  const cadastro = document.getElementById('cadastro-tab');
-  const login = document.getElementById('login-tab');
+  importarComponente('components/login.html', 'componente-login', () => {
+    modalHeaderControl();
 
-  cadastro.addEventListener('click', (event) => {
-    event.preventDefault();
-    document.getElementById('cadastro-tab-content').style.display = 'block';
-    document.getElementById('login-tab-content').style.display = 'none';
-    login.classList.remove('active');
-    cadastro.classList.add('active');
-  });
+    const registrationForm = document.getElementById('cadastro');
 
-  login.addEventListener('click', (event) => {
-    event.preventDefault();
-    document.getElementById('cadastro-tab-content').style.display = 'none';
-    document.getElementById('login-tab-content').style.display = 'block';
-    cadastro.classList.remove('active');
-    login.classList.add('active');
+    registrationForm.addEventListener('submit', (event) => {
+      const dados = getCadastroData();
+      console.log('Dados do cadastro:', dados);
+    });
   });
 });
 
 // INÍCIO DO SCRIPT USADO NO FOOTER
-
 function sobreFunction() {
   const sobreP = document.getElementById('sobreP');
   const suporteP = document.getElementById('suporteP');

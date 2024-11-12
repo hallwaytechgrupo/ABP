@@ -17,11 +17,11 @@
       </div>
       <div class="login-container" id="login-tab-content">
         <h2 class="h2-login">Seja bem-vindo!</h2>
-        <form>
+        <form id="login">
           <!-- <label for="email">E-mail:</label> -->
           <input
             type="email"
-            id="email"
+            id="login-email"
             name="email"
             placeholder="E-mail"
             required
@@ -29,7 +29,7 @@
           <!-- <label for="password">Senha:</label> -->
           <input
             type="password"
-            id="password"
+            id="login-password"
             name="password"
             placeholder="Senha"
             required
@@ -39,14 +39,15 @@
       </div>
       <div class="cadastro-container" id="cadastro-tab-content">
         <h2 class="h2-login">Entre com seus dados para se cadastrar.</h2>
-        <form>
-          <input type="text" placeholder="Nome e sobrenome" />
-          <input type="email" placeholder="E-mail" />
-          <input type="password" placeholder="Senha" />
-          <input type="password" placeholder="Repita sua senha" />
+        <form id="cadastro">
+          <input type="text" id="cadastro-nome" name="nome" placeholder="Nome e sobrenome" />
+          <input type="email" id="cadastro-email" name="email" placeholder="E-mail" />
+          <input type="password" id="cadastro-senha" name="senha" placeholder="Senha" />
+          <input type="password" id="cadastro-repita-senha" name="repita-senha" placeholder="Repita sua senha" />
           <button type="submit">Cadastrar</button>
         </form>
       </div>
     </div>
   </div>
+  <script src="../scripts/puxar_dados.js"></script>
 </body>

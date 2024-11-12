@@ -10,11 +10,46 @@
     <div id="footer">
         <div id="footerLinks">
             <div id="primaryFooterLinks">
-                <a class="SSL" id="sobre" href="#sobreP" onclick="sobreFunction()">Sobre</a>
-                
-                <a class="SSL" id="suporte" href="#suporteP" onclick="suporteFunction()">Suporte</a>
+                <a class="SSL" id="sobre" href="#sobreP" onclick="
+                    const sobreP = document.getElementById('sobreP');
+                    const suporteP = document.getElementById('suporteP');
+                    const localizacaoP = document.getElementById('localizacaoP');
+                    const footerMeta = document.getElementById('footerMeta');
 
-                <a class="SSL" id="nossaLocalizacao" href="#localizacaoP" onclick="localizacaoFunction()">Nossa Localização</a>
+                    if (sobreP.style.display === 'none' || !sobreP.style.display) {
+                        sobreP.style.display = 'block';
+                        suporteP.style.display = 'none';
+                        localizacaoP.style.display = 'none';
+                        footerMeta.style.paddingTop = '2%';
+                    } else {
+                        sobreP.style.display = 'none';
+                        footerMeta.style.paddingTop = '5%';
+                    }
+                ">Sobre</a>
+                
+                <a class="SSL" id="suporte" href="#suporteP" onclick="
+                    if (suporteP.style.display === 'none' || !suporteP.style.display) {
+                        suporteP.style.display = 'block';
+                        sobreP.style.display = 'none';
+                        localizacaoP.style.display = 'none';
+                        footerMeta.style.paddingTop = '2%';
+                    } else {
+                        suporteP.style.display = 'none';
+                        footerMeta.style.paddingTop = '5%';
+                    }
+                ">Suporte</a>
+
+                <a class="SSL" id="nossaLocalizacao" href="#localizacaoP" onclick="
+                    if (localizacaoP.style.display === 'none' || !localizacaoP.style.display) {
+                        localizacaoP.style.display = 'block';
+                        sobreP.style.display = 'none';
+                        suporteP.style.display = 'none';
+                        footerMeta.style.paddingTop = '2%';
+                    } else {
+                        localizacaoP.style.display = 'none';
+                        footerMeta.style.paddingTop = '5%';
+                    }
+                ">Nossa Localização</a>
             </div>
 
             <div id="gitProjeto"> 

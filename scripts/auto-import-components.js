@@ -3,6 +3,7 @@ import setupMobileMenu from './components/header-mobile-menu.js';
 import modalQuizControl from './components/quiz-modal-control.js';
 import getQuizRespostas from './components/quiz-respostas.js';
 import { getCadastroData } from './utils/user.cadastro.js';
+import { usuarioLogado } from './utils/user.control.js';
 
 function importarComponente(componentPath, elementId, callback) {
   fetch(componentPath)
@@ -15,7 +16,9 @@ function importarComponente(componentPath, elementId, callback) {
       document.getElementById(elementId).innerHTML = bodyContent;
       if (callback) callback();
     })
-    .catch((error) => console.error('Erro ao carregar o componente:', error));
+    .catch((error) =>
+      console.error(`Erro ao carregar o ${componentPath}`, error),
+    );
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -24,7 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   if (document.getElementById('componente-cta-quiz')) {
-    importarComponente('components/cta.html', 'componente-cta-quiz');
+    if (usuarioLogado()) {
+      console.log('Usuário logado');
+      importarComponente('components/cta.html', 'componente-cta-quiz');
+    } else {
+      console.log('Usuário não logado');
+      importarComponente('components/cta-feedback.html', 'componente-cta-quiz');
+    }
 
     const scriptElement = document.querySelector(
       'script[type="module"][src="./scripts/auto-import-components.js"]',

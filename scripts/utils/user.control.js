@@ -1,5 +1,6 @@
 const usuarioLogado = () => {
   // Faça a tarefa aqui
+  return true;
 };
 
 const setarLogado = (status) => {

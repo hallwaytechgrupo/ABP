@@ -8,7 +8,11 @@ function importarComponente(componentPath, elementId, callback) {
   fetch(componentPath)
     .then((response) => response.text())
     .then((data) => {
-      document.getElementById(elementId).innerHTML = data;
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(data, 'text/html');
+      const bodyContent = doc.body.innerHTML;
+
+      document.getElementById(elementId).innerHTML = bodyContent;
       if (callback) callback();
     })
     .catch((error) => console.error('Erro ao carregar o componente:', error));
@@ -46,6 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const registrationForm = document.getElementById('cadastro');
 
     registrationForm.addEventListener('submit', (event) => {
+      event.preventDefault();
       const dados = getCadastroData();
       console.log('Dados do cadastro:', dados);
     });

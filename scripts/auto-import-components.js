@@ -2,7 +2,10 @@ import modalHeaderControl from './components/header-user-form.js';
 import setupMobileMenu from './components/header-mobile-menu.js';
 import modalQuizControl from './components/quiz-modal-control.js';
 import getQuizRespostas from './components/quiz-respostas.js';
-import { getCadastroData } from './controllers/cadastro.controller.js';
+import {
+  clearData,
+  getCadastroData,
+} from './controllers/cadastro.controller.js';
 import { getLoginData } from './controllers/login.controller.js';
 import { setarLogado, usuarioLogado } from './utils/user.utils.js';
 import { cadastro } from './services/cadastro.service.js';
@@ -98,6 +101,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (senha !== confirmarSenha) {
         alert('[SENHAS NÃO COINCIDEM]');
+
+        clearData(
+          document.getElementById('cadastro-senha'),
+          document.getElementById('cadastro-repita-senha'),
+        );
+        document.getElementById('cadastro-senha').focus();
+
       } else {
         const retorno = await cadastro(nome, email, senha);
 

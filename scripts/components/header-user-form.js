@@ -8,12 +8,14 @@ const modalHeaderControl = () => {
     document.querySelector('.container');
 
   btnAbrirModal.addEventListener('click', () => {
+    
     modal.style.display = 'block';
     status = 'open';
   });
 
   function fecharModal() {
     modal.style.display = 'none';
+    
   }
 
   document.addEventListener('click', (event) => {

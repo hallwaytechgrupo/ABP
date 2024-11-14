@@ -27,7 +27,11 @@ async function importarComponente(
     const element = document.getElementById(elementId);
     if (element) {
       element.innerHTML = bodyContent;
-      if (callback) callback();
+      console.log(`Componente ${componentPath} carregado com sucesso`);
+      if (callback) {
+        console.log('Executando callback');
+        callback();
+      }
     } else {
       throw new Error(`Element with id ${elementId} not found`);
     }

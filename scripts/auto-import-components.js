@@ -8,20 +8,42 @@ import { setarLogado, usuarioLogado } from './utils/user.utils.js';
 import { cadastro } from './services/cadastro.service.js';
 import { login } from './services/login.service.js';
 
-function importarComponente(componentPath, elementId, callback) {
-  fetch(componentPath)
-    .then((response) => response.text())
-    .then((data) => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(data, 'text/html');
-      const bodyContent = doc.body.innerHTML;
+async function importarComponente(
+  componentPath,
+  elementId,
+  callback,
+  retries = 3,
+) {
+  try {
+    const response = await fetch(componentPath);
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+    const data = await response.text();
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(data, 'text/html');
+    const bodyContent = doc.body.innerHTML;
 
-      document.getElementById(elementId).innerHTML = bodyContent;
+    const element = document.getElementById(elementId);
+    if (element) {
+      element.innerHTML = bodyContent;
       if (callback) callback();
-    })
-    .catch((error) =>
-      console.error(`Erro ao carregar o ${componentPath}`, error),
-    );
+    } else {
+      throw new Error(`Element with id ${elementId} not found`);
+    }
+  } catch (error) {
+    console.error(`Erro ao carregar o ${componentPath}:`, error);
+    if (retries > 0) {
+      console.log(
+        `Tentando recarregar o componente ${componentPath}... (${retries} tentativas restantes)`,
+      );
+      setTimeout(
+        () =>
+          importarComponente(componentPath, elementId, callback, retries - 1),
+        1000,
+      );
+    }
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -32,24 +54,24 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('componente-cta-quiz')) {
     if (usuarioLogado()) {
       console.log('Usuário logado');
-      importarComponente('components/cta.html', 'componente-cta-quiz');
+      importarComponente('components/cta.html', 'componente-cta-quiz', () => {
+        const scriptElement = document.querySelector(
+          'script[type="module"][src="./scripts/auto-import-components.js"]',
+        );
+        const moduleNumber = scriptElement.getAttribute('data-module');
 
-      const scriptElement = document.querySelector(
-        'script[type="module"][src="./scripts/auto-import-components.js"]',
-      );
-      const moduleNumber = scriptElement.getAttribute('data-module');
+        console.log('Módulo:', moduleNumber);
 
-      console.log('Módulo:', moduleNumber);
-
-      importarComponente(
-        `components/${moduleNumber}`,
-        'componente-quiz',
-        () => {
-          modalQuizControl(moduleNumber);
-          const respostas = getQuizRespostas();
-          console.log('Respostas:', respostas);
-        },
-      );
+        importarComponente(
+          `components/${moduleNumber}`,
+          'componente-quiz',
+          () => {
+            modalQuizControl(moduleNumber);
+            const respostas = getQuizRespostas();
+            console.log('Respostas:', respostas);
+          },
+        );
+      });
     } else {
       console.log('Usuário não logado');
       importarComponente('components/cta-feedback.html', 'componente-cta-quiz');

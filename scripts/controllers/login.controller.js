@@ -12,7 +12,3 @@ export const getLoginData = () => {
     senha: password,
   };
 };
-
-export const login = async (email, password) => {
-  // Faça a tarefa aqui
-};

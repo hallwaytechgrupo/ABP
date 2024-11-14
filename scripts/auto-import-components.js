@@ -2,8 +2,11 @@ import modalHeaderControl from './components/header-user-form.js';
 import setupMobileMenu from './components/header-mobile-menu.js';
 import modalQuizControl from './components/quiz-modal-control.js';
 import getQuizRespostas from './components/quiz-respostas.js';
-import { getCadastroData } from './utils/user.cadastro.js';
-import { usuarioLogado } from './utils/user.control.js';
+import { getCadastroData } from './controllers/cadastro.controller.js';
+import { getLoginData } from './controllers/login.controller.js';
+import { setarLogado, usuarioLogado } from './utils/user.utils.js';
+import { cadastro } from './services/cadastro.service.js';
+import { login } from './services/login.service.js';
 
 function importarComponente(componentPath, elementId, callback) {
   fetch(componentPath)
@@ -57,11 +60,39 @@ document.addEventListener('DOMContentLoaded', () => {
     modalHeaderControl();
 
     const registrationForm = document.getElementById('cadastro');
+    const loginForm = document.getElementById('login');
 
-    registrationForm.addEventListener('submit', (event) => {
+    registrationForm.addEventListener('submit', async (event) => {
       event.preventDefault();
-      const dados = getCadastroData();
-      console.log('Dados do cadastro:', dados);
+      const { nome, email, senha, confirmarSenha } = getCadastroData();
+
+      if (senha !== confirmarSenha) {
+        alert('[SENHAS NÃO COINCIDEM]');
+      } else {
+        const retorno = await cadastro(nome, email, senha);
+
+        console.log('Retorno do cadastro:', JSON.stringify(retorno));
+
+        if (retorno.status === 201) {
+          alert('[CADASTRO REALIZADO COM SUCESSO]');
+        }
+      }
+    });
+
+    loginForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const { email, senha } = getLoginData();
+      console.log('Dados do login:', { email, senha });
+      login(email, senha).then((retorno) => {
+        console.log('Retorno do login:', retorno);
+
+        if (retorno) {
+          setarLogado(true);
+          location.reload();
+        } else {
+          alert('[ERRO AO REALIZAR LOGIN]');
+        }
+      });
     });
   });
 });

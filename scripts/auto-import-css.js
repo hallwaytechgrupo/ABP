@@ -25,4 +25,8 @@ if (isQuiz) {
   linksCss.push('./css/cta-quiz.css', './css/quizz.css');
 }
 
+const script = document.createElement('script');
+script.src = 'https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js';
+document.head.appendChild(script);
+
 incluirLinksCss(linksCss);

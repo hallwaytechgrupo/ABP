@@ -33,23 +33,27 @@ document.addEventListener('DOMContentLoaded', () => {
     if (usuarioLogado()) {
       console.log('Usuário logado');
       importarComponente('components/cta.html', 'componente-cta-quiz');
+
+      const scriptElement = document.querySelector(
+        'script[type="module"][src="./scripts/auto-import-components.js"]',
+      );
+      const moduleNumber = scriptElement.getAttribute('data-module');
+
+      console.log('Módulo:', moduleNumber);
+
+      importarComponente(
+        `components/${moduleNumber}`,
+        'componente-quiz',
+        () => {
+          modalQuizControl(moduleNumber);
+          const respostas = getQuizRespostas();
+          console.log('Respostas:', respostas);
+        },
+      );
     } else {
       console.log('Usuário não logado');
       importarComponente('components/cta-feedback.html', 'componente-cta-quiz');
     }
-
-    const scriptElement = document.querySelector(
-      'script[type="module"][src="./scripts/auto-import-components.js"]',
-    );
-    const moduleNumber = scriptElement.getAttribute('data-module');
-
-    console.log('Módulo:', moduleNumber);
-
-    importarComponente(`components/${moduleNumber}`, 'componente-quiz', () => {
-      modalQuizControl(moduleNumber);
-      const respostas = getQuizRespostas();
-      console.log('Respostas:', respostas);
-    });
   }
 
   importarComponente('components/footer.html', 'componente-footer', () => {
@@ -88,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (retorno) {
           setarLogado(true);
-          location.reload();
+          window.location.reload();
         } else {
           alert('[ERRO AO REALIZAR LOGIN]');
         }

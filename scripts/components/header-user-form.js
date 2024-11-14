@@ -11,6 +11,7 @@ const modalHeaderControl = () => {
     container.style.filter = 'blur(5px)';
     modal.style.display = 'block';
     status = 'open';
+    document.getElementById('login-email').focus();
   });
 
   function fecharModal() {

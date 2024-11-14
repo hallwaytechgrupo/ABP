@@ -10,15 +10,10 @@ const modalHeaderControl = () => {
   btnAbrirModal.addEventListener('click', () => {
     modal.style.display = 'block';
     status = 'open';
-    if (container) {
-      container.style.filter = 'blur(5px)';
-    }
-    document.getElementById('login-email').focus();
   });
 
   function fecharModal() {
     modal.style.display = 'none';
-    container.style.filter = 'none';
   }
 
   document.addEventListener('click', (event) => {
@@ -41,7 +36,6 @@ const modalHeaderControl = () => {
     document.getElementById('login-tab-content').style.display = 'none';
     login.classList.remove('active');
     cadastro.classList.add('active');
-    document.getElementById('cadastro-nome').focus();
   });
 
   login.addEventListener('click', (event) => {
@@ -50,7 +44,6 @@ const modalHeaderControl = () => {
     document.getElementById('login-tab-content').style.display = 'block';
     cadastro.classList.remove('active');
     login.classList.add('active');
-    document.getElementById('login-senha').focus();
   });
 };
 

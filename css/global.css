@@ -124,10 +124,10 @@ button:hover,
 
 .modal {
 	display: none;
-	position: fixed;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, -50%);
+	position: absolute;
+	right: 10%;
+	top: 8%;
+	/* transform: translate(-50%, -50%); */
 	/* padding: 20px; */
 	z-index: 9999;
 }

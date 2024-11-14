@@ -37,6 +37,7 @@ const modalHeaderControl = () => {
     document.getElementById('login-tab-content').style.display = 'none';
     login.classList.remove('active');
     cadastro.classList.add('active');
+    document.getElementById('cadastro-nome').focus();
   });
 
   login.addEventListener('click', (event) => {
@@ -45,6 +46,7 @@ const modalHeaderControl = () => {
     document.getElementById('login-tab-content').style.display = 'block';
     cadastro.classList.remove('active');
     login.classList.add('active');
+    document.getElementById('login-email').focus();
   });
 };
 

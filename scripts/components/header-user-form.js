@@ -8,15 +8,14 @@ const modalHeaderControl = () => {
     document.querySelector('.container');
 
   btnAbrirModal.addEventListener('click', () => {
-    
+    container.style.filter = 'blur(5px)';
     modal.style.display = 'block';
     status = 'open';
-    document.getElementById('login-email').focus();
   });
 
   function fecharModal() {
     modal.style.display = 'none';
-    
+    container.style.filter = 'none';
   }
 
   document.addEventListener('click', (event) => {

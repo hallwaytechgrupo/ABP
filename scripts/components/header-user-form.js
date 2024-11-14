@@ -10,6 +10,7 @@ const modalHeaderControl = () => {
   btnAbrirModal.addEventListener('click', () => {
     modal.style.display = 'block';
     status = 'open';
+    document.getElementById('login-email').focus();
   });
 
   function fecharModal() {

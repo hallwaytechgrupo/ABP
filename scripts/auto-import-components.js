@@ -81,7 +81,13 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     } else {
       console.log('Usuário não logado');
-      importarComponente('components/cta-feedback.html', 'componente-cta-quiz');
+      importarComponente(
+        'components/cta-feedback.html',
+        'componente-cta-quiz',
+        () => {
+          modalHeaderControl();
+        },
+      );
     }
   }
 
@@ -107,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
           document.getElementById('cadastro-repita-senha'),
         );
         document.getElementById('cadastro-senha').focus();
-
       } else {
         const retorno = await cadastro(nome, email, senha);
 

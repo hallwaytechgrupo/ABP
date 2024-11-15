@@ -7,12 +7,14 @@ const modalHeaderControl = () => {
     document.querySelector('.container2') ||
     document.querySelector('.container');
 
-  btnAbrirModal.addEventListener('click', () => {
+  const abrirModal = () => {
     container.style.filter = 'blur(5px)';
     modal.style.display = 'block';
     status = 'open';
     document.getElementById('login-email').focus();
-  });
+  };
+
+  btnAbrirModal.addEventListener('click', abrirModal);
 
   function fecharModal() {
     modal.style.display = 'none';
@@ -23,7 +25,8 @@ const modalHeaderControl = () => {
     if (
       status === 'open' &&
       !event.target.closest('.modal') &&
-      !event.target.closest('#loginRegistrar')
+      !event.target.closest('#loginRegistrar') &&
+      !event.target.closest('#fazer-login')
     ) {
       status = 'closed';
       fecharModal();

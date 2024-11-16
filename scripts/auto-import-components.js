@@ -95,51 +95,65 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('callback');
   });
 
-  importarComponente('components/login.html', 'componente-login', () => {
-    modalHeaderControl();
-
-    const registrationForm = document.getElementById('cadastro');
-    const loginForm = document.getElementById('login');
-
-    registrationForm.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const { nome, email, senha, confirmarSenha } = getCadastroData();
-
-      if (senha !== confirmarSenha) {
-        alert('[SENHAS NÃO COINCIDEM]');
-
-        clearData(
-          document.getElementById('cadastro-senha'),
-          document.getElementById('cadastro-repita-senha'),
-        );
-        document.getElementById('cadastro-senha').focus();
-      } else {
-        const retorno = await cadastro(nome, email, senha);
-
-        console.log('Retorno do cadastro:', JSON.stringify(retorno));
-
-        if (retorno.status === 201) {
-          alert('[CADASTRO REALIZADO COM SUCESSO]');
-        }
+  if (usuarioLogado()) {
+    importarComponente('components/profile.html', 'componente-login', () => {
+      modalHeaderControl();
+      const logoutButton = document.getElementById('profile-logout');
+      if (logoutButton) {
+        logoutButton.addEventListener('click', (event) => {
+          event.preventDefault();
+          setarLogado(false);
+          window.location.reload();
+        });
       }
     });
+  } else {
+    importarComponente('components/login.html', 'componente-login', () => {
+      modalHeaderControl();
 
-    loginForm.addEventListener('submit', async (event) => {
-      event.preventDefault();
-      const { email, senha } = getLoginData();
-      console.log('Dados do login:', { email, senha });
-      login(email, senha).then((retorno) => {
-        console.log('Retorno do login:', retorno);
+      const registrationForm = document.getElementById('cadastro');
+      const loginForm = document.getElementById('login');
 
-        if (retorno) {
-          setarLogado(true);
-          window.location.reload();
+      registrationForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const { nome, email, senha, confirmarSenha } = getCadastroData();
+
+        if (senha !== confirmarSenha) {
+          alert('[SENHAS NÃO COINCIDEM]');
+
+          clearData(
+            document.getElementById('cadastro-senha'),
+            document.getElementById('cadastro-repita-senha'),
+          );
+          document.getElementById('cadastro-senha').focus();
         } else {
-          alert('[ERRO AO REALIZAR LOGIN]');
+          const retorno = await cadastro(nome, email, senha);
+
+          console.log('Retorno do cadastro:', JSON.stringify(retorno));
+
+          if (retorno.status === 201) {
+            alert('[CADASTRO REALIZADO COM SUCESSO]');
+          }
         }
       });
+
+      loginForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        const { email, senha } = getLoginData();
+        console.log('Dados do login:', { email, senha });
+        login(email, senha).then((retorno) => {
+          console.log('Retorno do login:', retorno);
+
+          if (retorno) {
+            setarLogado(true);
+            window.location.reload();
+          } else {
+            alert('[ERRO AO REALIZAR LOGIN]');
+          }
+        });
+      });
     });
-  });
+  }
 });
 
 // INÍCIO DO SCRIPT USADO NO FOOTER

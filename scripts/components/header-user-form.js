@@ -11,7 +11,10 @@ const modalHeaderControl = () => {
     container.style.filter = 'blur(5px)';
     modal.style.display = 'block';
     status = 'open';
-    document.getElementById('login-email').focus();
+    const loginEmail = document.getElementById('login-email');
+    if (loginEmail) {
+      loginEmail.focus();
+    }
   };
 
   btnAbrirModal.addEventListener('click', abrirModal);
@@ -35,6 +38,8 @@ const modalHeaderControl = () => {
 
   const cadastro = document.getElementById('cadastro-tab');
   const login = document.getElementById('login-tab');
+
+  if (!cadastro || !login) return;
 
   cadastro.addEventListener('click', (event) => {
     event.preventDefault();

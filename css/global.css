@@ -74,7 +74,7 @@ button:hover,
 .container {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: flex-start;
 	flex: 1 1 auto;
 	margin: 100px 100px 30px 100px;
 	color: black;

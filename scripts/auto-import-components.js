@@ -172,8 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (retorno.status === 201) {
               localStorage.setItem('cadastradoAgora', 'true');
               localStorage.setItem('scrum-id', id);
-              localStorage.setItem('scrum-nome', retorno.uNome);
-              localStorage.setItem('scrum-email', retorno.uEmail);
+              localStorage.setItem('scrum-nome', uNome);
+              localStorage.setItem('scrum-email', uEmail);
               setarLogado(true);
               window.location.reload();
             }

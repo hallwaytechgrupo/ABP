@@ -1,5 +1,6 @@
 const modalHeaderControl = () => {
   const btnAbrirModal = document.getElementById('loginRegistrar');
+  const btnFazerLogin = document.getElementById('fazer-login');
   const modal = document.querySelector('.modal');
   let status = 'closed';
 
@@ -18,7 +19,9 @@ const modalHeaderControl = () => {
   };
 
   btnAbrirModal.addEventListener('click', abrirModal);
-
+  if (btnFazerLogin) {
+    btnFazerLogin.addEventListener('click', abrirModal);
+  }
   function fecharModal() {
     modal.style.display = 'none';
     container.style.filter = 'none';

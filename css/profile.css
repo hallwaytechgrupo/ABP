@@ -36,10 +36,6 @@
   color: black;
 }
 
-.profile-info .picture {
-	margin-right: 20px;
-}
-
 .profile-info .picture img {
 	border-radius: 9px;
 	height: auto;
@@ -191,6 +187,10 @@
 
 @media (max-width: 768px) {
 
+  .profile-info .picture {
+    margin-right: 20px;
+  }
+
   #gerar-certificado {
     font-size: 16px !important;
   }
@@ -231,7 +231,7 @@
     padding-left: 10px;
   }
   
-  #profile-name {
+  .profile-info > name > * {
     font-size: 16px !important;
   }
 

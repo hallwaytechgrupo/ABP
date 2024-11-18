@@ -10,6 +10,7 @@ import { getLoginData } from './controllers/login.controller.js';
 import { setarLogado, usuarioLogado } from './utils/user.utils.js';
 import { cadastro } from './services/cadastro.service.js';
 import { login } from './services/login.service.js';
+import toast from './toast.js';
 
 async function importarComponente(
   componentPath,
@@ -60,14 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (document.getElementById('componente-cta-quiz')) {
     if (usuarioLogado()) {
-      console.log('Usuário logado');
       importarComponente('components/cta.html', 'componente-cta-quiz', () => {
         const scriptElement = document.querySelector(
           'script[type="module"][src="./scripts/auto-import-components.js"]',
         );
         const moduleNumber = scriptElement.getAttribute('data-module');
-
-        console.log('Módulo:', moduleNumber);
 
         importarComponente(
           `components/${moduleNumber}`,
@@ -75,12 +73,10 @@ document.addEventListener('DOMContentLoaded', () => {
           () => {
             modalQuizControl(moduleNumber);
             const respostas = getQuizRespostas();
-            console.log('Respostas:', respostas);
           },
         );
       });
     } else {
-      console.log('Usuário não logado');
       importarComponente(
         'components/cta-feedback.html',
         'componente-cta-quiz',
@@ -97,7 +93,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (usuarioLogado()) {
     importarComponente('components/profile.html', 'componente-login', () => {
-      modalHeaderControl();
+      modalHeaderControl(false);
+
+      const profileNameElement = document.querySelector('#profile-name');
+      const scrumUser = localStorage.getItem('scrum-nome');
+      if (scrumUser && profileNameElement) {
+        profileNameElement.textContent = scrumUser;
+      }
+
+      console.log('Usuário logado ou acabou de logar');
+      const acabouDeCadastar =
+        localStorage.getItem('cadastradoAgora') === 'true';
+
+      const acabouDeLogar = localStorage.getItem('logadoAgora') === 'true';
+
+      if (acabouDeCadastar || acabouDeLogar) {
+        const message = acabouDeCadastar
+          ? 'Cadastrado com sucesso!'
+          : 'Logado com sucesso!';
+        toast({
+          title: 'Sucesso',
+          message: message,
+          type: 'success',
+          duration: 5000,
+        });
+
+        localStorage.removeItem('cadastradoAgora');
+        localStorage.removeItem('logadoAgora');
+      }
+
       const logoutButton = document.getElementById('profile-logout');
       if (logoutButton) {
         logoutButton.addEventListener('click', (event) => {
@@ -110,7 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     importarComponente('components/login.html', 'componente-login', () => {
       modalHeaderControl();
-
       const registrationForm = document.getElementById('cadastro');
       const loginForm = document.getElementById('login');
 
@@ -118,8 +141,23 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault();
         const { nome, email, senha, confirmarSenha } = getCadastroData();
 
+        if (!nome || !email || !senha || !confirmarSenha) {
+          toast({
+            title: 'Erro',
+            message: 'Todos os campos precisam estar preenchidos!',
+            type: 'error',
+            duration: 5000,
+          });
+          return;
+        }
+
         if (senha !== confirmarSenha) {
-          alert('[SENHAS NÃO COINCIDEM]');
+          toast({
+            title: 'Erro',
+            message: 'As senhas não coincidem!',
+            type: 'error',
+            duration: 5000,
+          });
 
           clearData(
             document.getElementById('cadastro-senha'),
@@ -127,12 +165,32 @@ document.addEventListener('DOMContentLoaded', () => {
           );
           document.getElementById('cadastro-senha').focus();
         } else {
-          const retorno = await cadastro(nome, email, senha);
+          try {
+            const retorno = await cadastro(nome, email, senha);
 
-          console.log('Retorno do cadastro:', JSON.stringify(retorno));
-
-          if (retorno.status === 201) {
-            alert('[CADASTRO REALIZADO COM SUCESSO]');
+            const { id, uNome, uEmail } = retorno.data;
+            if (retorno.status === 201) {
+              localStorage.setItem('cadastradoAgora', 'true');
+              localStorage.setItem('scrum-id', id);
+              localStorage.setItem('scrum-nome', retorno.uNome);
+              localStorage.setItem('scrum-email', retorno.uEmail);
+              setarLogado(true);
+              window.location.reload();
+            }
+          } catch (error) {
+            console.error('Erro ao realizar cadastro:', error);
+            let message = 'Erro inesperado ao realizar cadastro!';
+            let title = 'Erro';
+            if (error.code && error.message) {
+              title = error.code;
+              message = `${error.message}: Provavelmente a API não está disponível.`;
+            }
+            toast({
+              title: title,
+              message: message,
+              type: 'error',
+              duration: 5000,
+            });
           }
         }
       });
@@ -140,15 +198,20 @@ document.addEventListener('DOMContentLoaded', () => {
       loginForm.addEventListener('submit', async (event) => {
         event.preventDefault();
         const { email, senha } = getLoginData();
-        console.log('Dados do login:', { email, senha });
         login(email, senha).then((retorno) => {
-          console.log('Retorno do login:', retorno);
-
           if (retorno) {
+            localStorage.setItem('logadoAgora', 'true');
+            localStorage.setItem('scrum-nome', retorno.nome);
+            localStorage.setItem('scrum-email', retorno.email);
             setarLogado(true);
             window.location.reload();
           } else {
-            alert('[ERRO AO REALIZAR LOGIN]');
+            toast({
+              title: 'Erro',
+              message: 'E-mail ou senha inválidos!',
+              type: 'error',
+              duration: 5000,
+            });
           }
         });
       });

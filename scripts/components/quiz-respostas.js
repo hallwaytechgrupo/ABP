@@ -1,3 +1,5 @@
+import toast from '../toast.js';
+
 const getQuizRespostas = async () => {
   document.getElementById('quiz-form').addEventListener('submit', (event) => {
     event.preventDefault();
@@ -8,6 +10,18 @@ const getQuizRespostas = async () => {
       question2: formData.get('question2'),
       question3: formData.get('question3'),
     };
+
+    // Faça a tarefa da validação do quiz aqui
+    const condicao = false;
+    if (condicao) {
+      toast({
+        title: 'TÍTULO',
+        message: 'MENSAGEM',
+        type: 'error',
+        duration: 5000,
+      });
+      return;
+    }
 
     console.log('Respostas:', answers);
 

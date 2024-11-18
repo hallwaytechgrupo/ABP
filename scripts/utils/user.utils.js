@@ -9,4 +9,8 @@ function setarLogado(status) {
   }
 }
 
-export { usuarioLogado, setarLogado };
+function getUsuario() {
+  return {};
+}
+
+export { usuarioLogado, setarLogado, getUsuario };

@@ -1,11 +1,10 @@
 import {
   PDFDocument,
   rgb,
-  StandardFonts,
 } from 'https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/+esm';
 import fontkit from 'https://cdn.jsdelivr.net/npm/@pdf-lib/fontkit@1.1.1/+esm';
 
-export async function gerarCertificado(nome) {
+async function gerarCertificado(nome) {
   // Carrega o PDF existente em um array de bytes
   const existingPdfBytes = await fetch('/assets/certificado.pdf').then((res) =>
     res.arrayBuffer(),
@@ -80,3 +79,5 @@ export async function gerarCertificado(nome) {
   const url = URL.createObjectURL(blob);
   window.open(url);
 }
+
+export { gerarCertificado };

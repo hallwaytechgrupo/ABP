@@ -222,13 +222,18 @@
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     flex-direction: row;
   }
 
   .profile-info .name {
     width: auto !important;
     padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
   }
   
   .profile-info > name > * {

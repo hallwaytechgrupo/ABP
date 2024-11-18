@@ -168,12 +168,12 @@ document.addEventListener('DOMContentLoaded', () => {
           try {
             const retorno = await cadastro(nome, email, senha);
 
-            const { id, uNome, uEmail } = retorno.data;
             if (retorno.status === 201) {
+              const { id, nome, email } = retorno.data;
               localStorage.setItem('cadastradoAgora', 'true');
               localStorage.setItem('scrum-id', id);
-              localStorage.setItem('scrum-nome', uNome);
-              localStorage.setItem('scrum-email', uEmail);
+              localStorage.setItem('scrum-nome', nome);
+              localStorage.setItem('scrum-email', email);
               setarLogado(true);
               window.location.reload();
             }

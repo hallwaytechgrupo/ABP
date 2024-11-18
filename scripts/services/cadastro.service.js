@@ -3,9 +3,9 @@ import { api } from './../apiSetup.js';
 export const cadastro = async (nome, email, senha) => {
   // Crie um objeto com os dados do usuário
   const usuario = {
-    name: nome,
-    mail: email,
-    password: senha,
+    nome,
+    email,
+    senha,
   };
   try {
     // Faça uma requisição POST para a rota /user/signup

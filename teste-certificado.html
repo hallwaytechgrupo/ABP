@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+  <h1>Testing Dashboard</h1>
+  <button id="generatePdfWithTextButton">Generate PDF with Text</button>
+
+  <script type="module">
+    import { gerarCertificado } from './scripts/certificado.js';
+    document.getElementById('generatePdfWithTextButton').addEventListener('click', () => {
+      const nome = localStorage.getItem('nome');
+      if (nome) {
+        gerarCertificado(nome);
+      } else {
+        alert('Nome não encontrado no localStorage');
+      }
+    });
+  </script>
+</body>
+</html>

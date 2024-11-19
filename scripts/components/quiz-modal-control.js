@@ -6,7 +6,7 @@ const modalQuizControl = (moduleNumber) => {
   btnAbrirModal.addEventListener('click', () => {
     modal.style.display = 'block';
     status = 'open';
-    if (moduleNumber === 'quiz2.html') {
+    if (moduleNumber === '2') {
       document.querySelector('.container2').style.filter = 'blur(10px)';
     } else {
       document.querySelector('.container').style.filter = 'blur(10px)';

@@ -11,6 +11,8 @@ import { setarLogado, usuarioLogado } from './utils/user.utils.js';
 import { cadastro } from './services/cadastro.service.js';
 import { login } from './services/login.service.js';
 import toast from './toast.js';
+import { getQuestoesByModulo } from './services/quiz.service.js';
+import prepararQuiz from './components/quiz-mudar-questoes.js';
 
 async function importarComponente(
   componentPath,
@@ -71,6 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
         importarComponente(`components/${module}`, 'componente-quiz', () => {
           modalQuizControl(moduleNumber);
           getQuizRespostas(moduleNumber);
+          prepararQuiz(moduleNumber);
         });
       });
     } else {
@@ -94,6 +97,21 @@ document.addEventListener('DOMContentLoaded', () => {
       'componente-login',
       async () => {
         modalHeaderControl(false);
+
+        const primeiroAcesso = localStorage.getItem('primeiroAcesso');
+
+        if (primeiroAcesso) {
+          console.log('Primeiro acesso do usuário');
+          for (let i = 1; i <= 3; i++) {
+            getQuestoesByModulo(i).then((response) => {
+              const questoes = response.data;
+
+              localStorage.setItem(`modulo-${i}`, JSON.stringify(questoes));
+
+              localStorage.setItem('primeiroAcesso', false);
+            });
+          }
+        }
 
         const profileNameElement = document.querySelector('#profile-name');
         const scrumUser = localStorage.getItem('scrum-nome');
@@ -127,6 +145,9 @@ document.addEventListener('DOMContentLoaded', () => {
           logoutButton.addEventListener('click', (event) => {
             event.preventDefault();
             setarLogado(false);
+            localStorage.removeItem('scrum-id');
+            localStorage.removeItem('scrum-nome');
+            localStorage.removeItem('scrum-email');
             window.location.reload();
           });
         }
@@ -172,6 +193,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (retorno.status === 201) {
               const { id, nome, email } = retorno.data;
               localStorage.setItem('cadastradoAgora', 'true');
+
+              if (!localStorage.getItem('primeiroAcesso')) {
+                localStorage.setItem('primeiroAcesso', true);
+              }
+
               localStorage.setItem('scrum-id', id);
               localStorage.setItem('scrum-nome', nome);
               localStorage.setItem('scrum-email', email);
@@ -208,8 +234,13 @@ document.addEventListener('DOMContentLoaded', () => {
         login(email, senha).then((retorno) => {
           if (retorno) {
             localStorage.setItem('logadoAgora', 'true');
-            localStorage.setItem('scrum-nome', retorno.nome);
-            localStorage.setItem('scrum-email', retorno.email);
+
+            if (!localStorage.getItem('primeiroAcesso')) {
+              localStorage.setItem('primeiroAcesso', true);
+            }
+
+            localStorage.setItem('scrum-nome', retorno.data.nome);
+            localStorage.setItem('scrum-email', retorno.data.email);
             setarLogado(true);
             window.location.reload();
           } else {

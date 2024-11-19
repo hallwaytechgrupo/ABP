@@ -11,7 +11,7 @@
         "editor.defaultFormatter": "biomejs.biome",
         "editor.formatOnSave": true,
     },
-    "workbench.colorTheme": "Halcyon",
+    "workbench.colorTheme": "Default Dark Modern",
     "workbench.iconTheme": "catppuccin-latte",
     "liveServer.settings.port": 5501,
 }

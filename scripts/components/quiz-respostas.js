@@ -12,11 +12,12 @@ const getQuizRespostas = async () => {
     };
 
     // Faça a tarefa da validação do quiz aqui
-    const condicao = false;
+    const condicao = !answers.question1 || !answers.question2 || !answers.question3;
+
     if (condicao) {
       toast({
-        title: 'TÍTULO',
-        message: 'MENSAGEM',
+        title: 'ERRO:400',
+        message: 'VOCÊ PRECISA RESPONDER TODAS AS QUESTÕES PARA PROSSEGUIR',
         type: 'error',
         duration: 5000,
       });

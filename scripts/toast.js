@@ -2,6 +2,11 @@
 function toast({ title = '', message = '', type = 'info', duration = 3000 }) {
   const main = document.getElementById('toast');
   if (main) {
+    const toastsRemove = main.querySelectorAll('div');
+    for (const toast of toastsRemove) {
+      toast.remove();
+    }
+
     const toast = document.createElement('div');
 
     // Auto remove toast

@@ -24,7 +24,7 @@ const modalQuizControl = (moduleNumber) => {
       !event.target.closest('#start-quiz')
     ) {
       status = 'closed';
-      if (moduleNumber === 'quiz2.html') {
+      if (moduleNumber === '2') {
         document.querySelector('.container2').style.filter = 'none';
       } else {
         document.querySelector('.container').style.filter = 'none';

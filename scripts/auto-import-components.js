@@ -65,16 +65,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const scriptElement = document.querySelector(
           'script[type="module"][src="./scripts/auto-import-components.js"]',
         );
-        const moduleNumber = scriptElement.getAttribute('data-module');
+        const module = scriptElement.getAttribute('data-module');
+        const moduleNumber = scriptElement.getAttribute('data-module-number');
 
-        importarComponente(
-          `components/${moduleNumber}`,
-          'componente-quiz',
-          () => {
-            modalQuizControl(moduleNumber);
-            const respostas = getQuizRespostas();
-          },
-        );
+        importarComponente(`components/${module}`, 'componente-quiz', () => {
+          modalQuizControl(moduleNumber);
+          getQuizRespostas(moduleNumber);
+        });
       });
     } else {
       importarComponente(
@@ -92,45 +89,49 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   if (usuarioLogado()) {
-    importarComponente('components/profile.html', 'componente-login', () => {
-      modalHeaderControl(false);
+    importarComponente(
+      'components/profile.html',
+      'componente-login',
+      async () => {
+        modalHeaderControl(false);
 
-      const profileNameElement = document.querySelector('#profile-name');
-      const scrumUser = localStorage.getItem('scrum-nome');
-      if (scrumUser && profileNameElement) {
-        profileNameElement.textContent = scrumUser;
-      }
+        const profileNameElement = document.querySelector('#profile-name');
+        const scrumUser = localStorage.getItem('scrum-nome');
+        if (scrumUser && profileNameElement) {
+          profileNameElement.textContent = scrumUser;
+        }
 
-      console.log('Usuário logado ou acabou de logar');
-      const acabouDeCadastar =
-        localStorage.getItem('cadastradoAgora') === 'true';
+        console.log('Usuário logado ou acabou de logar');
+        const acabouDeCadastar =
+          localStorage.getItem('cadastradoAgora') === 'true';
 
-      const acabouDeLogar = localStorage.getItem('logadoAgora') === 'true';
+        const acabouDeLogar = localStorage.getItem('logadoAgora') === 'true';
 
-      if (acabouDeCadastar || acabouDeLogar) {
-        const message = acabouDeCadastar
-          ? 'Cadastrado com sucesso!'
-          : 'Logado com sucesso!';
-        toast({
-          title: 'Sucesso',
-          message: message,
-          type: 'success',
-          duration: 5000,
-        });
+        if (acabouDeCadastar || acabouDeLogar) {
+          const message = acabouDeCadastar
+            ? 'Cadastrado com sucesso!'
+            : 'Logado com sucesso!';
+          toast({
+            title: 'Sucesso',
+            message: message,
+            type: 'success',
+            duration: 5000,
+          });
 
-        localStorage.removeItem('cadastradoAgora');
-        localStorage.removeItem('logadoAgora');
-      }
+          localStorage.removeItem('cadastradoAgora');
+          localStorage.removeItem('logadoAgora');
+        }
 
-      const logoutButton = document.getElementById('profile-logout');
-      if (logoutButton) {
-        logoutButton.addEventListener('click', (event) => {
-          event.preventDefault();
-          setarLogado(false);
-          window.location.reload();
-        });
-      }
-    });
+        const logoutButton = document.getElementById('profile-logout');
+        if (logoutButton) {
+          logoutButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            setarLogado(false);
+            window.location.reload();
+          });
+        }
+      },
+    );
   } else {
     importarComponente('components/login.html', 'componente-login', () => {
       modalHeaderControl();
@@ -185,6 +186,12 @@ document.addEventListener('DOMContentLoaded', () => {
               title = error.code;
               message = `${error.message}: Provavelmente a API não está disponível.`;
             }
+
+            if (error.response && error.response.status === 400) {
+              title = 'Erro ao cadastrar';
+              message = error.response.data.message;
+            }
+
             toast({
               title: title,
               message: message,

@@ -18,6 +18,9 @@ export const cadastro = async (nome, email, senha) => {
     if (error.response && error.response.status === 400) {
       const { message } = error.response.data;
       console.error('Erro de validação:', message);
+    } else if (error.response && error.response.status === 409) {
+      const { message } = error.response.data;
+      console.error('Erro de conflito:', message);
     } else {
       console.error('Erro ao realizar cadastro:', error);
     }

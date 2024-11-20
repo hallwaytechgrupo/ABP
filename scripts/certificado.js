@@ -15,10 +15,14 @@ async function gerarCertificado(nome) {
 
   // Embed a font
   pdfDoc.registerFontkit(fontkit);
-  const fontBytes = await fetch('/assets/Montserrat.ttf').then((res) =>
+  const fontBytes = await fetch('/assets/montserrat.ttf').then((res) =>
+    res.arrayBuffer(),
+  );
+  const fontBytes_2 = await fetch('/assets/signature.ttf').then((res) =>
     res.arrayBuffer(),
   );
   const montserrat = await pdfDoc.embedFont(fontBytes);
+  const signature = await pdfDoc.embedFont(fontBytes_2);
 
   // Get the first page of the document
   const pages = pdfDoc.getPages();
@@ -26,20 +30,19 @@ async function gerarCertificado(nome) {
   const { width, height } = firstPage.getSize();
 
   // Define the text to be added
-  const text = `Nome: ${nome}`;
-  const nomeUpper = nome.toUpperCase();
+  const nomeUpper = nome;
 
   // Calculate text width and height
-  const textSize = 24;
-  const textWidth = montserrat.widthOfTextAtSize(nomeUpper, textSize);
-  const textHeight = montserrat.heightAtSize(textSize);
+  const textSize = 60;
+  const textWidth = signature.widthOfTextAtSize(nomeUpper, textSize);
+  const textHeight = signature.heightAtSize(textSize);
 
   // Add text to the first page
   firstPage.drawText(nomeUpper, {
     x: 574 - textWidth / 2,
-    y: 100 - textHeight / 2 + 16,
+    y: 100 - textHeight / 2 + 32,
     size: textSize,
-    font: montserrat,
+    font: signature,
     color: rgb(0.1, 0.4, 0.73),
   });
 

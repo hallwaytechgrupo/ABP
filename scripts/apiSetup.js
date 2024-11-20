@@ -1,5 +1,5 @@
 // const PORT = 1239;
-const DOMAIN = 'abp-2024-2-server.onrender.com';
+const DOMAIN = 'sea-lion-app-ctbf8.ondigitalocean.app';
 let PORT;
 
 const api = axios.create({

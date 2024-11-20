@@ -35,7 +35,7 @@ async function importarComponente(
       element.innerHTML = bodyContent;
       console.log(`Componente ${componentPath} carregado com sucesso`);
       if (callback) {
-        console.log('Executando callback');
+        console.log(`- callback ${componentPath} chamado`);
         callback();
       }
     } else {
@@ -87,9 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  importarComponente('components/footer.html', 'componente-footer', () => {
-    console.log('callback');
-  });
+  importarComponente('components/footer.html', 'componente-footer');
 
   if (usuarioLogado()) {
     importarComponente(
@@ -101,13 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const primeiroAcesso = localStorage.getItem('primeiroAcesso');
 
         if (primeiroAcesso) {
-          console.log('Primeiro acesso do usuário');
+          console.log('[U] Primeiro acesso do usuário');
           for (let i = 1; i <= 3; i++) {
             getQuestoesByModulo(i).then((response) => {
               const questoes = response.data;
 
               localStorage.setItem(`modulo-${i}`, JSON.stringify(questoes));
-
               localStorage.setItem('primeiroAcesso', false);
             });
           }
@@ -119,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
           profileNameElement.textContent = scrumUser;
         }
 
-        console.log('Usuário logado ou acabou de logar');
+        console.log('[U] Usuário logado ou acabou de logar');
         const acabouDeCadastar =
           localStorage.getItem('cadastradoAgora') === 'true';
 
@@ -208,14 +205,21 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Erro ao realizar cadastro:', error);
             let message = 'Erro inesperado ao realizar cadastro!';
             let title = 'Erro';
+
             if (error.code && error.message) {
               title = error.code;
               message = `${error.message}: Provavelmente a API não está disponível.`;
             }
 
-            if (error.response && error.response.status === 400) {
+            if (error.response) {
               title = 'Erro ao cadastrar';
-              message = error.response.data.message;
+              if (
+                error.response.status === 400 ||
+                error.response.status === 409
+              ) {
+                console.log('error.response.data', error.response.data);
+                message = error.response.data.message;
+              }
             }
 
             toast({
@@ -231,27 +235,56 @@ document.addEventListener('DOMContentLoaded', () => {
       loginForm.addEventListener('submit', async (event) => {
         event.preventDefault();
         const { email, senha } = getLoginData();
-        login(email, senha).then((retorno) => {
-          if (retorno) {
+
+        try {
+          const { data, status } = await login(email, senha);
+
+          if (status === 200) {
             localStorage.setItem('logadoAgora', 'true');
 
             if (!localStorage.getItem('primeiroAcesso')) {
               localStorage.setItem('primeiroAcesso', true);
             }
 
-            localStorage.setItem('scrum-nome', retorno.data.nome);
-            localStorage.setItem('scrum-email', retorno.data.email);
+            const { nome, email } = data;
+
+            if (nome && email) {
+              localStorage.setItem('scrum-email', nome);
+              localStorage.setItem('scrum-nome', email);
+            }
             setarLogado(true);
             window.location.reload();
-          } else {
+          }
+
+          if (status === 400) {
             toast({
-              title: 'Erro',
-              message: 'E-mail ou senha inválidos!',
+              title: 'Erro ao realizar login',
+              message: data,
               type: 'error',
               duration: 5000,
             });
           }
-        });
+        } catch (error) {
+          console.error('Erro ao realizar login:', error);
+          let message = 'Erro inesperado ao realizar cadastro!';
+          let title = 'Erro';
+          if (error.code && error.message) {
+            title = error.code;
+            message = `${error.message}: ${error.message}.`;
+          }
+
+          if (error.response && error.response.status === 400) {
+            title = 'Erro ao cadastrar';
+            message = error.response.data.message;
+          }
+
+          toast({
+            title: title,
+            message: message,
+            type: 'error',
+            duration: 5000,
+          });
+        }
       });
     });
   }

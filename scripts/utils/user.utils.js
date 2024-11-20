@@ -14,3 +14,24 @@ function getUsuario() {
 }
 
 export { usuarioLogado, setarLogado, getUsuario };
+
+export function getScrumDetails() {
+  const { nome = null, email = null } = {
+    nome: localStorage.getItem('scrum-nome'),
+    email: localStorage.getItem('scrum-email'),
+  };
+
+  return { nome, email };
+}
+
+/* OUTRA MANEIRA DE FAZER A MESMA FUNÇÃO
+export function getScrumDetails() {
+  const nome = localStorage.getItem('scrum-nome');
+  const email = localStorage.getItem('scrum-email');
+  
+  return {
+    nome: nome || null,
+    email: email || null
+  };
+}
+*/

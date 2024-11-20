@@ -27,4 +27,4 @@ function habilitarGeracaoCertificado() {
   //   continue...
 }
 
-export { setStepStatus, habilitarGeracaoCertificado };
+export { habilitarGeracaoCertificado };

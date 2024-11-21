@@ -25,7 +25,8 @@ export function habilitarGeracaoCertificado(callback) {
 
   // Desenvolva aqui
   if (button?.hasAttribute('disabled') && usuarioAprovadoTodos) {
-    // Você deve adicionar o disabled do botão, e adicionar um listenner
+    button.removeAttribute('disabled');
+    button.addEventListener('click', callback);
   } else if (!button) {
     console.error('Button with id "gerar-certificado" not found.');
   }

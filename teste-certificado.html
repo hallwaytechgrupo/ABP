@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <link rel="stylesheet" href="/css/global.css">
 </head>
 <body>
@@ -11,15 +12,18 @@
   <button id="generatePdfWithTextButton">Generate PDF with Text</button>
 
   <script type="module">
-    import { gerarCertificado } from './scripts/certificado.js';
-    document.getElementById('generatePdfWithTextButton').addEventListener('click', () => {
-      const nome = localStorage.getItem('nome');
-      if (nome) {
-        gerarCertificado(nome);
-      } else {
-        alert('Nome não encontrado no localStorage');
-      }
-    });
+    import { gerarCertificado } from './scripts/certificado-v2.js';
+
+    document.getElementById('generatePdfWithTextButton').addEventListener('click', async () => {
+  try {
+    const email = 'a@a.com'; // Substitua pelo email do usuário
+    const pdfBlob = await gerarCertificado(email);
+    const pdfUrl = URL.createObjectURL(pdfBlob);
+    window.open(pdfUrl, '_blank');
+  } catch (error) {
+    console.error('Erro ao gerar certificado:', error);
+  }
+});
   </script>
 </body>
 </html>

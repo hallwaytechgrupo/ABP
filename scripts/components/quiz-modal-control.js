@@ -2,7 +2,6 @@ const modalQuizControl = (moduleNumber) => {
   const btnAbrirModal = document.getElementById('start-quiz');
   const modal = document.querySelector('.modal-quiz');
   let status = 'closed';
-  console.log('modal', btnAbrirModal);
   btnAbrirModal.addEventListener('click', () => {
     modal.style.display = 'block';
     status = 'open';

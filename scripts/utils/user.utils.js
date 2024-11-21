@@ -10,19 +10,50 @@ function setarLogado(status) {
 }
 
 function getUsuario() {
+  const userFromStorage = JSON.parse(localStorage.getItem('usuario'));
+
+  const {
+    id = null,
+    nome = null,
+    email = null,
+    tentativas = {},
+  } = userFromStorage;
+
+  return { id, nome, email, tentativas };
+}
+
+function getUsuarioAprovacoes() {
+  const { tentativas } = getScrumDetails();
+
+  if (tentativas) return tentativas;
   return {};
 }
 
-export { usuarioLogado, setarLogado, getUsuario };
+function setUsuarioAprovacao(tentativa) {
+  const usuario = JSON.parse(localStorage.getItem('usuario')) || {};
 
-export function getScrumDetails() {
-  const { nome = null, email = null } = {
-    nome: localStorage.getItem('scrum-nome'),
-    email: localStorage.getItem('scrum-email'),
+  usuario.tentativas = {
+    ...usuario.tentativas,
+    ...tentativa,
   };
 
-  return { nome, email };
+  localStorage.setItem('usuario', JSON.stringify(usuario));
 }
+
+function usuarioAprovadoEmTodos() {
+  const tentativas = getUsuarioAprovacoes();
+
+  // Verifique se todas as tentativas são true
+}
+
+export {
+  getUsuario,
+  usuarioLogado,
+  setarLogado,
+  getUsuarioAprovacoes,
+  setUsuarioAprovacao,
+  usuarioAprovadoEmTodos,
+};
 
 /* OUTRA MANEIRA DE FAZER A MESMA FUNÇÃO
 export function getScrumDetails() {

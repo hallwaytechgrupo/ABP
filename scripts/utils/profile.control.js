@@ -1,4 +1,4 @@
-import { getUsuarioAprovacoes } from './user.utils.js';
+import { getUsuario, usuarioAprovadoEmTodos } from './user.utils.js';
 
 export function setStepStatus(id, completed) {
   if (typeof id !== 'number' || id <= 0) {
@@ -19,11 +19,30 @@ export function setStepStatus(id, completed) {
   statusElement.textContent = completed ? 'check' : 'hourglass_empty';
 }
 
-function habilitarGeracaoCertificado() {
+export function habilitarGeracaoCertificado(callback) {
   const button = document.getElementById('gerar-certificado');
-  const { tentativas } = getUsuarioAprovacoes() || {};
+  const usuarioAprovadoTodos = usuarioAprovadoEmTodos();
 
-  //   continue...
+  // Desenvolva aqui
+  if (button?.hasAttribute('disabled') && usuarioAprovadoTodos) {
+    // Você deve adicionar o disabled do botão, e adicionar um listenner
+  } else if (!button) {
+    console.error('Button with id "gerar-certificado" not found.');
+  }
 }
 
-export { habilitarGeracaoCertificado };
+export async function gerarCertificado() {
+  const email = getUsuario().email;
+  try {
+    const response = await gerarCertificado(email);
+    if (response.status === 200) {
+      const pdfBlob = await response.blob();
+      const pdfUrl = URL.createObjectURL(pdfBlob);
+      window.open(pdfUrl, '_blank');
+    } else {
+      console.error('Erro ao gerar certificado.');
+    }
+  } catch (error) {
+    console.error('Erro ao gerar certificado:', error);
+  }
+}

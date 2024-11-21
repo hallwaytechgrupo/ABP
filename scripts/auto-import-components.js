@@ -7,11 +7,14 @@ import {
   getCadastroData,
 } from './controllers/cadastro.controller.js';
 import { getLoginData } from './controllers/login.controller.js';
-import { setarLogado, usuarioLogado } from './utils/user.utils.js';
+import { getUsuario, setarLogado, usuarioLogado } from './utils/user.utils.js';
 import { cadastro } from './services/cadastro.service.js';
 import { login } from './services/login.service.js';
 import toast from './toast.js';
-import { getQuestoesByModulo } from './services/quiz.service.js';
+import {
+  getQuestoesByModulo,
+  verificarAprovacao,
+} from './services/quiz.service.js';
 import prepararQuiz from './components/quiz-mudar-questoes.js';
 
 async function importarComponente(
@@ -71,9 +74,44 @@ document.addEventListener('DOMContentLoaded', () => {
         const moduleNumber = scriptElement.getAttribute('data-module-number');
 
         importarComponente(`components/${module}`, 'componente-quiz', () => {
-          modalQuizControl(moduleNumber);
-          getQuizRespostas(moduleNumber);
-          prepararQuiz(moduleNumber);
+          try {
+            let message;
+            if (!localStorage.getItem(`modulo-${moduleNumber}`)) {
+              message = ` [Q] Buscando questões do módulo ${moduleNumber}`;
+              getQuestoesByModulo(Number.parseInt(moduleNumber)).then(
+                (response) => {
+                  const questoes = response.data;
+
+                  localStorage.setItem(
+                    `modulo-${moduleNumber}`,
+                    JSON.stringify(questoes),
+                  );
+                  console.log(
+                    ' [Q] Questões do módulo',
+                    moduleNumber,
+                    'salvas',
+                  );
+                },
+              );
+            } else {
+              message = ` [Q] Questões do módulo ${moduleNumber} já foram carregadas`;
+            }
+            console.log(message);
+          } catch (error) {
+            console.error(' [Q] Erro ao iniciar o quiz:', error);
+          } finally {
+            console.log(' [Q] Habilitando botão de início do quiz...');
+
+            const startQuizButton = document.getElementById('start-quiz');
+            if (startQuizButton) {
+              startQuizButton.disabled = false;
+            }
+
+            console.log(' [Q] O quiz está pronto para ser iniciado!');
+            modalQuizControl(moduleNumber);
+            getQuizRespostas(moduleNumber);
+            prepararQuiz(moduleNumber);
+          }
         });
       });
     } else {
@@ -96,9 +134,21 @@ document.addEventListener('DOMContentLoaded', () => {
       async () => {
         modalHeaderControl(false);
 
-        const primeiroAcesso = localStorage.getItem('primeiroAcesso');
+        const loginRegistrar = document.getElementById('loginRegistrar');
+        if (loginRegistrar) {
+          const button = loginRegistrar.querySelector('button');
+          if (button) {
+            const userNameSpan = document.createElement('span');
+            userNameSpan.id = 'username';
+            userNameSpan.textContent = 'Meu perfil';
+            userNameSpan.classList.add('truncate-text');
+            button.appendChild(userNameSpan);
+          }
+        }
 
-        if (primeiroAcesso) {
+        const primeiroAcesso = localStorage.getItem('primeiroAcesso');
+        const primeiroAcessoBoolean = primeiroAcesso === 'true';
+        if (primeiroAcessoBoolean) {
           console.log('[U] Primeiro acesso do usuário');
           for (let i = 1; i <= 3; i++) {
             getQuestoesByModulo(i).then((response) => {
@@ -108,12 +158,6 @@ document.addEventListener('DOMContentLoaded', () => {
               localStorage.setItem('primeiroAcesso', false);
             });
           }
-        }
-
-        const profileNameElement = document.querySelector('#profile-name');
-        const scrumUser = localStorage.getItem('scrum-nome');
-        if (scrumUser && profileNameElement) {
-          profileNameElement.textContent = scrumUser;
         }
 
         console.log('[U] Usuário logado ou acabou de logar');
@@ -141,10 +185,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (logoutButton) {
           logoutButton.addEventListener('click', (event) => {
             event.preventDefault();
+            localStorage.removeItem('usuario');
+            localStorage.removeItem('primeiroAcesso');
             setarLogado(false);
-            localStorage.removeItem('scrum-id');
-            localStorage.removeItem('scrum-nome');
-            localStorage.removeItem('scrum-email');
             window.location.reload();
           });
         }
@@ -195,9 +238,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('primeiroAcesso', true);
               }
 
-              localStorage.setItem('scrum-id', id);
-              localStorage.setItem('scrum-nome', nome);
-              localStorage.setItem('scrum-email', email);
+              localStorage.setItem(
+                'usuario',
+                JSON.stringify({ id, nome, email, aprovacoes: {} }),
+              );
               setarLogado(true);
               window.location.reload();
             }
@@ -240,20 +284,28 @@ document.addEventListener('DOMContentLoaded', () => {
           const { data, status } = await login(email, senha);
 
           if (status === 200) {
-            localStorage.setItem('logadoAgora', 'true');
+            let aprovacoes = {};
+            console.log(' [U] Usuário logado com sucesso:', data);
+            verificarAprovacao(data.email).then((response) => {
+              aprovacoes = response.data;
 
-            if (!localStorage.getItem('primeiroAcesso')) {
-              localStorage.setItem('primeiroAcesso', true);
-            }
+              localStorage.setItem('logadoAgora', 'true');
 
-            const { nome, email } = data;
+              if (!localStorage.getItem('primeiroAcesso')) {
+                localStorage.setItem('primeiroAcesso', true);
+              }
 
-            if (nome && email) {
-              localStorage.setItem('scrum-email', nome);
-              localStorage.setItem('scrum-nome', email);
-            }
-            setarLogado(true);
-            window.location.reload();
+              const { id, nome, email } = data;
+
+              if (id && nome && email) {
+                localStorage.setItem(
+                  'usuario',
+                  JSON.stringify({ id, nome, email, aprovacoes: aprovacoes }),
+                );
+              }
+              setarLogado(true);
+              window.location.reload();
+            });
           }
 
           if (status === 400) {

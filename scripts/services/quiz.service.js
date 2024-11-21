@@ -41,18 +41,33 @@ export const createTentativa = async (modulo, email, respostas) => {
   }
 };
 
-// Serviço para verificar aprovação
-export const verificarAprovacao = async (email, modulo) => {
+export const verificarAprovacaoModulo = async (email, modulo) => {
   const data = {
     email,
     modulo,
   };
   try {
-    const response = await api.post('/quiz/verificar-aprovacao', data);
+    const response = await api.post('/quiz/verificarAprovacaoModulo', data);
     console.log('Aprovação verificada com sucesso:', response.data);
     return { data: response.data, status: response.status };
   } catch (error) {
     console.error('Erro ao verificar aprovação:', error);
+    throw error;
+  }
+};
+
+// Serviço para verificar progresso em todos os módulos
+export const verificarAprovacao = async (email) => {
+  const data = {
+    email,
+  };
+  console.log('[S] Verificando progresso para:', email);
+  try {
+    const response = await api.post('/quiz/verificarAprovacao', data);
+    console.log('Progresso verificado com sucesso:', response.data);
+    return { data: response.data, status: response.status };
+  } catch (error) {
+    console.error('Erro ao verificar progresso:', error);
     throw error;
   }
 };
@@ -71,3 +86,17 @@ export const getTentativasByUser = async (email) => {
     throw error;
   }
 };
+
+export async function gerarCertificado(email) {
+  try {
+    const response = await api.post(
+      '/quiz/gerarCertificado',
+      { email },
+      { responseType: 'blob' },
+    );
+    return response.data;
+  } catch (error) {
+    console.error('Erro ao gerar certificado:', error);
+    throw error;
+  }
+}

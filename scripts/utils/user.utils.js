@@ -1,6 +1,13 @@
 function usuarioLogado() {
   const logado = localStorage.getItem('logado');
-  return logado === 'true';
+  if (logado === 'true') {
+    for (let i = 1; i <= 3; i++) {
+      const aprovado = getUsuarioAprovacaoModulo(i);
+      setStepStatus(i, aprovado);
+    }
+    return true;
+  }
+  return false;
 }
 
 function setarLogado(status) {
@@ -68,15 +75,3 @@ export {
   usuarioAprovadoEmTodos,
   getUsuarioAprovacaoModulo,
 };
-
-/* OUTRA MANEIRA DE FAZER A MESMA FUNÇÃO
-export function getScrumDetails() {
-  const nome = localStorage.getItem('scrum-nome');
-  const email = localStorage.getItem('scrum-email');
-  
-  return {
-    nome: nome || null,
-    email: email || null
-  };
-}
-*/

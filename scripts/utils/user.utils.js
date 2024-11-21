@@ -23,10 +23,15 @@ function getUsuario() {
 }
 
 function getUsuarioAprovacoes() {
-  const { aprovacoes } = getScrumDetails();
+  const { aprovacoes } = getUsuario();
 
   if (aprovacoes) return aprovacoes;
   return {};
+}
+
+function getUsuarioAprovacaoModulo(modulo) {
+  const aprovacoes = getUsuarioAprovacoes();
+  return aprovacoes[`modulo-${modulo}`];
 }
 
 function setUsuarioAprovacao(tentativa) {
@@ -53,6 +58,7 @@ export {
   getUsuarioAprovacoes,
   setUsuarioAprovacao,
   usuarioAprovadoEmTodos,
+  getUsuarioAprovacaoModulo,
 };
 
 /* OUTRA MANEIRA DE FAZER A MESMA FUNÇÃO

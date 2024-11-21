@@ -7,16 +7,24 @@ import {
   getCadastroData,
 } from './controllers/cadastro.controller.js';
 import { getLoginData } from './controllers/login.controller.js';
-import { getUsuario, setarLogado, usuarioLogado } from './utils/user.utils.js';
+import {
+  getUsuario,
+  getUsuarioAprovacaoModulo,
+  getUsuarioAprovacoes,
+  setarLogado,
+  usuarioLogado,
+} from './utils/user.utils.js';
 import { cadastro } from './services/cadastro.service.js';
 import { login } from './services/login.service.js';
 import toast from './toast.js';
 import {
   getQuestoesByModulo,
   verificarAprovacao,
+  verificarAprovacaoModulo,
 } from './services/quiz.service.js';
 import prepararQuiz from './components/quiz-mudar-questoes.js';
 import { criarTentativa } from './components/quiz-criar-tentativa.js';
+import { setStepStatus } from './utils/profile.control.js';
 
 async function importarComponente(
   componentPath,

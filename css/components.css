@@ -5,6 +5,14 @@
 	display: none;
 }
 
+#logo-img {
+	width: 100%;
+	height: auto;
+	min-width: 76px !important;
+	object-fit: contain;
+	object-position: center;
+  }
+
 #header {
 	display: flex;
 	flex-direction: row;
@@ -70,7 +78,19 @@
 	font-weight: bold;
 	border: none;
 	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 5px;
 }
+
+#username {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 150px;
+	font-size: 14px;
+}
+
 #header button {
 	cursor: pointer;
 }
@@ -197,6 +217,10 @@
 
 /* RESPONSIVIDADE */
 @media (max-width: 480px) {
+	#header #botoes #loginRegistrar button {
+		padding: 10px;
+	}
+
 	.entrada::before {
 		top: 20px;
 	}
@@ -240,12 +264,22 @@
 }
 
 @media (max-width: 710px) {
+	#header #botoes #loginRegistrar button {
+		padding: 10px;
+	}
+	/* #header #botoes #username { */
+	/* } */
+
 	#logo > div {
 		display: none;
 	}
 }
 
 @media (max-width: 800px) {
+	#header #botoes #loginRegistrar button {
+		padding: 10px;
+	}
+	
 	#header {
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -287,5 +321,27 @@
 	#primaryFooterLinks {
 		margin-bottom: 10%;
 		text-align: center;
+	}
+}
+
+@media (max-width: 390px) {
+	#header {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		height: 100%;
+		align-items: center;
+		flex-direction: column;
+	}
+
+	#header #botoes #loginRegistrar button {
+		padding: 10px;
+	}
+}
+
+@media (max-width: 1024px) {
+	#logo > div {
+		display: none;
 	}
 }

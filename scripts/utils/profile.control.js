@@ -1,5 +1,4 @@
-import { gerarCertificado } from '../certificado.js';
-import { getUsuario } from './user.utils.js';
+import { getUsuarioAprovacoes } from './user.utils.js';
 
 export function setStepStatus(id, completed) {
   if (typeof id !== 'number' || id <= 0) {
@@ -22,7 +21,7 @@ export function setStepStatus(id, completed) {
 
 function habilitarGeracaoCertificado() {
   const button = document.getElementById('gerar-certificado');
-  const { nome } = getUsuario() || { nome: 'usuário' };
+  const { tentativas } = getUsuarioAprovacoes() || {};
 
   //   continue...
 }

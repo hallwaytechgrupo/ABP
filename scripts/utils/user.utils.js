@@ -1,12 +1,6 @@
-import { setStepStatus } from "./profile.control.js";
-
 function usuarioLogado() {
   const logado = localStorage.getItem('logado');
   if (logado === 'true') {
-    for (let i = 1; i <= 3; i++) {
-      const aprovado = getUsuarioAprovacaoModulo(i);
-      setStepStatus(i, aprovado);
-    }
     return true;
   }
   return false;
@@ -60,7 +54,8 @@ function usuarioAprovadoEmTodos() {
   let todosTrue = true;
 
   for (const key in modulos) {
-    if (!modulos[key]) { // Se algum valor não for true
+    if (!modulos[key]) {
+      // Se algum valor não for true
       todosTrue = false;
       break;
     }
@@ -77,4 +72,3 @@ export {
   usuarioAprovadoEmTodos,
   getUsuarioAprovacaoModulo,
 };
-

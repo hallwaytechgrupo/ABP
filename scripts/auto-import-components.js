@@ -141,6 +141,11 @@ document.addEventListener('DOMContentLoaded', () => {
       'components/profile.html',
       'componente-login',
       async () => {
+        for (let i = 1; i <= 3; i++) {
+          const aprovado = getUsuarioAprovacaoModulo(i);
+          setStepStatus(i, aprovado);
+        }
+
         modalHeaderControl(false);
 
         const loginRegistrar = document.getElementById('loginRegistrar');

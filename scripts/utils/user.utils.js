@@ -46,9 +46,17 @@ function setUsuarioAprovacao(tentativa) {
 }
 
 function usuarioAprovadoEmTodos() {
-  const tentativas = getUsuarioAprovacoes();
+  const modulos = getUsuarioAprovacoes();
 
-  // Verifique se todas as tentativas são true
+  let todosTrue = true;
+
+  for (const key in modulos) {
+    if (!modulos[key]) { // Se algum valor não for true
+      todosTrue = false;
+      break;
+    }
+  }
+  return todosTrue;
 }
 
 export {

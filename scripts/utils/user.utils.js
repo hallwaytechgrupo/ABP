@@ -1,3 +1,5 @@
+import { setStepStatus } from "./profile.control.js";
+
 function usuarioLogado() {
   const logado = localStorage.getItem('logado');
   if (logado === 'true') {
@@ -75,3 +77,4 @@ export {
   usuarioAprovadoEmTodos,
   getUsuarioAprovacaoModulo,
 };
+

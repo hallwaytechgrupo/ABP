@@ -16,6 +16,7 @@ import {
   verificarAprovacao,
 } from './services/quiz.service.js';
 import prepararQuiz from './components/quiz-mudar-questoes.js';
+import { criarTentativa } from './components/quiz-criar-tentativa.js';
 
 async function importarComponente(
   componentPath,
@@ -109,7 +110,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             console.log(' [Q] O quiz está pronto para ser iniciado!');
             modalQuizControl(moduleNumber);
-            getQuizRespostas(moduleNumber);
+            getQuizRespostas(moduleNumber, criarTentativa);
             prepararQuiz(moduleNumber);
           }
         });

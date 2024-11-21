@@ -1,8 +1,6 @@
-import { createTentativa } from '../services/quiz.service.js';
 import toast from '../toast.js';
-import { setStepStatus } from '../utils/profile.control.js';
 
-const getQuizRespostas = async (moduleNumber) => {
+const getQuizRespostas = async (moduleNumber, callback) => {
   document
     .getElementById('quiz-form')
     .addEventListener('submit', async (event) => {
@@ -29,38 +27,29 @@ const getQuizRespostas = async (moduleNumber) => {
         return;
       }
 
-      console.log('Respostas:', answers);
-
-      const infoDiv = document.querySelector('.info');
-      infoDiv.style.display = 'block';
-      infoDiv.innerHTML = `
-          <p>Respostas:</p>
-          <p>Questão 1: ${answers.question1}</p>
-          <p>Questão 2: ${answers.question2}</p>
-          <p>Questão 3: ${answers.question3}</p>
-    `;
-
       if (answers) {
         console.log('Quiz completado!', moduleNumber);
-        const numberInt = Number.parseInt(moduleNumber, 10) || 1;
 
+        const baseId = (moduleNumber - 1) * 3;
         const respostas = [
           {
-            idquestao: 1 * numberInt,
+            idquestao: baseId + 1,
             resposta: answers.question1 === 'true',
           },
           {
-            idquestao: 2 * numberInt,
+            idquestao: baseId + 2,
             resposta: answers.question2 === 'true',
           },
           {
-            idquestao: 3 * numberInt,
+            idquestao: baseId + 3,
             resposta: answers.question3 === 'true',
           },
         ];
-      }
 
-      return { completed: true, answers };
+        console.log('chamando callback');
+
+        callback(moduleNumber, respostas);
+      }
     });
 };
 

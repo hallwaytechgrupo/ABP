@@ -16,24 +16,24 @@ function getUsuario() {
     id = null,
     nome = null,
     email = null,
-    tentativas = {},
+    aprovacoes = {},
   } = userFromStorage;
 
-  return { id, nome, email, tentativas };
+  return { id, nome, email, aprovacoes };
 }
 
 function getUsuarioAprovacoes() {
-  const { tentativas } = getScrumDetails();
+  const { aprovacoes } = getScrumDetails();
 
-  if (tentativas) return tentativas;
+  if (aprovacoes) return aprovacoes;
   return {};
 }
 
 function setUsuarioAprovacao(tentativa) {
   const usuario = JSON.parse(localStorage.getItem('usuario')) || {};
 
-  usuario.tentativas = {
-    ...usuario.tentativas,
+  usuario.aprovacoes = {
+    ...usuario.aprovacoes,
     ...tentativa,
   };
 

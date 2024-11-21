@@ -1,11 +1,11 @@
-import { getQuestoesByModulo } from '../services/quiz.service.js';
+import { getQuestoesByModuloLS } from '../utils/quiz.control.js';
 
 export function prepararQuiz(modulo) {
   const questao1Input = document.getElementById('question1');
   const questao2Input = document.getElementById('question2');
   const questao3Input = document.getElementById('question3');
 
-  const questoes = getQuestoesByModulo(modulo);
+  const questoes = getQuestoesByModuloLS(modulo);
 
   if (questoes.length < 3) {
     console.error(`Não há questões suficientes para o módulo ${modulo}`);

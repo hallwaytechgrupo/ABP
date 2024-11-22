@@ -1,3 +1,8 @@
+#btn-logar, #btn-cadastrar {
+	display: inline-block;
+	width: 100%;
+}
+
 .login {
 	display: flex;
 	flex-wrap: wrap;

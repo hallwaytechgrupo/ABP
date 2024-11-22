@@ -22,17 +22,22 @@ export function setStepStatus(id, completed) {
 }
 
 export function habilitarGeracaoCertificado() {
-  console.log('testando');
   const button = document.getElementById('gerar-certificado');
   const usuarioAprovadoTodos = usuarioAprovadoEmTodos();
-  console.log('button', button);
-  console.log('usuarioAprovadoTodos', usuarioAprovadoTodos);
 
-  // Desenvolva aqui
   if (button?.hasAttribute('disabled') && usuarioAprovadoTodos) {
     button.removeAttribute('disabled');
-    button.addEventListener('click', () => {
-      gerarCertificado();
+    button.addEventListener('click', async () => {
+      const originalText = button.textContent;
+      button.textContent = 'Gerando...';
+      button.disabled = true;
+
+      try {
+        await gerarCertificado();
+      } finally {
+        button.textContent = originalText;
+        button.disabled = false;
+      }
     });
   } else if (!button) {
     console.error('Button with id "gerar-certificado" not found.');
@@ -43,7 +48,7 @@ export async function gerarCertificado() {
   const nome = getUsuario().nome;
   try {
     if (usuarioAprovadoEmTodos()) {
-      gerarCertificadoFront(nome);
+      await gerarCertificadoFront(nome);
     }
   } catch (error) {
     console.error('Erro ao gerar certificado:', error);

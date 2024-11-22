@@ -1,10 +1,16 @@
 import { createTentativa } from '../services/quiz.service.js';
 import toast from '../toast.js';
-import { getUsuario, setUsuarioAprovacao } from '../utils/user.utils.js';
-import { setStepStatus } from '../utils/profile.control.js';
+import {
+  getUsuario,
+  setUsuarioAprovacao,
+  usuarioAprovadoEmTodos,
+} from '../utils/user.utils.js';
+import {
+  habilitarGeracaoCertificado,
+  setStepStatus,
+} from '../utils/profile.control.js';
 
 export const criarTentativa = async (modulo, respostas) => {
-  console.log('Respostas', respostas);
   const { data, status } = await createTentativa(
     Number.parseInt(modulo),
     getUsuario().email,
@@ -39,7 +45,10 @@ export const criarTentativa = async (modulo, respostas) => {
       const aprovado = { [moduloKey]: true };
       console.log('aprovado', aprovado);
       setUsuarioAprovacao(aprovado);
-      console.log('PORRA!');
+      if (usuarioAprovadoEmTodos()) {
+        console.log('[U] Aprovado em todos os módulos');
+        habilitarGeracaoCertificado();
+      }
     } else {
       toast({
         title: 'Reprovado!',
@@ -53,8 +62,6 @@ export const criarTentativa = async (modulo, respostas) => {
             <p class="center">Você acertou ${nota} de 3 questões.</p>
             <p></p>
             `;
-
-      setStepStatus(Number.parseInt(modulo), false);
     }
 
     const submitButton = document.querySelector(

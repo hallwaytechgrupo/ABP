@@ -27,4 +27,9 @@ if (isQuiz) {
   linksCss.push('./css/cta-quiz.css', './css/quizz.css');
 }
 
+const faviconLink = document.createElement('link');
+faviconLink.rel = 'icon';
+faviconLink.href = './assets/favicon.ico';
+document.head.appendChild(faviconLink);
+
 incluirLinksCss(linksCss);

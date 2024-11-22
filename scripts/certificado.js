@@ -81,6 +81,7 @@ async function gerarCertificadoFront(nome) {
   const blob = new Blob([pdfBytes], { type: 'application/pdf' });
   const url = URL.createObjectURL(blob);
   window.open(url);
+  return true;
 }
 
 export { gerarCertificadoFront };

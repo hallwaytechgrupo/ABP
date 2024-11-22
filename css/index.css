@@ -270,6 +270,11 @@
 }
 
 @media (max-width: 600px) {
+	.scrum-beneficios .cartoes .cartao-beneficios {
+		width: 300px !important;
+		flex: none;
+	}
+
 	.entrada > .cartao {
 		margin: 30px;
 	}

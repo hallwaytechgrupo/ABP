@@ -163,6 +163,9 @@ document.addEventListener('DOMContentLoaded', () => {
               getUsuario().nome.charAt(0).toUpperCase() +
               getUsuario().nome.slice(1);
             userNameSpan.classList.add('truncate-text');
+            const firstName = getUsuario().nome.split(' ')[0];
+            userNameSpan.textContent =
+              firstName.charAt(0).toUpperCase() + firstName.slice(1);
             button.appendChild(userNameSpan);
           }
         }
@@ -171,6 +174,9 @@ document.addEventListener('DOMContentLoaded', () => {
         nomeUsuario.innerText =
           getUsuario().nome.charAt(0).toUpperCase() +
           getUsuario().nome.slice(1);
+
+        const emailUsuario = document.getElementById('profile-email');
+        emailUsuario.innerText = getUsuario().email;
 
         const primeiroAcesso = localStorage.getItem('primeiroAcesso');
         const primeiroAcessoBoolean = primeiroAcesso === 'true';
@@ -211,6 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (logoutButton) {
           logoutButton.addEventListener('click', (event) => {
             event.preventDefault();
+            localStorage.setItem('deslogadoAgora', 'true');
             localStorage.removeItem('usuario');
             localStorage.removeItem('primeiroAcesso');
             setarLogado(false);
@@ -222,6 +229,19 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     importarComponente('components/login.html', 'componente-login', () => {
       modalHeaderControl();
+      const acabouDeDeslogar =
+        localStorage.getItem('deslogadoAgora') === 'true';
+
+      if (acabouDeDeslogar) {
+        toast({
+          title: 'Sucesso',
+          message: 'Deslogado com sucesso!',
+          type: 'success',
+          duration: 5000,
+        });
+        localStorage.removeItem('deslogadoAgora');
+      }
+
       const registrationForm = document.getElementById('cadastro');
       const loginForm = document.getElementById('login');
 
@@ -253,6 +273,11 @@ document.addEventListener('DOMContentLoaded', () => {
           );
           document.getElementById('cadastro-senha').focus();
         } else {
+          const button = document.getElementById('btn-cadastrar');
+          const originalText = button.textContent;
+          button.textContent = 'Cadastrando...';
+          button.disabled = true;
+
           try {
             const retorno = await cadastro(nome, email, senha);
 
@@ -298,12 +323,21 @@ document.addEventListener('DOMContentLoaded', () => {
               type: 'error',
               duration: 5000,
             });
+          } finally {
+            button.textContent = originalText;
+            button.disabled = false;
           }
         }
       });
 
       loginForm.addEventListener('submit', async (event) => {
         event.preventDefault();
+
+        const button = document.getElementById('btn-logar');
+        const originalText = button.textContent;
+        button.textContent = 'Entrando...';
+        button.disabled = true;
+
         const { email, senha } = getLoginData();
 
         try {
@@ -362,6 +396,9 @@ document.addEventListener('DOMContentLoaded', () => {
             type: 'error',
             duration: 5000,
           });
+        } finally {
+          button.textContent = originalText;
+          button.disabled = false;
         }
       });
     });

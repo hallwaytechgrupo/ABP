@@ -1,4 +1,4 @@
-import {api} from './../apiSetup.js';
+import { api } from './../apiSetup.js';
 
 export const clearData = (input1, input2) => {
   input1.value = '';
@@ -13,13 +13,6 @@ export function getCadastroData() {
     'cadastro-repita-senha',
   ).value;
 
-  console.log({
-    name: name,
-    email: email,
-    password: password,
-    confirmPassword: confirmPassword,
-  });
-
   return {
     nome: name,
     email: email,
@@ -27,6 +20,3 @@ export function getCadastroData() {
     confirmarSenha: confirmPassword,
   };
 }
-
-
-

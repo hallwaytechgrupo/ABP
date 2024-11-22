@@ -8,11 +8,9 @@ export const cadastro = async (nome, email, senha) => {
     senha,
   };
   try {
-    // Faça uma requisição POST para a rota /user/signup
     const response = await api.post('/user/signup', usuario);
 
-    // Retorne os dados da resposta
-    console.log('Cadastro realizado com sucesso:', response.data);
+    console.log('[U] Cadastro realizado com sucesso.');
     return { data: response.data, status: response.status };
   } catch (error) {
     if (error.response && error.response.status === 400) {

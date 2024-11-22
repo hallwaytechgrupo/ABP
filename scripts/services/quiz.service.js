@@ -4,7 +4,7 @@ import { api } from './../apiSetup.js';
 export const getQuestoes = async () => {
   try {
     const response = await api.get('/quiz');
-    console.log('Questões obtidas com sucesso:', response.data);
+    console.log('[Q] Questões obtidas com sucesso:', response.data);
     return { data: response.data, status: response.status };
   } catch (error) {
     console.error('Erro ao obter questões:', error);
@@ -16,7 +16,7 @@ export const getQuestoes = async () => {
 export const getQuestoesByModulo = async (modulo) => {
   try {
     const response = await api.get(`/quiz/modulo/${modulo}`);
-    console.log('Questões por módulo obtidas com sucesso:', response.data);
+    console.log('[Q] Questões por módulo obtidas com sucesso:', response.data);
     return { data: response.data, status: response.status };
   } catch (error) {
     console.error('Erro ao obter questões por módulo:', error);
@@ -33,7 +33,7 @@ export const createTentativa = async (modulo, email, respostas) => {
   };
   try {
     const response = await api.post('/quiz/tentativas', tentativa);
-    console.log('Tentativa criada com sucesso:', response.data);
+    console.log('[Q] Tentativa criada com sucesso:', response.data);
     return { data: response.data, status: response.status };
   } catch (error) {
     console.error('Erro ao criar tentativa:', error);
@@ -48,7 +48,7 @@ export const verificarAprovacaoModulo = async (email, modulo) => {
   };
   try {
     const response = await api.post('/quiz/verificarAprovacaoModulo', data);
-    console.log('Aprovação verificada com sucesso:', response.data);
+    console.log('[Q] Aprovação verificada com sucesso:', response.data);
     return { data: response.data, status: response.status };
   } catch (error) {
     console.error('Erro ao verificar aprovação:', error);
@@ -61,10 +61,10 @@ export const verificarAprovacao = async (email) => {
   const data = {
     email,
   };
-  console.log('[S] Verificando progresso para:', email);
+  console.log('[Q] Verificando progresso para:', email);
   try {
     const response = await api.post('/quiz/verificarAprovacao', data);
-    console.log('Progresso verificado com sucesso:', response.data);
+    console.log('[Q] Progresso verificado com sucesso:', response.data);
     return { data: response.data, status: response.status };
   } catch (error) {
     console.error('Erro ao verificar progresso:', error);
@@ -79,7 +79,7 @@ export const getTentativasByUser = async (email) => {
   };
   try {
     const response = await api.post('/quiz/tentativas/usuario', data);
-    console.log('Tentativas obtidas com sucesso:', response.data);
+    console.log('[Q] Tentativas obtidas com sucesso:', response.data);
     return { data: response.data, status: response.status };
   } catch (error) {
     console.error('Erro ao obter tentativas:', error);
@@ -94,7 +94,7 @@ export async function gerarCertificadoService(email) {
       { email },
       { responseType: 'blob' },
     );
-    console.log('Certificado gerado com sucesso:', response);
+    console.log('[Q] Certificado gerado com sucesso:', response);
     return response.data;
   } catch (error) {
     console.error('Erro ao gerar certificado:', error);

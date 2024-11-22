@@ -53,17 +53,7 @@ ul li {
 	background-color: rgb(21, 77, 143, 1); /* Cor ao clicar */
 }
 
-button {
-	color: rgb(255, 255, 255);
-	background-color: rgb(39, 124, 208);
-	border-radius: 10px;
-	width: 150px; /* Definir uma largura fixa */
-	height: 40px; /* Definir uma altura fixa */
-	display: flex;
-	align-items: center; /* Centralizar verticalmente o texto dentro do botão */
-	justify-content: center; /* Centralizar horizontalmente o texto dentro do botão */
-	gap: 10px;
-}
+
 
 button.active {
 	background-color: rgb(21, 77, 143, 1); /* Cor ao clicar */
@@ -208,5 +198,12 @@ ul li {
 	}
 	.image {
 		max-width: 100%;
+	}
+}
+
+
+@media (max-width: 480px) {
+	#cta-quiz {
+		font-size: 16px;
 	}
 }

@@ -45,9 +45,6 @@ const getQuizRespostas = async (moduleNumber, callback) => {
             resposta: answers.question3 === 'true',
           },
         ];
-
-        console.log('chamando callback');
-
         callback(moduleNumber, respostas);
       }
     });

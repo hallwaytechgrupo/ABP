@@ -40,10 +40,10 @@ export function habilitarGeracaoCertificado() {
 }
 
 export async function gerarCertificado() {
-  const email = getUsuario().email;
+  const nome = getUsuario().nome;
   try {
     if (usuarioAprovadoEmTodos()) {
-      gerarCertificadoFront(email);
+      gerarCertificadoFront(nome);
     }
   } catch (error) {
     console.error('Erro ao gerar certificado:', error);

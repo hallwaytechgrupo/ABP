@@ -20,9 +20,9 @@
 | [10](#rf-10) | RF | As questões devem ser cadastradas pelo administrador diretamente no SGBD PostgreSQL. | Baixa | A fazer | 0 |
 <center>
 
-## Burndown:
-![image](./content/sprint-03/burndown-01.png)
-> Atualizado em - 
+## Diagrama Alternativo ao Burndown:
+![image](./content/sprint-03/CFD.png)
+> Gerado um Cumulative Flow Diagram, devido ao BurndownForTrello estar offline.
 
 </center>
 

@@ -137,6 +137,32 @@ ___________________________________________
 
 ___________________________________________
 
+<a name="rf-08"></a>
+
+## 08 - Requisito Funcional
+- O sistema deve exibir as questões somente nos tópicos que o usuário não tenha sido aprovado. Para ser considerado aprovado no tópico é necessário acertar pelo menos 2 questões;
+
+### **Histórias de Usuário**
+- **Como um** usuário logado, **eu quero** que o sistema me mostre as questões apenas dos tópicos que eu ainda não completei, **para que** eu possa focar nos meus pontos fracos.
+
+### **DoD - Definition of Done**
+- O sistema deve rastrear o progresso do usuário em cada tópico.
+- O sistema deve marcar um tópico como completo quando o usuário acertar pelo menos duas questões.
+- O sistema deve ocultar as questões de tópicos já completos.
+
+___________________________________________
+
+<a name="rf-09"></a>
+
+## 09 - Requisito Funcional
+- O sistema deve ser capaz de emitir o certificado de conclusão para os usuários que foram aprovados em todos os tópicos;
+
+### **Histórias de Usuário**
+- **Como um** usuário, **eu quero** receber um certificado ao concluir todos os tópicos do curso, **para que** eu possa comprovar meu conhecimento.
+
+### **DoD - Definition of Done**
+- O sistema deve gerar um certificado em PDF com os dados do usuário e a data de conclusão.
+
 <a name="rf-09"></a>
 
 ## 09 - Requisito Funcional

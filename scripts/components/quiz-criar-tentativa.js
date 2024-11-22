@@ -21,18 +21,17 @@ export const criarTentativa = async (modulo, respostas) => {
     infoDiv.style.display = 'block';
 
     if (nota >= 2) {
+      const mensagem =
+        nota === 2
+          ? 'Você acertou 2 de 3 questões.'
+          : 'Você acertou 3 de 3 questões.';
       toast({
         title: 'Aprovado!',
-        message: 'Você acertou 2 de 3 questões.',
+        message: mensagem,
         type: 'success',
         duration: 5000,
       });
-
-      infoDiv.innerHTML = `
-        <p>Aprovado!</p>
-        <p>Você acertou ${nota} de 3 questões.</p>
-        <p></p>
-        `;
+      infoDiv.innerHTML = ` <p>Aprovado!</p> <p>${mensagem}</p> `;
 
       setStepStatus(Number.parseInt(modulo), true);
       const moduloKey = `modulo-${modulo}`;

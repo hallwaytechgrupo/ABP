@@ -24,7 +24,10 @@ import {
 } from './services/quiz.service.js';
 import prepararQuiz from './components/quiz-mudar-questoes.js';
 import { criarTentativa } from './components/quiz-criar-tentativa.js';
-import { setStepStatus } from './utils/profile.control.js';
+import {
+  habilitarGeracaoCertificado,
+  setStepStatus,
+} from './utils/profile.control.js';
 
 async function importarComponente(
   componentPath,
@@ -145,6 +148,8 @@ document.addEventListener('DOMContentLoaded', () => {
           const aprovado = getUsuarioAprovacaoModulo(i);
           setStepStatus(i, aprovado);
         }
+
+        habilitarGeracaoCertificado();
 
         modalHeaderControl(false);
 

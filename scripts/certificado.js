@@ -4,7 +4,7 @@ import {
 } from 'https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/+esm';
 import fontkit from 'https://cdn.jsdelivr.net/npm/@pdf-lib/fontkit@1.1.1/+esm';
 
-async function gerarCertificado(nome) {
+async function gerarCertificadoFront(nome) {
   // Carrega o PDF existente em um array de bytes
   const existingPdfBytes = await fetch('/assets/certificado.pdf').then((res) =>
     res.arrayBuffer(),
@@ -15,7 +15,7 @@ async function gerarCertificado(nome) {
 
   // Embed a font
   pdfDoc.registerFontkit(fontkit);
-  const fontBytes = await fetch('/assets/montserrat.ttf').then((res) =>
+  const fontBytes = await fetch('/assets/Montserrat.ttf').then((res) =>
     res.arrayBuffer(),
   );
   const fontBytes_2 = await fetch('/assets/signature.ttf').then((res) =>
@@ -83,4 +83,4 @@ async function gerarCertificado(nome) {
   window.open(url);
 }
 
-export { gerarCertificado };
+export { gerarCertificadoFront };

@@ -87,13 +87,14 @@ export const getTentativasByUser = async (email) => {
   }
 };
 
-export async function gerarCertificado(email) {
+export async function gerarCertificadoService(email) {
   try {
     const response = await api.post(
       '/quiz/gerarCertificado',
       { email },
       { responseType: 'blob' },
     );
+    console.log('Certificado gerado com sucesso:', response);
     return response.data;
   } catch (error) {
     console.error('Erro ao gerar certificado:', error);

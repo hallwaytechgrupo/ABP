@@ -1,3 +1,5 @@
+import { gerarCertificadoFront } from '../certificado.js';
+import { gerarCertificadoService } from '../services/quiz.service.js';
 import { getUsuario, usuarioAprovadoEmTodos } from './user.utils.js';
 
 export function setStepStatus(id, completed) {
@@ -19,14 +21,19 @@ export function setStepStatus(id, completed) {
   statusElement.textContent = completed ? 'check' : 'hourglass_empty';
 }
 
-export function habilitarGeracaoCertificado(callback) {
+export function habilitarGeracaoCertificado() {
+  console.log('testando');
   const button = document.getElementById('gerar-certificado');
   const usuarioAprovadoTodos = usuarioAprovadoEmTodos();
+  console.log('button', button);
+  console.log('usuarioAprovadoTodos', usuarioAprovadoTodos);
 
   // Desenvolva aqui
   if (button?.hasAttribute('disabled') && usuarioAprovadoTodos) {
     button.removeAttribute('disabled');
-    button.addEventListener('click', callback);
+    button.addEventListener('click', () => {
+      gerarCertificado();
+    });
   } else if (!button) {
     console.error('Button with id "gerar-certificado" not found.');
   }
@@ -35,13 +42,8 @@ export function habilitarGeracaoCertificado(callback) {
 export async function gerarCertificado() {
   const email = getUsuario().email;
   try {
-    const response = await gerarCertificado(email);
-    if (response.status === 200) {
-      const pdfBlob = await response.blob();
-      const pdfUrl = URL.createObjectURL(pdfBlob);
-      window.open(pdfUrl, '_blank');
-    } else {
-      console.error('Erro ao gerar certificado.');
+    if (usuarioAprovadoEmTodos()) {
+      gerarCertificadoFront(email);
     }
   } catch (error) {
     console.error('Erro ao gerar certificado:', error);

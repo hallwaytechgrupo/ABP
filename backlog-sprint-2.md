@@ -3,7 +3,7 @@
 
 ## Links úteis
 [![Trello](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=trello&message=Trello)](https://trello.com/b/pvZsrUjm/sprint-02) 
-[![Website](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=htmx&message=Visitar%20Website)](https://hallwaytechgrupo.github.io/ABP-2024-2/) 
+[![Website](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=htmx&message=Visitar%20Website)](https://hallwaytech.vercel.app/) 
 
 ## Entregas
 

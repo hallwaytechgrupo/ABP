@@ -48,6 +48,7 @@
 - CSS - Adicionar funcionalidade de blur quando o modal de login estiver aberto
 - CSS - Adicionar funcionalidade para focar a caixa de texto do nome ao clicar no botão do perfil
 - HTML - Criar um modal do perfil de usuário
+- HTML, CSS e JS - Criar modal de perfil e vinculá-lo ao menu, quando o usuário estiver logado.
 ___________________________________________
 
 <a name="rf-02"></a>
@@ -58,12 +59,15 @@ ___________________________________________
 ### **DoD - Definition of Done**
 - Tela de registro intuitiva.
 - Validação dos campos de nome completo, e-mail e senha.
-- Senhas armazenadas em hash seguro (bcrypt, Argon2, etc.).
+- Senhas armazenadas no banco de dados..
 - Registro do usuário no sistema e o redirecionamento/atualização da página com o login.
 
 ### **Tarefas:**
 - CSS - Adicionar funcionalidade para focar a caixa de texto do nome ao clicar na aba "Cadastro"
 - JS - Criar função para verificar se um usuário já existe
+- JS Back-end - Criar rota de cadastro.
+- JS - Chamar rota de cadastro.
+- JS - Criar função para buscar os dados da caixa de texto de cadastro.
 ___________________________________________
 
 <a name="rf-03"></a>
@@ -81,6 +85,9 @@ ___________________________________________
 ### **Tarefas:**
 - CSS - Adicionar funcionalidade para focar a caixa de texto do nome ao clicar na aba "Login".
 - JS - Criar função auxiliar de login.
+- JS Back-end - Criar rota de login.
+- JS - Chamar rota de cadastro.
+- JS - Criar função para buscar os dados da caixa de texto de cadastro.
 ___________________________________________
 
 <a name="rf-05"></a>
@@ -97,8 +104,12 @@ ___________________________________________
 
 
 ### **Tarefas:**
-- JS - BD - Quiz - Criar função para buscar as questões de um módulo no BD.
-- JS - BD - Quiz - Criar função para comparar as questões do usuário com a do banco.
+- JS - Criar função para buscar as questões de um módulo no BD.
+- JS - Criar função para colocar as questões do banco no HTML do Quiz.
+- JS - Criar função para comparar as questões do usuário com a do banco.
+- JS - Criar rota para buscar questões no banco de dados.
+- JS - Criar rota pra tentativa de um usuário (respostas e nota).
+- JS - Criar função para criar uma tentativa do usuário.
 
 <a name="rf-06"></a>
 
@@ -120,8 +131,9 @@ ___________________________________________
 - O quizz não aparece para usuários não logados.
 
 ### **Tarefas:**
-- JS - Criar função de controle de login
-- HTML e CSS - Criar componente para alertar login
+- JS - Criar função de controle de login.
+- HTML e CSS - Criar componente para alertar login.
+- JS - Exibir componente de alerta se o usuário não estiver logado.
 
 ___________________________________________
 
@@ -149,3 +161,8 @@ ___________________________________________
     - **Pontuação:** 3  
     - **Responsável:** Christopher.  
     - **Descrição:** Criar o CSS da página de certificado, se necessário, também o JS, e subir no GitHub.
+
+### **Tarefas:**
+- JS - Criar função para verificar se o usuário foi aprovado em todos os módulos.
+- JS - Escrever no PDF, na área do nome, que será dado pelo parâmetro.
+- JS - Se o usuário foi aprovado em todos os módulos, gerar o certificado.

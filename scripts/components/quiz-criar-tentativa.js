@@ -31,7 +31,8 @@ export const criarTentativa = async (modulo, respostas) => {
         type: 'success',
         duration: 5000,
       });
-      infoDiv.innerHTML = ` <p>Aprovado!</p> <p>${mensagem}</p> `;
+      infoDiv.innerHTML = `<p class="center">Aprovado!</p> 
+                          <p class="center">${mensagem}</p>`;
 
       setStepStatus(Number.parseInt(modulo), true);
       const moduloKey = `modulo-${modulo}`;
@@ -48,8 +49,8 @@ export const criarTentativa = async (modulo, respostas) => {
       });
 
       infoDiv.innerHTML = `
-            <p>Reprovado!</p>
-            <p>Você acertou ${nota} de 3 questões.</p>
+            <p class="center">Reprovado!</p>
+            <p class="center">Você acertou ${nota} de 3 questões.</p>
             <p></p>
             `;
 

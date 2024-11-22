@@ -10,14 +10,14 @@
 
 | ID | Tipo | Descrição | Prioridade | Status | Responsável | Pontuação total |
 |--|--|--|--|--|--|--|
-| [01](#rf-01) | RF | As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que, ao ser clicado, remete o usuário à seção correspondente; | Baixa | A Fazer | Nome | 6 |
-| [02](#rf-02) | RF | O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail e senha;| Baixa | A Fazer | Nome | 6 |
-| [03](#rf-03) | RF | O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; | Baixa | A Fazer | Nome | 6 |
-| [05](#rf-05) | RF | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devem contemplar o tema abordado no tópico;| Média | A Fazer | Nome | 15 |
-| [06](#rf-06) | RF | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões; | Alta | A Fazer | Nome | 32 |
-| [08](#rf-08) | RF | O sistema deve exibir as questões somente nos tópicos que o usuário não tenha sido aprovado. Para ser considerado aprovado no tópico é necessário acertar pelo menos 2 questões; || A fazer |
-| [09](#rf-09) | RF | O sistema deve ser capaz de emitir o certificado de conclusão para os usuários que foram aprovados em todos os tópicos; | Baixa | A Fazer | Nome | 5 |
-| [10](#rf-10) | RF | As questões devem ser cadastradas pelo administrador diretamente no SGBD PostgreSQL. | Baixa | A fazer | 0 |
+| [01](#rf-01) | RF | As páginas devem possuir um mecanismo de navegação comum (menu de navegação) que, ao ser clicado, remete o usuário à seção correspondente; | Baixa | Concluido | Christopher | 6 |
+| [02](#rf-02) | RF | O usuário deve ser capaz de se auto cadastrar, informando seu nome completo, e-mail e senha;| Baixa | Concluido | Ariel, Marcos, Vinicius | 6 |
+| [03](#rf-03) | RF | O usuário deve ser capaz de efetuar autenticação utilizando e-mail do cadastro e senha; | Baixa | Concluido | Ariel, Vinicius | 6 |
+| [05](#rf-05) | RF | Aos usuários logados, o sistema deve exibir 3 questões para cada tópico. As questões devem contemplar o tema abordado no tópico;| Média | Concluido | Lucas, Vinicius | 10 |
+| [06](#rf-06) | RF | O usuário não logado pode acessar o conteúdo das páginas (tópicos) do curso, mas não pode visualizar as questões; | Alta | Concluido | Christopher, Mário | 27 |
+| [08](#rf-08) | RF | O sistema deve exibir as questões somente nos tópicos que o usuário não tenha sido aprovado. Para ser considerado aprovado no tópico é necessário acertar pelo menos 2 questões; | Alta | Concluido | Lucas, Mário | 5
+| [09](#rf-09) | RF | O sistema deve ser capaz de emitir o certificado de conclusão para os usuários que foram aprovados em todos os tópicos; | Baixa | Concluido | Christopher | 5 |
+| [10](#rf-10) | RF | As questões devem ser cadastradas pelo administrador diretamente no SGBD PostgreSQL. | Baixa | Concluido | Christopher | 5 |
 <center>
 
 ## Diagrama Alternativo ao Burndown:

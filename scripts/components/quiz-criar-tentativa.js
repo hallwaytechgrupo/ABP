@@ -27,6 +27,13 @@ export const criarTentativa = async (modulo, respostas) => {
     infoDiv.style.display = 'block';
 
     if (nota >= 2) {
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+        zIndex: 9999,
+      });
+
       let mensagem =
         nota === 2
           ? 'Você acertou 2 de 3 questões'

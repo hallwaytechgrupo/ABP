@@ -27,6 +27,11 @@ if (isQuiz) {
   linksCss.push('./css/cta-quiz.css', './css/quizz.css');
 }
 
+const confettiScript = document.createElement('script');
+confettiScript.src =
+  'https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js';
+document.head.appendChild(confettiScript);
+
 const faviconLink = document.createElement('link');
 faviconLink.rel = 'icon';
 faviconLink.href = './assets/favicon.ico';

@@ -28,8 +28,8 @@ export const criarTentativa = async (modulo, respostas) => {
 
     if (nota >= 2) {
       confetti({
-        particleCount: 100,
-        spread: 70,
+        particleCount: 300,
+        spread: 100,
         origin: { y: 0.6 },
         zIndex: 9999,
       });

@@ -7,8 +7,13 @@
 
 .modal-profile {
   max-width: 400px;
+  height: 80vh;
 	align-self: center;
   padding: 0 16px;
+}
+.modal-profile > .content {
+  height: 100%;
+  overflow-y: auto;
 }
 
 #profile {
@@ -213,14 +218,10 @@
   .modal-profile {
     width: 80%;
     max-width: 100%;
-    height: 90vh;
     padding: 0 8px;
     overflow-y: auto;
   }
-  .modal-profile > .content {
-    height: 100%;
-    overflow-y: auto;
-  }
+  
 
   .profile-info {
     align-items: center;

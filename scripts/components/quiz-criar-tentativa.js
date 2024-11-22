@@ -29,8 +29,8 @@ export const criarTentativa = async (modulo, respostas) => {
     if (nota >= 2) {
       let mensagem =
         nota === 2
-          ? 'Você acertou 2 de 3 questões.'
-          : 'Você acertou 3 de 3 questões.';
+          ? 'Você acertou 2 de 3 questões'
+          : 'Você acertou 3 de 3 questões';
 
       infoDiv.innerHTML = `<p class="center">Aprovado!</p> 
                           <p class="center">${mensagem}</p>`;

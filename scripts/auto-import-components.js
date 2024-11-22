@@ -12,6 +12,7 @@ import {
   getUsuarioAprovacaoModulo,
   getUsuarioAprovacoes,
   setarLogado,
+  usuarioAprovadoEmTodos,
   usuarioLogado,
 } from './utils/user.utils.js';
 import { cadastro } from './services/cadastro.service.js';
@@ -119,10 +120,29 @@ document.addEventListener('DOMContentLoaded', () => {
               startQuizButton.disabled = false;
             }
 
-            console.log(' [Q] O quiz está pronto para ser iniciado!');
-            modalQuizControl(moduleNumber);
-            getQuizRespostas(moduleNumber, criarTentativa);
-            prepararQuiz(moduleNumber);
+            if (getUsuarioAprovacaoModulo(moduleNumber)) {
+              const quizButton = document.getElementById('start-quiz');
+              quizButton.disabled = true;
+              quizButton.classList.add('disabled');
+              quizButton.innerHTML = 'Parabéns! Aprovado!';
+              quizButton.style.backgroundColor = 'green';
+              let message = 'Você já foi aprovado neste módulo!';
+              if (usuarioAprovadoEmTodos()) {
+                message =
+                  'Você já foi aprovado em todos os módulos!<br/>Gere seu certificado no perfil.';
+              }
+              toast({
+                title: 'Parabéns!',
+                message: message,
+                type: 'success',
+                duration: 5000,
+              });
+            } else {
+              console.log(' [Q] O quiz está pronto para ser iniciado!');
+              modalQuizControl(moduleNumber);
+              getQuizRespostas(moduleNumber, criarTentativa);
+              prepararQuiz(moduleNumber);
+            }
           }
         });
       });

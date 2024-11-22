@@ -27,16 +27,11 @@ export const criarTentativa = async (modulo, respostas) => {
     infoDiv.style.display = 'block';
 
     if (nota >= 2) {
-      const mensagem =
+      let mensagem =
         nota === 2
           ? 'Você acertou 2 de 3 questões.'
           : 'Você acertou 3 de 3 questões.';
-      toast({
-        title: 'Aprovado!',
-        message: mensagem,
-        type: 'success',
-        duration: 5000,
-      });
+
       infoDiv.innerHTML = `<p class="center">Aprovado!</p> 
                           <p class="center">${mensagem}</p>`;
 
@@ -48,7 +43,15 @@ export const criarTentativa = async (modulo, respostas) => {
       if (usuarioAprovadoEmTodos()) {
         console.log('[U] Aprovado em todos os módulos');
         habilitarGeracaoCertificado();
+        mensagem = `${mensagem} e foi aprovado em todos os módulos!
+        <br/>Gere seu certificado no perfil.`;
       }
+      toast({
+        title: 'Aprovado!',
+        message: mensagem,
+        type: 'success',
+        duration: 5000,
+      });
     } else {
       toast({
         title: 'Reprovado!',

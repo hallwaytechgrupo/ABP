@@ -291,7 +291,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
               localStorage.setItem(
                 'usuario',
-                JSON.stringify({ id, nome, email, aprovacoes: {} }),
+                JSON.stringify({
+                  id,
+                  nome,
+                  email,
+                  aprovacoes: {
+                    'modulo-1': false,
+                    'modulo-2': false,
+                    'modulo-3': false,
+                  },
+                }),
               );
               setarLogado(true);
               window.location.reload();

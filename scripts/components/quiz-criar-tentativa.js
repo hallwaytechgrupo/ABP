@@ -52,6 +52,19 @@ export const criarTentativa = async (modulo, respostas) => {
         type: 'success',
         duration: 5000,
       });
+
+      const quizButton = document.getElementById('start-quiz');
+      quizButton.disabled = true;
+      quizButton.classList.add('disabled');
+      quizButton.innerHTML = 'Parabéns! Aprovado!';
+      quizButton.style.backgroundColor = 'green';
+
+      const submitButton = document.querySelector(
+        '#quiz-form button[type="submit"]',
+      );
+      submitButton.disabled = true;
+      submitButton.innerHTML = 'Parabéns! Aprovado!';
+      submitButton.style.backgroundColor = 'green';
     } else {
       toast({
         title: 'Reprovado!',
@@ -65,15 +78,15 @@ export const criarTentativa = async (modulo, respostas) => {
             <p class="center">Você acertou ${nota} de 3 questões.</p>
             <p></p>
             `;
-    }
 
-    const submitButton = document.querySelector(
-      '#quiz-form button[type="submit"]',
-    );
-    submitButton.disabled = true;
-    setTimeout(() => {
-      submitButton.disabled = false;
-    }, 3000);
+      const submitButton = document.querySelector(
+        '#quiz-form button[type="submit"]',
+      );
+      submitButton.disabled = true;
+      setTimeout(() => {
+        submitButton.disabled = false;
+      }, 3000);
+    }
   } else {
     toast({
       title: 'Erro',

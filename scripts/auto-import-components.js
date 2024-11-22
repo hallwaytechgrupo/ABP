@@ -154,11 +154,18 @@ document.addEventListener('DOMContentLoaded', () => {
           if (button) {
             const userNameSpan = document.createElement('span');
             userNameSpan.id = 'username';
-            userNameSpan.textContent = 'Meu perfil';
+            userNameSpan.textContent =
+              getUsuario().nome.charAt(0).toUpperCase() +
+              getUsuario().nome.slice(1);
             userNameSpan.classList.add('truncate-text');
             button.appendChild(userNameSpan);
           }
         }
+
+        const nomeUsuario = document.getElementById('profile-name');
+        nomeUsuario.innerText =
+          getUsuario().nome.charAt(0).toUpperCase() +
+          getUsuario().nome.slice(1);
 
         const primeiroAcesso = localStorage.getItem('primeiroAcesso');
         const primeiroAcessoBoolean = primeiroAcesso === 'true';

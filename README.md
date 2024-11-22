@@ -11,7 +11,9 @@
 [![Trello](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=trello&message=Trello%20Sprint%201)](https://trello.com/b/DNJojiWv/sprint-01) [![Trello](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=trello&message=Trello%20Sprint%202)](https://trello.com/b/pvZsrUjm/sprint-02) [![Trello](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=trello&message=Trello%20Sprint%203)](https://trello.com/b/QIPO2kDE/sprint-03) 
 
 [![Website](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=htmx&message=Visitar%20Website)](https://hallwaytech.vercel.app/) 
-[![GitHub](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=github&message=C%C3%B3digo%20Fonte)](https://github.com/hallwaytechgrupo/ABP-2024-2/tree/desenvolvimento) 
+[![GitHub](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=github&message=C%C3%B3digo%20Fonte%20Front)](https://github.com/hallwaytechgrupo/ABP-2024-2/tree/desenvolvimento) 
+[![GitHub](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=github&message=C%C3%B3digo%20Fonte%20Servidor)](https://github.com/hallwaytechgrupo/ABP-2024-2-server) 
+
 
 <hr />
 

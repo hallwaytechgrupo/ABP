@@ -4,6 +4,7 @@
 ## Links úteis
 [![Trello](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=trello&message=Trello)](https://trello.com/b/QIPO2kDE/sprint-03) 
 [![Website](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=htmx&message=Visitar%20Website)](https://hallwaytech.vercel.app/) 
+[![Requisitos_do_Cliente](https://img.shields.io/static/v1?style=for-the-badge&label=&color=black&logo=gitbook&message=Documenta%C3%A7%C3%A3o%20Sprint%2003)](https://github.com/hallwaytechgrupo/ABP-2024-2/blob/main/sprint-3-documentacao.md)
 
 ## Entregas
 
@@ -150,6 +151,8 @@ ___________________________________________
 - O sistema deve marcar um tópico como completo quando o usuário acertar pelo menos duas questões.
 - O sistema deve ocultar as questões de tópicos já completos.
 
+- JS - Impossibilitar o quiz quando ele for aprovado naquele módulo.
+
 ___________________________________________
 
 <a name="rf-09"></a>
@@ -192,3 +195,22 @@ ___________________________________________
 - JS - Criar função para verificar se o usuário foi aprovado em todos os módulos.
 - JS - Escrever no PDF, na área do nome, que será dado pelo parâmetro.
 - JS - Se o usuário foi aprovado em todos os módulos, gerar o certificado.
+
+___________________________________________
+
+<a name="rf-10"></a>
+
+## 10 - Requisito Funcional
+- As questões devem ser cadastradas pelo administrador diretamente no SGBD PostgreSQL.
+
+### **Histórias de Usuário**
+- **Como um** administrador do sistema, **eu quero** cadastrar as questões sobre o Scrum, **para que** os usuários possam comprovar o entendimento da metodologia.
+
+### **DoD - Definition of Done**
+- Configurar o banco de dados PostgreSQL para armazenar as questões e suas respectivas respostas.
+
+- Criar o modelo físico do banco
+- Popular as questões
+- Criar select para saber se um usuário foi aprovado em um módulo
+- Criar select para pegar as questões de um módulo
+- Criar select para saber se o usuário foi aprovado em todos os módulos

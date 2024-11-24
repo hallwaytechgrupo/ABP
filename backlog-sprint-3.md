@@ -21,8 +21,8 @@
 <center>
 
 ## Diagrama Alternativo ao Burndown:
-![image](./content/sprint-03/CFD.png)
-> Gerado um Cumulative Flow Diagram, devido ao BurndownForTrello estar offline.
+![image](./content/sprint-03/burndown.png)
+> Gerado em: 24/11/2024
 
 </center>
 

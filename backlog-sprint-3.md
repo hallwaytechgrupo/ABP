@@ -20,9 +20,21 @@
 | [10](#rf-10) | RF | As questões devem ser cadastradas pelo administrador diretamente no SGBD PostgreSQL. | Baixa | Concluido | Christopher | 5 |
 <center>
 
-## Diagrama Alternativo ao Burndown:
+## Burndown:
 ![image](./content/sprint-03/burndown.png)
 > Gerado em: 24/11/2024
+
+## Diagrama de Casos de Uso:
+![image](./content/sprint-03/casoDeUso.jpg)
+
+### MER: 
+
+![MER](/content/sprint-03/mer.png)
+
+### Modelo Físico:
+
+![Modelo Físico](/content/sprint-03/fisico.png)
+
 
 </center>
 
